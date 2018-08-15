@@ -1,0 +1,57 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/slider.json",
+  "title": "Slider Accelerator",
+  "description": "Slider Accelerator",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "propertyOrder": [
+    "slides",
+    "loadingColour",
+    "loadingPosition",
+    "loop",
+    "navigationDots"
+  ],
+  "type": "object",
+  "properties": {
+    "slides": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "slides",
+                "enum": [
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/banner.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/video.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "title": "Slides",
+      "description": "",
+      "minItems": 1,
+      "maxItems": 8
+    },
+    "loop": {
+      "type": "boolean",
+      "title": "Loop slider",
+      "description": ""
+    },
+    "navigationDots": {
+      "type": "boolean",
+      "title": "Navigation Dots",
+      "description": ""
+    }
+  }
+}

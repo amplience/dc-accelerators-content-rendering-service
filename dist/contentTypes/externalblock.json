@@ -1,0 +1,24 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/externalblock.json",
+  "title": "External Block",
+  "description": "",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "propertyOrder": [
+    "external"
+  ],
+  "type": "object",
+  "properties": {
+    "external": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 2000,
+      "title": "External",
+      "description": "Insert HTML code"
+    }
+  }
+}

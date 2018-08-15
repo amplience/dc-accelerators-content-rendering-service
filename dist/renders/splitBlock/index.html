@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>splitBlock</title>
+
+    <link rel="stylesheet" href="../../../dist/renders/splitBlock/splitBlock.min.css"/>
+    <link rel="stylesheet" href="../../../dist/renders/text/text.min.css"/>
+    <link rel="stylesheet" href="../../../dist/renders/image/image.min.css"/>
+    <link rel="stylesheet" href="../../../dist/renders/video/video.min.css"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .amp-dc-splitBlock {
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="js_splitBlock_wrap"></div>
+
+
+<script src="../../reusable/showdown.min.js"></script>
+
+<script src="../../reusable/utils.js"></script>
+
+
+<script>
+    AmpCa.utils = new AmpCa.Utils();
+
+    AmpCa.utils.getHtmlServiceData({
+        auth: {
+            baseUrl: 'https://c1.adis.ws',
+            id: '47c6b9bf-c164-4c7f-8087-1a608028108e',
+            store: 'csdemo',
+            templateName: 'splitBlock'
+        },
+        callback: function (data) {
+            document.querySelectorAll(".js_splitBlock_wrap")[0].innerHTML = data;
+            AmpCa.utils.postProcessing.execHtmlService('splitBlock');
+        }
+    });
+
+</script>
+
+</body>
+</html>

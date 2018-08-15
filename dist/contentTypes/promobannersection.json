@@ -1,0 +1,78 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobannersection.json",
+  "title": "Promo Banner Section",
+  "description": "Promo Banner Section",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "propertyOrder": [
+    "icon",
+    "backgroundColour",
+    "topLine",
+    "toplineColour",
+    "bottomLine",
+    "bottomlineColour",
+    "link"
+  ],
+  "type": "object",
+  "properties": {
+    "icon": {
+      "title": "Icon",
+      "description": "insert a PNG to be used as an icon",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+        }
+      ]
+    },
+    "backgroundColour": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 6,
+      "title": "Background Colour",
+      "description": "Add a Hex value"
+    },
+    "topLine": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 500,
+      "title": "Top Line",
+      "description": "Enter top line of the promo banner section"
+    },
+    "toplineColour": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 6,
+      "title": "Top Line Text Colour",
+      "description": "Add a Hex Value"
+    },
+    "bottomLine": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 500,
+      "title": "Bottom Line",
+      "description": "Enter bottom line of the promo banner section"
+    },
+    "bottomlineColour": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 6,
+      "title": "Bottom Line Text Colour",
+      "description": "Add a Hex Value"
+    },
+    "link": {
+      "title": "Link",
+      "description": "",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/link.json"
+        }
+      ]
+    }
+  }
+}

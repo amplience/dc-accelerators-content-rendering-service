@@ -1,0 +1,35 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/roundel.json",
+  "title": "Roundel",
+  "description": "Roundel Accelerator",
+  "propertyOrder": [
+    "roundel",
+    "roundelRatio",
+    "roundelPosition"
+  ],
+  "type": "object",
+  "properties": {
+    "roundel": {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+    },
+    "roundelRatio": {
+      "type": "number",
+      "title": "Roundel Ratio",
+      "description": "A value between 0 and 10 e.g. 0.6",
+      "minimum": 0,
+      "maximum": 10
+    },
+    "roundelPosition": {
+      "type": "string",
+      "enum": [
+        "Top Left",
+        "Top Right",
+        "Bottom Left",
+        "Bottom Right"
+      ],
+      "title": "Roundel Position",
+      "description": "Roundel Position"
+    }
+  }
+}

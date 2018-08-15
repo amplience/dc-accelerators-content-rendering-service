@@ -1,0 +1,54 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/splitblock.json",
+  "title": "Split Block Accelerators",
+  "description": "Split Block Accelerator",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "propertyOrder": [
+    "content",
+    "split"
+  ],
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "content",
+                "enum": [
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/video.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/text.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "minItems": 2,
+      "maxItems": 2,
+      "title": "Content",
+      "description": ""
+    },
+    "split": {
+      "type": "string",
+      "enum": [
+        "50/50",
+        "70/30",
+        "30/70"
+      ],
+      "title": "Split Ratio",
+      "description": ""
+    }
+  }
+}

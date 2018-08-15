@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cardList</title>
+
+    <link rel="stylesheet" href="../../../dist/renders/image/image.min.css"/>
+    <link rel="stylesheet" href="../../../dist/renders/card/card.min.css"/>
+    <link rel="stylesheet" href="../../../dist/renders/cardList/cardList.min.css"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="js_card_list_wrap"></div>
+
+<script src="../../reusable/utils.js"></script>
+
+<script>
+    AmpCa.utils = new AmpCa.Utils();
+
+    AmpCa.utils.getHtmlServiceData({
+        auth: {
+            baseUrl: 'https://c1.adis.ws',
+            id: '3d35c8be-22d3-408e-8067-51dd38abaa63',
+            store: 'csdemo',
+            templateName: 'cardList'
+        },
+        callback: function (data) {
+            document.querySelectorAll(".js_card_list_wrap")[0].innerHTML = data;
+        }
+    });
+</script>
+
+</body>
+</html>

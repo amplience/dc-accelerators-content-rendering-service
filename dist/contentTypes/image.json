@@ -1,0 +1,55 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+  "title": "Image",
+  "description": "Image Accelerator",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "propertyOrder": [
+    "image",
+    "imageAltText",
+    "seoText",
+    "roundel"
+  ],
+  "type": "object",
+  "properties": {
+    "image": {
+      "title": "Image",
+      "description": "insert an image",
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+        }
+      ]
+    },
+    "imageAltText": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 150,
+      "title": "Image alt text",
+      "description": "insert image alt text"
+    },
+    "seoText": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 100,
+      "title": "SEO Text",
+      "description": "e.g. ladies-sunglasses"
+    },
+    "roundel": {
+      "title": "Roundel",
+      "description": "Roundel Image",
+      "type": "array",
+      "items": {
+        "$ref": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/roundel.json"
+      },
+      "minItems": 0,
+      "maxItems": 4,
+      "_interpolate": true
+    }
+  }
+}

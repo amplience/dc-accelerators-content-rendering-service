@@ -1,0 +1,55 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/cardlist.json",
+  "title": "Card List Accelerator",
+  "description": "Card List Accelerator",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "propertyOrder": [
+    "object",
+    "heroList",
+    "cards"
+  ],
+  "type": "object",
+  "properties": {
+    "header": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 50,
+      "title": "Header",
+      "description": ""
+    },
+    "heroList": {
+      "type": "boolean",
+      "title": "Hero format",
+      "description": "Hero format supports exactly 3 cards"
+    },
+    "cards": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "Card Content",
+                "enum": [
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/card.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 19,
+      "title": "Cards",
+      "description": ""
+    }
+  }
+}

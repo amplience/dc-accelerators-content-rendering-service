@@ -1,0 +1,25 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/text.json",
+  "title": "Text Acclerator",
+  "description": "Text Accelerator",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "propertyOrder": [
+    "text"
+  ],
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string",
+      "format": "markdown",
+      "title": "Text",
+      "description": "",
+      "minLength": 0,
+      "maxLength": 6000
+    }
+  }
+}

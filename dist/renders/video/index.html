@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video</title>
+
+    <link rel="stylesheet" href="../../../dist/renders/video/video.min.css"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="js_video_wrap"></div>
+
+<script src="../../reusable/utils.js"></script>
+
+<script>
+
+    AmpCa.utils = new AmpCa.Utils();
+
+
+    AmpCa.utils.getHtmlServiceData({
+        auth: {
+            baseUrl: 'https://c1.adis.ws',
+            id: '05c1affc-ac26-4f4f-98dc-9f12dc912583',
+            store: 'csdemo',
+            templateName: 'video'
+        },
+        callback: function (data) {
+            document.querySelectorAll(".js_video_wrap")[0].innerHTML = data;
+            AmpCa.utils.postProcessing.execHtmlService('video');
+        }
+    });
+
+</script>
+
+</body>
+</html>

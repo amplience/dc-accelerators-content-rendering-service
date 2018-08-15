@@ -1,0 +1,48 @@
+{
+  "banner": [
+    "image"
+  ],
+  "blog": [
+    "text",
+    "image",
+    "video",
+    "slider",
+    "banner",
+    "card",
+    "cardList"
+  ],
+  "externalBlock": [],
+  "homepage": [
+    "slider",
+    "banner",
+    "promoBanner",
+    "video",
+    "text",
+    "externalBlock",
+    "splitBlock",
+    "card",
+    "cardList",
+    "image"
+  ],
+  "image": [],
+  "card": [
+    "image"
+  ],
+  "cardList": [
+    "image",
+    "card"
+  ],
+  "promoBanner": [],
+  "slider": [
+    "banner",
+    "image",
+    "video"
+  ],
+  "splitBlock": [
+    "image",
+    "video",
+    "text"
+  ],
+  "text": [],
+  "video": []
+}

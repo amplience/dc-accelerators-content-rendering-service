@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promo banner</title>
+
+    <link rel="stylesheet" href="../../../dist/renders/promoBanner/promoBanner.min.css"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="js_promoBanner_wrap" style="max-width:1024px; margin:20px auto;"></div>
+
+
+<!-- build:js ../../reusable/utils.js -->
+<script src="../../reusable/js/utils.js"></script>
+<!-- /build -->
+
+<script>
+
+    AmpCa.utils = new AmpCa.Utils();
+
+    AmpCa.utils.getHtmlServiceData({
+        auth: {
+            baseUrl: 'https://c1.adis.ws',
+            id: '1b05fb00-e845-412b-80e0-33ee82789913',
+            store: 'csdemo',
+            templateName: 'promoBanner'
+        },
+        callback: function (data) {
+            document.querySelectorAll(".js_promoBanner_wrap")[0].innerHTML = data;
+            AmpCa.utils.postProcessing.execHtmlService('promoBanner', {});
+        }
+    });
+
+</script>
+
+</body>
+</html>

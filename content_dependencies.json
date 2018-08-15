@@ -1,0 +1,15 @@
+{
+  "banner": [
+    "link"
+  ],
+  "blog": [
+    "link",
+    "snippet"
+  ],
+  "image": [
+    "roundel"
+  ],
+  "promoBanner": [
+    "promobannersection"
+  ]
+}

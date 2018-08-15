@@ -1,0 +1,46 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/homepage.json",
+  "title": "Homepage Accelerator",
+  "description": "Homepage Accelerator",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "propertyOrder": [
+    "contentTypes"
+  ],
+  "type": "object",
+  "properties": {
+    "contentTypes": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "Content Types",
+                "enum": [
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/slider.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobanner.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/video.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/text.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/externalblock.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/splitblock.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/cardlist.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "title": "Content Type",
+      "description": ""
+    }
+  }
+}

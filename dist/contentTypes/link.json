@@ -1,0 +1,27 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/link.json",
+  "title": "Link Accelerator",
+  "description": "Link Accelerator",
+  "propertyOrder": [
+    "label",
+    "value"
+  ],
+  "type": "object",
+  "properties": {
+    "label": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "title": "Label",
+      "description": ""
+    },
+    "value": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 2000,
+      "title": "Value",
+      "description": "A relative URL, absolute URL or an ID"
+    }
+  }
+}

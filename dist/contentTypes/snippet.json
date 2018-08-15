@@ -1,0 +1,54 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/snippet.json",
+  "title": "Blog Snippet Accelerator",
+  "description": "Blog Snippet Accelerator",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "propertyOrder": [
+    "image",
+    "title",
+    "description",
+    "cta"
+  ],
+  "type": "object",
+  "properties": {
+    "image": {
+      "type": "object",
+      "title": "Image",
+      "description": "",
+      "allOf": [
+        {
+          "$ref": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
+        }
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "title": "Title",
+      "description": ""
+    },
+    "description": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 500,
+      "title": "Snippet Description",
+      "description": ""
+    },
+    "cta": {
+      "type": "object",
+      "title": "Call to action",
+      "description": "",
+      "allOf": [
+        {
+          "$ref": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/link.json"
+        }
+      ]
+    }
+  }
+}

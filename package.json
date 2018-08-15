@@ -1,0 +1,49 @@
+{
+  "name": "dc-accelerators-html-service",
+  "version": "1.0.0",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "description": "Amplience DC Frontend modules, using HTML Service",
+  "main": "src/",
+  "author": "Amplience",
+  "dependencies": {
+    "cms-javascript-sdk": "amplience/cms-javascript-sdk#2d7cb9d",
+    "lory.js": "2.2.1",
+    "showdown": "1.7.1",
+    "content-types": "amplience/dc-accelerators-content-types#49428b8",
+    "dc-accelerators": "amplience/dc-accelerators#a420353"
+  },
+  "devDependencies": {
+    "del": "3.0.0",
+    "event-stream": "^3.3.4",
+    "gulp": "3.9.1",
+    "gulp-add-src": "^0.2.0",
+    "gulp-autoprefixer": "4.0.0",
+    "gulp-clean-css": "3.4.1",
+    "gulp-concat": "2.6.1",
+    "gulp-connect": "5.0.0",
+    "gulp-declare": "0.3.0",
+    "gulp-htmlmin": "3.0.0",
+    "gulp-insert": "^0.5.0",
+    "gulp-processhtml": "1.0.1",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "3.1.0",
+    "gulp-sourcemaps": "2.6.0",
+    "gulp-uglify": "3.0.0",
+    "gulp-watch": "4.3.8",
+    "jasmine-core": "^2.7.0",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "pump": "1.0.2"
+  },
+  "directories": {},
+  "keywords": [
+    "AMP",
+    "Amplience"
+  ],
+  "license": "ISC"
+}

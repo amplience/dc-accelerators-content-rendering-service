@@ -1,0 +1,33 @@
+<div class="amp-dc-slider js_slider" data-infinite="{{loop}}" data-autoplay="{{autoplay}}"
+     data-navigation="{{navigationDots}}">
+    <div class="amp-dc-slider-frame js_frame">
+        <ul class="amp-dc-slider-slides js_slides">
+            {{#each slides}}
+            <li class="amp-dc-slider-slide js_dc_slide">
+                {{> templateChooser this}}
+            </li>
+            {{/each}}
+        </ul>
+        <span class="amp-dc-slider-prev js_prev js_slider_toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5">
+                    <g>
+                        <path d="M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z"/>
+                    </g>
+                </svg>
+            </span>
+        <span class="amp-dc-slider-next js_next js_slider_toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5">
+                    <g>
+                        <path d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z"/>
+                    </g>
+                </svg>
+            </span>
+        {{#if navigationDots}}
+        <ul class="amp-dc-dots">
+            {{#each slides}}
+            <li class="amp-dc-dot js_dc_slider_dot"></li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </div>
+</div>

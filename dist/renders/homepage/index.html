@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>homepage</title>
+
+    <link rel="stylesheet" href="../../../dist/renders/homepage/homepage.min.css"/>
+    <link rel="stylesheet" href="../../../dist/renders/slider/slider.min.css"/>
+    <link rel="stylesheet" href="../../../dist/renders/banner/banner.min.css"/>
+    <link rel="stylesheet" href="../../../dist/renders/image/image.min.css"/>
+    <link rel="stylesheet" href="../../../dist/renders/video/video.min.css"/>
+    <link rel="stylesheet" href="../../../dist/renders/promoBanner/promoBanner.min.css"/>
+    <link rel="stylesheet" href="../../../dist/renders/splitBlock/splitBlock.min.css"/>
+    <link rel="stylesheet" href="../../../dist/renders/text/text.min.css"/>
+    <!-- <link rel="stylesheet" href="../../../dist/renders/externalBlock/externalBlock.min.css"/> -->
+    <link rel="stylesheet" href="../../../dist/renders/cardList/cardList.min.css"/>
+    <link rel="stylesheet" href="../../../dist/renders/card/card.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .test {
+            padding: 15px 15px 20px 15px;
+            background: #efefef;
+            border-radius: 5px;
+        }
+
+        .test > div {
+            padding: 15px;
+            background: #bff2b5;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="header-wrap">
+    <div class="header-promotion">FREE DELIVERY | ORDER BEFORE 1PM FOR NEXT DAY DELIVERY | FREE RETURNS</div>
+    <div class="header-content">
+        <a class="logo" href="#">
+            <img src="https://i1.adis.ws/i/csdemo/m02fm899008g_81867bf7?h=40"
+                 srcset="https://i1.adis.ws/i/csdemo/m02fm899008g_81867bf7?h=40 1x, https://i1.adis.ws/i/csdemo/m02fm899008g_81867bf7?h=80 2x"
+                 class="logo-image">
+        </a>
+
+        <ul class="customer-menu">
+            <li class="first-nav"><a href="#" class="fa fa-map-marker primary-color"></a></li>
+            <li class="second-nav"><a href="#" class="fa fa-user primary-color"></a></li>
+            <li class="third-nav"><a href="" class="fa fa-shopping-cart primary-color"></a></li>
+        </ul>
+
+        <ul class="top-menu">
+            <li><a href="#">Home & Electricals</a></li>
+            <li><a href="#">Inspiration</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+        </ul>
+
+    </div>
+</div>
+
+<div class="js_homepage_wrap"></div>
+
+<script src="../../reusable/showdown.min.js"></script>
+
+<script src="../../reusable/utils.js"></script>
+
+<script src="../../reusable/lory.min.js"></script>
+
+<script src="../../../dist/renders/slider/sliderHelper.js"></script>
+
+
+<script>
+    AmpCa.utils = new AmpCa.Utils();
+
+    AmpCa.utils.getHtmlServiceData({
+        auth: {
+            baseUrl: 'https://c1.adis.ws',
+            id: 'd8b929ee-214d-48f0-90c0-4e121ca55a6f',
+            store: 'csdemo',
+            templateName: 'homepage'
+        },
+        callback: function (data) {
+            document.querySelectorAll(".js_homepage_wrap")[0].innerHTML = data;
+            loryHelpers.initSliders(document.querySelectorAll(".js_slider"));
+            AmpCa.utils.postProcessing.execHtmlService('homepage', {});
+        }
+    });
+
+</script>
+
+</body>
+</html>
