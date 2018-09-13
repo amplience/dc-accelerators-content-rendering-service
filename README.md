@@ -25,7 +25,7 @@ The content rendering service automates the process of combining JSON content wi
 - [Demo](#demo)
 - [Content Packages](#content-packages)
 - [Setting up the Content Types](#setting-up-the-content-types)
-- [Locations for Icons, Cards and Visualisations] (#locations-for-icons,-cards-and-visualisations)
+- [Locations for Icons, Cards and Visualisations](#locations-for-icons-cards-and-visualisations)
 - [Render Dependencies](#render-dependencies)
 - [Setting up the Transformation Templates](#setting-up-the-transformation-templates)
 - [Generated Builds](#generated-builds)
@@ -35,7 +35,7 @@ The content rendering service automates the process of combining JSON content wi
 - [Building minified and concatenated files](#building-minified-and-concatenated-files)
 - [Development](#development)
 - [Bug / Feature Request](#bug-/-feature-request)
-- [Contacts] (#contacts)
+- [Contacts](#contacts)
     
 ## Quick Start
 
