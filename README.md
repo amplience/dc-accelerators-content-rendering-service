@@ -21,13 +21,14 @@ The content rendering service automates the process of combining JSON content wi
 
 
 ## Table of Contents
-- [Quick Start](#quick-start)
+- [Configuring the basepath](#configuring-the-basepath)
+- [Install](#install)
 - [Demo](#demo)
-- [Content Packages](#content-packages)
-- [Setting up the Content Types](#setting-up-the-content-types)
-- [Locations for Icons, Cards and Visualisations](#locations-for-icons-cards-and-visualisations)
 - [Render Dependencies](#render-dependencies)
+- [Content Packages](#content-packages)
 - [Setting up the Transformation Templates](#setting-up-the-transformation-templates)
+- [Setting up the Content Types](#setting-up-the-content-types)
+- [Locations for Icons, Cards and Visualisations](#locations-for-icons,-cards-and-visualisations)
 - [Generated Builds](#generated-builds)
 - [Dependencies](#dependencies)
     - [Helper scripts](#helper-scripts)
@@ -37,7 +38,11 @@ The content rendering service automates the process of combining JSON content wi
 - [Bug / Feature Request](#bug-/-feature-request)
 - [Contacts](#contacts)
     
-## Quick Start
+## Configuring the basepath
+
+Before building the project, the basepath for the content types needs to be defined. This will be the location where the content types are stored. To configure this, open up the `.replace.json` file and change the content type basepath to the root URL where you are storing the content types.
+    
+## Install
 
 ```bash
 # Install dependencies 
@@ -49,18 +54,65 @@ $ gulp
 ```
 Open page with desired render, e.g. localhost:9100/dist/renders/image/index.html
 ## Demo
-https://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/homepage/index.html?c=d8b929ee-214d-48f0-90c0-4e121ca55a6f&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114
+Here you can find the Dynamic Content inventory, where all the accelerator modules are shown:
+
+```http://dev-solutions.s3.amazonaws.com/dc-renders-wireframe/dist/index.html?c=ab78c8be-9f03-4a52-bde0-4ebde03b79a3```
+
+We have also created a demo page using these modules, with some added styling and functionalities. It can be found here:
+
+```https://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/homepage/index.html?c=d8b929ee-214d-48f0-90c0-4e121ca55a6f&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114```
+
+## Render Depencencies
+
+This diagram shows all the content types needed for the renders included in a homepage. The arrows indicate the dependencies of the different content types.
+
+<div align="center">
+    <a href="http://amplience.com/">
+        <img src="http://i1.adis.ws/i/csdemo/dc-readme-homepage-2" alt="Amplience Content Authoring" title="Amplience" style="margin-left:auto; margin-right:auto; display:block;" width="900px" height="500px" />
+    </a>
+</div>
+
+This diagram shows all the content types needed for the renders included in a blog. The arrows indicate the dependencies of the different content types.
+
+<div align="center">
+    <a href="http://amplience.com/">
+        <img src="http://i1.adis.ws/i/csdemo/dc-readme-blog-2" alt="Amplience Content Authoring" title="Amplience" style="margin-left:auto; margin-right:auto; display:block;" width="630px" height="350px" />
+    </a>
+</div>
+
 ## Content Packages
 Commonly used content type templates have been split up into separate packages.
 Individual packages can be found in `src/renders`, here you can edit any render templates or styling prior to running a build. Note that the actual content types are stored in a different repository, which can be found here:
 
 https://github.com/amplience/dc-accelerators-content-types
 
+## Setting up the Transformation Templates
+
+Before setting up transformation templates, you need to add an empty image to the account. This image will act as a background for the layers in the transformation templates, before they are populated with images. The empty image `empty.png` can be found in the root repository.
+
+To display image content correctly with roundels, the handlebars template makes use of a transformation template. This needs to be set up within your Amplience account before the renders will work properly.
+
+- Log in to Amplience OnDemand and open up the "tools" menu.
+- Select the "Transformation Templates" option in the menu.
+- Click the "new" button in the top right of the screen.
+- Set both the "Friendly Name" and "Template Name" to be "roundel".
+- In the "Additional Parameters" box, enter these parameters:
+
+```
+myasset=empty&p1_img=empty&p2_img=empty&p3_img=empty&p4_img=empty&qlt=90&roundelRatio=1&layer0=[src=/i//{$prod_img}&w=1350]&layer1=[src=/i//{$p1_img}&w={376*$roundelRatio}&right=10&bottom=10&anchor=BR&visible={$p1_img!=$myasset}&img404=roundel_fallback]&layer2=[src=/i//{$p2_img}&w={376*$roundelRatio}&left=10&bottom=10&anchor=BL&visible={$p2_img!=$myasset}]&layer3=[src=/i//{$p3_img}&w={376*$roundelRatio}&left=10&top=10&anchor=TL&visible={$p3_img!=$myasset}]&layer4=[src=/i//{$p4_img}&w={376*$roundelRatio}&right=10&top=10&anchor=TR&visible={$p4_img!=$myasset}]  
+```
+
+- Click "Create".
+
+To add a point of interest transformation template, follow the same instructions with "Friendly Name" and "Template Name" set to poi, and with these parameters in the "Additional Parameters" box:
+
+```
+scaleFit=poi&poi={$this.metadata.pointOfInterest.x},{$this.metadata.pointOfInterest.y},{$this.metadata.pointOfInterest.w},{$this.metadata.pointOfInterest.h}
+```
+
 ## Setting up the Content Types
 
-Before registering the content types, they need to be hosted at an http location. The standard content types are by default stored at https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators, but this can be changed in the `.replace.json` file.
-
-When the content types have been placed at a basepath URL and the project built with the same basepath, you can start the process of registering the content types in Dynamic Content:
+When the content types have been placed at the same basepath URL as you built the project with (see section "configuring the basebath"), you can start the process of registering the content types in Dynamic Content:
 
 - Log in to the Amplience Dynamic Content platform and navigate to the development tab.
 - Click on the button "Register content type".
@@ -91,167 +143,242 @@ When the content types have been placed at a basepath URL and the project built 
 
 ## Locations for Icons, Cards and Visualisations
 
-#### Banner
-##### Icon
-https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-banner.png
-##### Card
-https://bigcontent.io/cms/cards/summary-photo/index.html
+#### Roundel
+- ##### Icon
 
-For the summary-photo card you need to add: headline, URL for the image and ALT-text.
-##### Visualisation
-The visualisation file is located in `src/renders/banner` 
+	`https://apps.dev-artifacts.adis.ws/cms-icons/develop/latest/256/ca-types-image.png`
 
-#### Video
-##### Icon
-https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-video.png
-##### Card
-https://bigcontent.io/cms/cards/photo/index.html
+- ##### Card
 
-For the photo card you need to add: URL for the image and ALT-text.
-##### Visualisation
-The visualisation file is located in `src/renders/video`
+	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/gallery/index.html`
 
-#### Text
-##### Icon
-https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-text.png
-##### Card
-https://bigcontent.io/cms/cards/text/index.html
+	The pointers you need to add for the card are:
+	- headline: /roundelPosition
+	- image0: /image
 
-For the text card you need to add: headline.
-##### Visualisation
-The visualisation file is located in `src/renders/text`
+#### Link
+- ##### Icon
 
-#### Split block
-##### Icon
-https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-splitblock.png
-##### Card
-https://bigcontent.io/cms/cards/summary-photo/index.html
+	`https://apps.dev-artifacts.adis.ws/cms-icons/master/latest/256/ca-types-cta.png`
 
-For the summary-photo card you need to add: headline, URL for the image and ALT-text.
-##### Visualisation
-The visualisation file is located in `src/renders/splitBlock`
+- ##### Card
 
-#### Slider
-##### Icon
-https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-slider.png
-##### Card
-https://bigcontent.io/cms/cards/gallery/index.html
+	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/text/index.html`
 
-For the gallery card you need to add: headline, 1-4 images and 1-4 ALT-texts for the images.
-##### Visualisation
-The visualisation file is located in `src/renders/slider`
-
-#### Promobanner
-##### Icon
-https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-promobanner.png
-##### Card
-https://bigcontent.io/cms/cards/gallery/index.html
-
-For the gallery card you need to add: headline, 1-4 images and 1-4 ALT-texts for the images.
-##### Visualisation
-The visualisation file is located in `src/renders/promoBanner`
+	The pointer you need to add for the card is:
+	- headline: /label
 
 #### Image
-##### Icon
-https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-image.png
-##### Card
-https://bigcontent.io/cms/cards/photo/index.html
 
-For the photo card you need to add: URL for the image and ALT-text.
-##### Visualisation
-The visualisation file is located in `src/renders/image`
+- ##### Icon
 
-#### External Block
-##### Icon
-https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-externalblock.png
-##### Card
-https://bigcontent.io/cms/cards/text/index.html
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-image.png`
+- ##### Card
+	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/gallery/index.html`
 
-For the text card you need to add: headline.
-##### Visualisation
-The visualisation file is located in `src/renders/externalBlock`
+	The pointers you need to add for the card are:
+	- headline: /_title
+	- image0: /image
+- ##### Visualisation
+	The visualisation file is located in `src/renders/image`
+	
+#### Text
 
+- ##### Icon
+
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-text.png`
+- ##### Card
+
+	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/text/index.html`
+
+	The pointer you need to add for the card is:
+	- headline: /text
+	
+- ##### Visualisation
+	The visualisation file is located in `src/renders/text`
+
+#### Video
+
+- ##### Icon
+
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-video.png`
+	
+- ##### Card
+
+	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/gallery/index.html`
+
+	The pointers you need to add for the card are:
+	- headline: /_title
+	- image0: /video
+- ##### Visualisation
+
+	The visualisation file is located in `src/renders/video`
+	
 #### Card
-##### Icon
-https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-card.png
-##### Card
-https://bigcontent.io/cms/cards/summary-photo/index.html
 
-For the summary-photo card you need to add: headline, URL for the image and ALT-text.
-##### Visualisation
-The visualisation file is located in `src/renders/card`
+- ##### Icon
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-card.png`
+	
+- ##### Card
+	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/gallery/index.html`
+
+	The pointers you need to add for the card are:
+	- headline: /_title
+	- image0: /image/image
+- ##### Visualisation
+	The visualisation file is located in `src/renders/card`
 
 #### Card List
-##### Icon
-https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-cardlist.png
-##### Card
-https://bigcontent.io/cms/cards/gallery/index.html
 
-For the gallery card you need to add: headline, 1-4 images and 1-4 ALT-texts for the images.
-##### Visualisation
-The visualisation file is located in `src/renders/cardList`
+- ##### Icon
+
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-cardlist.png`
+- ##### Card
+
+	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/gallery/index.html`
+
+	The pointers you need to add for the card are:
+	- headline: /_title
+	- image0: /cards/0/image/image
+	- image1: /cards/1/image/image
+	- image2: /cards/2/image/image
+- ##### Visualisation
+	The visualisation file is located in `src/renders/cardList`
+	
+#### Banner
+- ##### Icon
+
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-banner.png`
+
+- ##### Card
+
+	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/gallery/index.html`
+
+	The pointers you need to add for the card are:
+	- headline: /_title
+	- image0: /image/image
+	
+- ##### Visualisation
+	The visualisation file is located in `src/renders/banner`
+	
+#### Slider
+- ##### Icon
+
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-slider.png`
+- ##### Card
+
+	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/gallery/index.html`
+
+	The pointers you need to add for the card are:
+	- headline: /_title
+	- image0: /slides/0/image
+	- image1: /slides/1/image
+	- image2: /slides/2/image
+- ##### Visualisation
+	The visualisation file is located in `src/renders/slider`
+
+#### Split block
+
+- ##### Icon
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-splitblock.png`
+	
+- ##### Card
+	`https://dev-solutions.s3.amazonaws.com/ca/cards/split-block/split-block-card.html`
+
+	The pointer you need to add for the card is:
+	- headline: /_title
+	
+- ##### Visualisation
+	The visualisation file is located in `src/renders/splitBlock`
+	
+#### Promobanner section
+- ##### Icon
+
+	`http://solutions.adis.ws.s3.amazonaws.com/ca/icons/promobannersectionicon.png`
+
+- ##### Card
+
+	`http://apps.dev-artifacts.adis.ws/cms-cards/master/latest/gallery/index.html`
+
+	The pointers you need to add for the card are:
+	- headline: /_title
+	- image0: /icon
+
+#### Promobanner
+
+- ##### Icon
+
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-promobanner.png`
+- ##### Card
+	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/gallery/index.html`
+
+	The pointers you need to add for the card are:
+	- headline: /_title
+	- image0: /bannerSection/0/icon
+	- image1: /bannerSection/1/icon
+	- image2: /bannerSection/2/icon
+- ##### Visualisation
+	The visualisation file is located in `src/renders/promoBanner`
+
+#### External Block
+
+- ##### Icon
+
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-externalblock.png`
+- ##### Card
+	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/text/index.html`
+
+	The pointer you need to add for the card is:
+	- headline: /external
+- ##### Visualisation
+	The visualisation file is located in `src/renders/externalBlock`
+
+#### Snippet
+- ##### Icon
+
+	`http://apps.dev-artifacts.adis.ws/cms-icons/develop/v0.4.0/256/ca-types-splitblock.png`
+
+- ##### Card
+
+	`http://apps.dev-artifacts.adis.ws/cms-cards/master/latest/gallery/index.html`
+
+	The pointers you need to add for the card are:
+	- headline: /_title
+	- image0: /image
 
 #### Blog
-##### Icon
-https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-blogpost.png
-##### Card
-https://bigcontent.io/cms/cards/summary-photo/index.html
 
-For the summary-photo card you need to add: headline, URL for the image and ALT-text.
-##### Visualisation
-The visualisation file is located in `src/renders/blog`
+- ##### Icon
+
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-blogpost.png`
+- ##### Card
+
+	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/gallery/index.html`
+
+	The pointers you need to add for the card are:
+	- headline: /title
+	- image0: /snippet/image/image
+- ##### Visualisation
+
+	The visualisation file is located in `src/renders/blog`
 
 #### Homepage
-##### Icon
-https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-page.png
-##### Visualisation
-The visualisation file is located in `src/renders/homepage`
 
+- ##### Icon
 
-## Render Depencencies
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-page.png`
 
-This diagram shows all the content types needed for the renders included in a homepage. The arrows indicate the dependencies of the different content types.
+- ##### Card
 
-<div align="center">
-    <a href="http://amplience.com/">
-        <img src="http://i1.adis.ws/i/csdemo/dc-readme-homepage-1" alt="Amplience Content Authoring" title="Amplience" style="margin-left:auto; margin-right:auto; display:block;" width="900px" height="500px" />
-    </a>
-</div>
+	`https://dev-solutions.s3.amazonaws.com/ca/cards/homepage/homepage-card.html`
 
-This diagram shows all the content types needed for the renders included in a blog. The arrows indicate the dependencies of the different content types.
+	The pointer you need to add for the card is:
+	- headline: /_title
 
-<div align="center">
-    <a href="http://amplience.com/">
-        <img src="http://i1.adis.ws/i/csdemo/dc-readme-blog-1" alt="Amplience Content Authoring" title="Amplience" style="margin-left:auto; margin-right:auto; display:block;" width="900px" height="500px" />
-    </a>
-</div>
+- ##### Visualisation
 
-
-
-## Setting up the Transformation Templates
-
-To display image content correctly with roundels, the handlebars template makes use of a transformation template. This needs to be set up within your Amplience account before the renders will work properly.
-
-- Log in to Amplience OnDemand and open up the "tools" menu.
-- Select the "Transformation Templates" option in the menu.
-- Click the "new" button in the top right of the screen.
-- Set both the "Friendly Name" and "Template Name" to be "roundel".
-- In the "Additional Parameters" box, enter these parameters:
-
-```
-myasset=empty&p1_img=empty&p2_img=empty&p3_img=empty&p4_img=empty&qlt=90&roundelRatio=1&layer0=[src=/i//{$prod_img}&w=1350]&layer1=[src=/i//{$p1_img}&w={376*$roundelRatio}&right=10&bottom=10&anchor=BR&visible={$p1_img!=$myasset}&img404=roundel_fallback]&layer2=[src=/i//{$p2_img}&w={376*$roundelRatio}&left=10&bottom=10&anchor=BL&visible={$p2_img!=$myasset}]&layer3=[src=/i//{$p3_img}&w={376*$roundelRatio}&left=10&top=10&anchor=TL&visible={$p3_img!=$myasset}]&layer4=[src=/i//{$p4_img}&w={376*$roundelRatio}&right=10&top=10&anchor=TR&visible={$p4_img!=$myasset}]  
-```
-
-- Click "Create".
-
-To add a point of interest transformation template, follow the same instructions with "Friendly Name" and "Template Name" set to poi, and with these parameters in the "Additional Parameters" box:
-
-```
-scaleFit=poi&poi={$this.metadata.pointOfInterest.x},{$this.metadata.pointOfInterest.y},{$this.metadata.pointOfInterest.w},{$this.metadata.pointOfInterest.h}
-```
-
-To add a template with layers, you will also need to add an empty image to the account. The empty image can be found in the repository.
-
+	The visualisation file is located in `src/renders/homepage`
+	
 ## Generated Builds
 Built renders are located in `dist/renders` folder.
 Here you can find unminified and minified css, handlebars templates and the visualisation html page.
