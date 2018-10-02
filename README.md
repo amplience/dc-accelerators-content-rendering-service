@@ -22,7 +22,7 @@ The content rendering service automates the process of combining JSON content wi
 
 ## Table of Contents
 - [Configuring the basepath](#configuring-the-basepath)
-- [Install](#install)
+- [Installation](#installation)
 - [Demo](#demo)
 - [Render Dependencies](#render-dependencies)
 - [Content Packages](#content-packages)
@@ -38,11 +38,11 @@ The content rendering service automates the process of combining JSON content wi
 - [Bug / Feature Request](#bug-/-feature-request)
 - [Contacts](#contacts)
     
-## Configuring the basepath
+## Configuring the Basepath
 
 Before building the project, the basepath for the content types needs to be defined. This will be the location where the content types are stored. To configure this, open up the `.replace.json` file and change the content type basepath to the root URL where you are storing the content types.
     
-## Install
+## Installation
 
 ```bash
 # Install dependencies 
@@ -150,9 +150,7 @@ When the content types have been placed at the same basepath URL as you built th
 
 - ##### Card
 
-	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/gallery/index.html`
-
-	The pointers you need to add for the card are:
+	Choose the gallery card. The pointers you need to add for the card are:
 	- headline: /roundelPosition
 	- image0: /image
 
@@ -163,9 +161,8 @@ When the content types have been placed at the same basepath URL as you built th
 
 - ##### Card
 
-	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/text/index.html`
 
-	The pointer you need to add for the card is:
+	Choose the text card. The pointer you need to add for the card is:
 	- headline: /label
 
 #### Image
@@ -174,9 +171,8 @@ When the content types have been placed at the same basepath URL as you built th
 
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-image.png`
 - ##### Card
-	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/gallery/index.html`
 
-	The pointers you need to add for the card are:
+	Choose the gallery card. The pointers you need to add for the card are:
 	- headline: /_title
 	- image0: /image
 - ##### Visualisation
@@ -189,9 +185,7 @@ When the content types have been placed at the same basepath URL as you built th
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-text.png`
 - ##### Card
 
-	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/text/index.html`
-
-	The pointer you need to add for the card is:
+	Choose the text card. The pointer you need to add for the card is:
 	- headline: /text
 	
 - ##### Visualisation
@@ -205,9 +199,7 @@ When the content types have been placed at the same basepath URL as you built th
 	
 - ##### Card
 
-	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/gallery/index.html`
-
-	The pointers you need to add for the card are:
+	Choose the gallery card. The pointers you need to add for the card are:
 	- headline: /_title
 	- image0: /video
 - ##### Visualisation
@@ -220,9 +212,7 @@ When the content types have been placed at the same basepath URL as you built th
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-card.png`
 	
 - ##### Card
-	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/gallery/index.html`
-
-	The pointers you need to add for the card are:
+	Choose the gallery card. The pointers you need to add for the card are:
 	- headline: /_title
 	- image0: /image/image
 - ##### Visualisation
@@ -235,9 +225,7 @@ When the content types have been placed at the same basepath URL as you built th
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-cardlist.png`
 - ##### Card
 
-	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/gallery/index.html`
-
-	The pointers you need to add for the card are:
+	Choose the gallery card. The pointers you need to add for the card are:
 	- headline: /_title
 	- image0: /cards/0/image/image
 	- image1: /cards/1/image/image
@@ -252,9 +240,7 @@ When the content types have been placed at the same basepath URL as you built th
 
 - ##### Card
 
-	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/gallery/index.html`
-
-	The pointers you need to add for the card are:
+	Choose the gallery card. The pointers you need to add for the card are:
 	- headline: /_title
 	- image0: /image/image
 	
@@ -267,9 +253,7 @@ When the content types have been placed at the same basepath URL as you built th
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-slider.png`
 - ##### Card
 
-	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/gallery/index.html`
-
-	The pointers you need to add for the card are:
+	Choose the gallery card. The pointers you need to add for the card are:
 	- headline: /_title
 	- image0: /slides/0/image
 	- image1: /slides/1/image
@@ -283,9 +267,7 @@ When the content types have been placed at the same basepath URL as you built th
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-splitblock.png`
 	
 - ##### Card
-	`https://dev-solutions.s3.amazonaws.com/ca/cards/split-block/split-block-card.html`
-
-	The pointer you need to add for the card is:
+	Choose the text card. The pointer you need to add for the card is:
 	- headline: /_title
 	
 - ##### Visualisation
@@ -298,9 +280,7 @@ When the content types have been placed at the same basepath URL as you built th
 
 - ##### Card
 
-	`http://apps.dev-artifacts.adis.ws/cms-cards/master/latest/gallery/index.html`
-
-	The pointers you need to add for the card are:
+	Choose the gallery card. The pointers you need to add for the card are:
 	- headline: /_title
 	- image0: /icon
 
@@ -310,9 +290,7 @@ When the content types have been placed at the same basepath URL as you built th
 
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-promobanner.png`
 - ##### Card
-	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/gallery/index.html`
-
-	The pointers you need to add for the card are:
+	Choose the gallery card. The pointers you need to add for the card are:
 	- headline: /_title
 	- image0: /bannerSection/0/icon
 	- image1: /bannerSection/1/icon
@@ -326,9 +304,7 @@ When the content types have been placed at the same basepath URL as you built th
 
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-externalblock.png`
 - ##### Card
-	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/text/index.html`
-
-	The pointer you need to add for the card is:
+	Choose the gallery text. The pointer you need to add for the card is:
 	- headline: /external
 - ##### Visualisation
 	The visualisation file is located in `src/renders/externalBlock`
@@ -340,9 +316,7 @@ When the content types have been placed at the same basepath URL as you built th
 
 - ##### Card
 
-	`http://apps.dev-artifacts.adis.ws/cms-cards/master/latest/gallery/index.html`
-
-	The pointers you need to add for the card are:
+	Choose the gallery card. The pointers you need to add for the card are:
 	- headline: /_title
 	- image0: /image
 
@@ -353,9 +327,7 @@ When the content types have been placed at the same basepath URL as you built th
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-blogpost.png`
 - ##### Card
 
-	`https://apps.dev-artifacts.adis.ws/cms-cards/master/latest/gallery/index.html`
-
-	The pointers you need to add for the card are:
+	Choose the gallery card. The pointers you need to add for the card are:
 	- headline: /title
 	- image0: /snippet/image/image
 - ##### Visualisation
@@ -370,9 +342,7 @@ When the content types have been placed at the same basepath URL as you built th
 
 - ##### Card
 
-	`https://dev-solutions.s3.amazonaws.com/ca/cards/homepage/homepage-card.html`
-
-	The pointer you need to add for the card is:
+	Choose the text card.The pointer you need to add for the card is:
 	- headline: /_title
 
 - ##### Visualisation
