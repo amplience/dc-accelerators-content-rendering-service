@@ -291,6 +291,14 @@ gulp.task('copy-node-modules', function () {
         .pipe(gulp.dest('dist/reusable'));
 });
 
+gulp.task('copy-icons', function () {
+    return gulp
+        .src([
+            'src/icons/**'
+        ])
+        .pipe(gulp.dest('dist/icons'));
+});
+
 gulp.task('addLoryLicense', ['copy-node-modules'], function () {
     return gulp
         .src('node_modules/lory.js/LICENSE')
@@ -342,6 +350,7 @@ gulp.task(
     [
         'del',
         'copy-node-modules',
+        'copy-icons',
         'addLoryLicense',
         'addShowdownLicense',
         'reusable-js-min',
