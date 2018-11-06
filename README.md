@@ -41,8 +41,39 @@ The content rendering service automates the process of combining JSON content wi
 ## Configuring the Basepath
 
 Before building the project, the basepath for the content types needs to be defined. This will be the location where the content types are stored. To configure this, open up the `.replace.json` file and change the content type basepath to the root URL where you are storing the content types.
+
+If you can't view the .replace.json file, you need to activate the feature to view hidden files in your operating system. Information on how to show hidden files for Windows, Mac and Unix this is found below:
+
+##### Windows
+
+There are a few options to show hidden files on Windows, but one of the easier ones is to do it from the control panel.
+
+1. Right-click the "Start" button, then select "Control Panel".
+2. Go to "Appearance and Personalization", then select "File Explorer Options".
+3. Click the "View" tab.
+4. Scroll down a bit and change the "Hidden files and folders" setting to "Show hidden files, folders and drives".
+
+This was tested on Windows 10.
+
+##### Mac
+
+For macOS releases since Sierra, there is a shortcut for showing hidden files. To use this simply open the finder window and press `CMD + SHIFT + .`
+If you press the command again it will hide the hidden files.
+
+If using macOS older than Sierra, there is another way to show hidden files:
+
+1. Open the Terminal found in Finder > Applications > Utilities.
+2. In the Terminal, paste the following `defaults write com.apple.finder AppleShowAllFiles YES` and press enter.
+3. Hold the "Option/alt" key, then right click on the finder icon in the dock and click "Relaunch"
+
+##### Unix
+
+For Unix-based systems, go to the directory where you want to view hidden files and press `ctrl + h`
     
 ## Installation
+
+Note that the installation requires Node version 6.14.3 or higher.
+
 
 ```bash
 # Install dependencies 
@@ -52,15 +83,15 @@ $ npm install --global gulp-cli
 # Build project
 $ gulp
 ```
-Open page with desired render, e.g. localhost:9100/dist/renders/image/index.html
+Open a page with desired render, e.g. localhost:9100/dist/renders/image/index.html
 ## Demo
-Here you can find the Dynamic Content inventory, where all the accelerator modules are shown:
+Here you can find the Dynamic Content Inventory, where all the accelerator modules are shown:
 
-```http://dev-solutions.s3.amazonaws.com/dc-renders-wireframe/dist/index.html?c=ab78c8be-9f03-4a52-bde0-4ebde03b79a3```
+<a href="http://dev-solutions.s3.amazonaws.com/dc-renders-wireframe/dist/index.html?c=ab78c8be-9f03-4a52-bde0-4ebde03b79a3"> Dynamic Content Inventory</a>
 
 We have also created a demo page using these modules, with some added styling and functionalities. It can be found here:
 
-```https://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/homepage/index.html?c=d8b929ee-214d-48f0-90c0-4e121ca55a6f&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114```
+<a href="https://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/homepage/index.html?c=d8b929ee-214d-48f0-90c0-4e121ca55a6f&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"> Demo page </a>
 
 ## Render Depencencies
 
@@ -82,9 +113,11 @@ This diagram shows all the content types needed for the renders included in a bl
 
 ## Content Packages
 Commonly used content type templates have been split up into separate packages.
-Individual packages can be found in `src/renders`, here you can edit any render templates or styling prior to running a build. Note that the actual content types are stored in a different repository, which can be found here:
+Individual packages can be found in `dist/renders`, here you can edit any render templates or styling prior to running a build. Note that the actual content types are stored in a different repository, which can be found here:
 
 https://github.com/amplience/dc-accelerators-content-types
+
+When the project is built using gulp, the content types will be pulled from Github and placed in `dist/contentTypes`. The IDs of these content types will be the same as the basepath configured in .replace.json. For example, the image.json content type will have the ID `YOUR_BASEPATH_URL + /image.json`
 
 ## Setting up the Transformation Templates
 
@@ -103,6 +136,7 @@ myasset=empty&p1_img=empty&p2_img=empty&p3_img=empty&p4_img=empty&qlt=90&roundel
 ```
 
 - Click "Create".
+- Go back to your newly created transformation template in the menu, click on the cogwheel icon and select "Publish".
 
 To add a point of interest transformation template, follow the same instructions with "Friendly Name" and "Template Name" set to poi, and with these parameters in the "Additional Parameters" box:
 
@@ -116,22 +150,21 @@ When the content types have been placed at the same basepath URL as you built th
 
 - Log in to the Amplience Dynamic Content platform and navigate to the development tab.
 - Click on the button "Register content type".
-- Add the content type URL and the content type label. It's important that the URL is the same as the URL where the content type is hosted. You can also add icons, cards, visualisations and associated repositories if needed.
+- Add the content type URL and the content type label. It's important that the URL is the same as the URL where the content type is hosted. Using the image content type as an example again, the URL for it would be `YOUR_BASEPATH_URL + /image.json`. You can also add icons, cards, visualisations and associated repositories if needed.
 - Add a content type icon. You can either choose one from Amplience or enter the URL where your own icon is located. The URLs for the icons can be found below.
 - Add a content type card. You can either choose one from Amplience or enter the URL where your own card is located. The URLs for the cards can be found below.
 - Choose associated repositories for the content types. Content types should not be associated with slot repositories.
-- Add a visualisation. The visualisation files for each specific render can be found in their respective folders in `src/renders`. The visualisation files need to be hosted at an http location as well. When that has been done you need to add the URL for the visualisation followed by the parameters "vse" and "content", i.e. 
+- Add a visualisation. The visualisation files for each specific render can be found in their respective render folders in `dist/renders`, located inside the package folder. For example, the image visualisation file is located in `dist/renders/image/package`. The render folders need to be hosted at an http location as well. When that has been done you need to add the URL for the visualisation.html file followed by the parameters "vse" and "content", i.e. 
 
 	```?vse={{vse.domain}}&content={{content.sys.id}}```
 
 	For example, if the basepath for the visualisation is 
 
-	```https://dev-solutions.s3.amazonaws.com/dc-renders/dist/renders/image/package/visualisation.html```
+	```YOUR_HTTP_LOCATION/dist/renders/image/package/visualisation.html```
 
 	then the URL for the visualisation would be
 
-	```https://dev-solutions.s3.amazonaws.com/dc-renders/dist/renders/image/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}```
-
+	```YOUR_HTTP_LOCATION/dist/renders/image/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}```
 	You also need to add a label for the visualisation.
 
 - Click save.
@@ -146,7 +179,7 @@ When the content types have been placed at the same basepath URL as you built th
 #### Roundel
 - ##### Icon
 
-	`https://apps.dev-artifacts.adis.ws/cms-icons/develop/latest/256/ca-types-image.png`
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-imagewithroundel.png`
 
 - ##### Card
 
@@ -157,10 +190,9 @@ When the content types have been placed at the same basepath URL as you built th
 #### Link
 - ##### Icon
 
-	`https://apps.dev-artifacts.adis.ws/cms-icons/master/latest/256/ca-types-cta.png`
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-link.png`
 
 - ##### Card
-
 
 	Choose the text card. The pointer you need to add for the card is:
 	- headline: /label
@@ -176,7 +208,8 @@ When the content types have been placed at the same basepath URL as you built th
 	- headline: /_title
 	- image0: /image
 - ##### Visualisation
-	The visualisation file is located in `src/renders/image`
+	The visualisation file is located in `dist/renders/image/package`
+	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`
 	
 #### Text
 
@@ -189,7 +222,8 @@ When the content types have been placed at the same basepath URL as you built th
 	- headline: /text
 	
 - ##### Visualisation
-	The visualisation file is located in `src/renders/text`
+	The visualisation file is located in `dist/renders/text/package`
+	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`
 
 #### Video
 
@@ -204,7 +238,8 @@ When the content types have been placed at the same basepath URL as you built th
 	- image0: /video
 - ##### Visualisation
 
-	The visualisation file is located in `src/renders/video`
+	The visualisation file is located in `dist/renders/video/package`
+	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`
 	
 #### Card
 
@@ -216,7 +251,8 @@ When the content types have been placed at the same basepath URL as you built th
 	- headline: /_title
 	- image0: /image/image
 - ##### Visualisation
-	The visualisation file is located in `src/renders/card`
+	The visualisation file is located in `dist/renders/card/package`
+	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`
 
 #### Card List
 
@@ -231,7 +267,8 @@ When the content types have been placed at the same basepath URL as you built th
 	- image1: /cards/1/image/image
 	- image2: /cards/2/image/image
 - ##### Visualisation
-	The visualisation file is located in `src/renders/cardList`
+	The visualisation file is located in `dist/renders/cardList/package`
+	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`
 	
 #### Banner
 - ##### Icon
@@ -245,7 +282,8 @@ When the content types have been placed at the same basepath URL as you built th
 	- image0: /image/image
 	
 - ##### Visualisation
-	The visualisation file is located in `src/renders/banner`
+	The visualisation file is located in `dist/renders/banner/package`
+	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`
 	
 #### Slider
 - ##### Icon
@@ -259,7 +297,8 @@ When the content types have been placed at the same basepath URL as you built th
 	- image1: /slides/1/image
 	- image2: /slides/2/image
 - ##### Visualisation
-	The visualisation file is located in `src/renders/slider`
+	The visualisation file is located in `dist/renders/slider/package`
+	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`
 
 #### Split block
 
@@ -271,12 +310,13 @@ When the content types have been placed at the same basepath URL as you built th
 	- headline: /_title
 	
 - ##### Visualisation
-	The visualisation file is located in `src/renders/splitBlock`
+	The visualisation file is located in `dist/renders/splitBlock/package`
+	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`
 	
 #### Promobanner section
 - ##### Icon
 
-	`http://solutions.adis.ws.s3.amazonaws.com/ca/icons/promobannersectionicon.png`
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-promobannersection.png`
 
 - ##### Card
 
@@ -296,7 +336,8 @@ When the content types have been placed at the same basepath URL as you built th
 	- image1: /bannerSection/1/icon
 	- image2: /bannerSection/2/icon
 - ##### Visualisation
-	The visualisation file is located in `src/renders/promoBanner`
+	The visualisation file is located in `dist/renders/promoBanner/package`
+	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`
 
 #### External Block
 
@@ -307,12 +348,13 @@ When the content types have been placed at the same basepath URL as you built th
 	Choose the gallery text. The pointer you need to add for the card is:
 	- headline: /external
 - ##### Visualisation
-	The visualisation file is located in `src/renders/externalBlock`
+	The visualisation file is located in `dist/renders/externalBlock/package`
+	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`
 
 #### Snippet
 - ##### Icon
 
-	`http://apps.dev-artifacts.adis.ws/cms-icons/develop/v0.4.0/256/ca-types-splitblock.png`
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-blogsnippet.png`
 
 - ##### Card
 
@@ -332,7 +374,8 @@ When the content types have been placed at the same basepath URL as you built th
 	- image0: /snippet/image/image
 - ##### Visualisation
 
-	The visualisation file is located in `src/renders/blog`
+	The visualisation file is located in `dist/renders/blog/package`
+	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`
 
 #### Homepage
 
@@ -347,8 +390,8 @@ When the content types have been placed at the same basepath URL as you built th
 
 - ##### Visualisation
 
-	The visualisation file is located in `src/renders/homepage`
-	
+	The visualisation file is located in `dist/renders/homepage/package`
+	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`	
 ## Generated Builds
 Built renders are located in `dist/renders` folder.
 Here you can find unminified and minified css, handlebars templates and the visualisation html page.
@@ -396,8 +439,8 @@ To fix a bug or enhance an existing module, follow these steps:
 
 
 ## Bug / Feature Request
-If you find a bug, kindly open an issue [here](tc@amplience.com) by including your steps to reproduce and the expected result.
-If you’d like to request a new function, feel free to do so by opening an issue [here](tc@amplience.com)
+If you find a bug, kindly contact tc@amplience.com and include your steps to reproduce the bug and the expected result.
+If you’d like to request a new function, feel free to do so by emailing the same address.
 
 ## Contacts
 If you have any problems, questions or comments please email tc@amplience.com or contact your customer success manager. 
