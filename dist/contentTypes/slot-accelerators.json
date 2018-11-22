@@ -1,0 +1,50 @@
+{
+	"$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+	"id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/slot-accelerators.json",
+	"title": "All accelerators",
+	"description": "All accelerators",
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+	],
+	"type": "object",
+	"properties": {
+		"chooser": {
+			"title": "Array of content-items",
+			"description": "A chooser list",
+			"type": "array",
+			"items": {
+				"type": "object",
+				"title": "Chooser list",
+				"description": "A chooser list",
+				"allOf": [
+					{
+						"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+					},
+					{
+						"properties": {
+							"contentType": {
+								"title": "Select accelerators content:",
+								"enum": [
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/banner.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/blog.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/card.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/cardlist.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/homepage.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobanner.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/slider.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/splitblock.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/externalblock.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/text.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/video.json"
+								]
+							}
+						}
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,56 @@
+{
+	"$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+	],
+	"id": "http://dev-tupperware.s3-website-eu-west-1.amazonaws.com/sfccdev/sfcc-slot-full.json",
+	"title": "content-type-slot-example.json",
+	"description": "content-type-slot-example.json description",
+	"type": "object",
+	"properties": {
+		"_environment": {
+			"type": "object",
+			"properties": {
+				"sfcc_slot": {
+					"$ref": "https://raw.githubusercontent.com/amplience/dc-integrations-sfcc/master/content-types/sfcc/sfcc.json#/definitions/sfcc_slot"
+				},
+				"sfcc_category_slot": {
+					"$ref": "https://raw.githubusercontent.com/amplience/dc-integrations-sfcc/master/content-types/sfcc/sfcc.json#/definitions/sfcc_category_slot"
+				},
+				"sfcc_site": {
+					"$ref": "https://raw.githubusercontent.com/amplience/dc-integrations-sfcc/master/content-types/sfcc/sfcc.json#/definitions/sfcc_site"
+				}
+			}
+		},
+		"content": {
+			"allOf": [
+				{
+					"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+				},
+				{
+					"properties": {
+						"contentType": {
+							"title": "Page Content",
+							"enum": [
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/banner.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/blog.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/card.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/cardlist.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/homepage.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobanner.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/slider.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/splitblock.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/externalblock.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/text.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/video.json"
+								]
+						}
+					}
+				}
+			]
+		}
+	}
+}
