@@ -241,8 +241,7 @@ gulp.task('renders-types-copy', function () {
 gulp.task('renders-files-copy', function () {
     return gulp
         .src([
-            'src/renders/**/visualisation.html',
-            'src/renders/**/templates/*.html'
+            'src/renders/**/visualisation.html'
         ])
         .pipe(
             rename(function (path) {
@@ -251,6 +250,20 @@ gulp.task('renders-files-copy', function () {
             })
         )
         .pipe(gulp.dest('dist/renders'));
+});
+
+gulp.task('templates-copy', function () {
+    return gulp
+        .src([
+            'src/renders/**/templates/*.html',
+            'src/reusable/templateChooser.html'
+        ])
+        .pipe(
+            rename(function (path) {
+                path.dirname = '';
+            })
+        )
+        .pipe(gulp.dest('dist/templates'));
 });
 
 gulp.task('renders-js-min', function (cb) {
@@ -355,6 +368,7 @@ gulp.task(
         'del',
         'copy-node-modules',
         'copy-icons',
+        'templates-copy',
         'addLoryLicense',
         'addShowdownLicense',
         'reusable-js-min',
