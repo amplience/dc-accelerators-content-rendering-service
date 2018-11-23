@@ -12,7 +12,7 @@
   "dependencies": {
     "cms-javascript-sdk": "github:amplience/cms-javascript-sdk#2d7cb9d",
     "dc-accelerators": "github:amplience/dc-accelerators#a420353",
-    "dc-accelerators-content-types": "github:amplience/dc-accelerators-content-types",
+    "dc-accelerators-content-types": "github:amplience/dc-accelerators-content-types#49428b8",
     "event-stream": "^3.3.6",
     "lory.js": "2.2.1",
     "showdown": "1.7.1"
