@@ -1,39 +1,39 @@
-{{#if (test this.[@type] (toRegex ".*/acc-template-text")) ~}}
+{{#if (test this.[@type] (toRegex ".*/text")) ~}}
 {{> text }}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/acc-template-video")) ~}}
+{{#if (test this.[@type] (toRegex ".*/video")) ~}}
 {{> video }}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/acc-template-promobanner")) ~}}
+{{#if (test this.[@type] (toRegex ".*/promobanner")) ~}}
 {{> promoBanner }}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/acc-template-splitblock")) ~}}
+{{#if (test this.[@type] (toRegex ".*/splitblock")) ~}}
 {{> splitBlock }}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/acc-template-slider")) ~}}
+{{#if (test this.[@type] (toRegex ".*/slider")) ~}}
 {{> slider }}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/acc-template-image")) ~}}
+{{#if (test this.[@type] (toRegex ".*/image")) ~}}
 {{> image this}}
 {{~/if}}
-{{#if (test this.[0].[@type] (toRegex ".*/acc-template-image")) ~}}
+{{#if (test this.[0].[@type] (toRegex ".*/image")) ~}}
 {{> image this.[0]}}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/acc-template-externalblock")) ~}}
+{{#if (test this.[@type] (toRegex ".*/externalblock")) ~}}
 {{> externalBlock }}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/acc-template-cardlist")) ~}}
+{{#if (test this.[@type] (toRegex ".*/cardlist")) ~}}
 {{> cardList }}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/acc-template-card.json")) ~}}
+{{#if (test this.[@type] (toRegex ".*/card.json")) ~}}
 {{> card }}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/acc-template-blog")) ~}}
+{{#if (test this.[@type] (toRegex ".*/blog")) ~}}
 {{> blog }}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/acc-template-banner")) ~}}
+{{#if (test this.[@type] (toRegex ".*/banner")) ~}}
 {{> banner }}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/acc-template-homepage")) ~}}
+{{#if (test this.[@type] (toRegex ".*/homepage")) ~}}
 {{> homepage }}
 {{~/if}}
