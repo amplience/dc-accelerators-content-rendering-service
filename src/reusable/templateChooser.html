@@ -1,39 +1,39 @@
-{{#if (test this.[@type] (toRegex ".*/acc-template-text")) ~}}
-{{> text }}
+{{#if (test this.[@type] (toRegex ".*/text")) ~}}
+{{> acc-template-text }}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/acc-template-video")) ~}}
-{{> video }}
+{{#if (test this.[@type] (toRegex ".*/video")) ~}}
+{{> acc-template-video }}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/acc-template-promobanner")) ~}}
-{{> promoBanner }}
+{{#if (test this.[@type] (toRegex ".*/promobanner")) ~}}
+{{> acc-template-promoBanner }}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/acc-template-splitblock")) ~}}
-{{> splitBlock }}
+{{#if (test this.[@type] (toRegex ".*/splitblock")) ~}}
+{{> acc-template-splitBlock }}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/acc-template-slider")) ~}}
-{{> slider }}
+{{#if (test this.[@type] (toRegex ".*/slider")) ~}}
+{{> acc-template-slider }}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/acc-template-image")) ~}}
-{{> image this}}
+{{#if (test this.[@type] (toRegex ".*/image")) ~}}
+{{> acc-template-image this}}
 {{~/if}}
-{{#if (test this.[0].[@type] (toRegex ".*/acc-template-image")) ~}}
-{{> image this.[0]}}
+{{#if (test this.[0].[@type] (toRegex ".*/image")) ~}}
+{{> acc-template-image this.[0]}}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/acc-template-externalblock")) ~}}
-{{> externalBlock }}
+{{#if (test this.[@type] (toRegex ".*/externalblock")) ~}}
+{{> acc-template-externalBlock }}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/acc-template-cardlist")) ~}}
-{{> cardList }}
+{{#if (test this.[@type] (toRegex ".*/cardlist")) ~}}
+{{> acc-template-cardList }}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/acc-template-card.json")) ~}}
-{{> card }}
+{{#if (test this.[@type] (toRegex ".*/card.json")) ~}}
+{{> acc-template-card }}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/acc-template-blog")) ~}}
-{{> blog }}
+{{#if (test this.[@type] (toRegex ".*/blog")) ~}}
+{{> acc-template-blog }}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/acc-template-banner")) ~}}
-{{> banner }}
+{{#if (test this.[@type] (toRegex ".*/banner")) ~}}
+{{> acc-template-banner }}
 {{~/if}}
-{{#if (test this.[@type] (toRegex ".*/acc-template-homepage")) ~}}
-{{> homepage }}
+{{#if (test this.[@type] (toRegex ".*/homepage")) ~}}
+{{> acc-template-homepage }}
 {{~/if}}
