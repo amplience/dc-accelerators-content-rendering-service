@@ -1,16 +1,16 @@
 {{#if video}}
 <div class='amp-dc-video-wrap'>
-    <video class="amp-dc-video" poster="/acc-template-video.html/{{video.defaultHost}}/v/{{video.endpoint}}/{{video.name}}?protocol=https"
-           controls src="/acc-template-video.html/{{video.defaultHost}}/v/{{video.endpoint}}/{{video.name}}/mp4_720p">
-        <source src="/acc-template-video.html/{{video.defaultHost}}/v/{{video.endpoint}}/{{video.name}}/mp4_720p"
+    <video class="amp-dc-video" poster="//{{video.defaultHost}}/v/{{video.endpoint}}/{{video.name}}?protocol=https"
+           controls src="//{{video.defaultHost}}/v/{{video.endpoint}}/{{video.name}}/mp4_720p">
+        <source src="//{{video.defaultHost}}/v/{{video.endpoint}}/{{video.name}}/mp4_720p"
                 data-res="High" data-bitrate="2119" label="High"
                 type="video/mpeg4" codecs="h264">
 
-        <source src="/acc-template-video.html/{{video.defaultHost}}/v/{{video.endpoint}}/{{video.name}}/mp4_480p"
+        <source src="//{{video.defaultHost}}/v/{{video.endpoint}}/{{video.name}}/mp4_480p"
                 data-res="Medium" data-bitrate="689" label="Medium"
                 type="video/mpeg4" codecs="h264">
 
-        <source src="/acc-template-video.html/{{video.defaultHost}}/v/{{video.endpoint}}/{{video.name}}/webm_480p"
+        <source src="//{{video.defaultHost}}/v/{{video.endpoint}}/{{video.name}}/webm_480p"
                 data-res="Medium" data-bitrate="624" label="Medium"
                 type="video/webm" codecs="vp8">
     </video>
