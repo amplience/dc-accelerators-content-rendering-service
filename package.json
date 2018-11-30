@@ -13,13 +13,12 @@
     "cms-javascript-sdk": "github:amplience/cms-javascript-sdk#2d7cb9d",
     "dc-accelerators": "github:amplience/dc-accelerators#release-v1.1.0",
     "dc-accelerators-content-types": "github:amplience/dc-accelerators-content-types",
-    "event-stream": "^3.3.6",
     "lory.js": "2.2.1",
     "showdown": "1.7.1"
   },
   "devDependencies": {
     "del": "3.0.0",
-    "event-stream": "^3.3.4",
+    "event-stream": "^4.0.1",
     "gulp": "3.9.1",
     "gulp-add-src": "^0.2.0",
     "gulp-autoprefixer": "4.0.0",
