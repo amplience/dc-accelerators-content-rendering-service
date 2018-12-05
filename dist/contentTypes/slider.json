@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/slider.json",
+  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/slider.json",
   "title": "Slider Accelerator",
   "description": "Slider Accelerator",
   "allOf": [
@@ -29,9 +29,9 @@
               "contentType": {
                 "title": "slides",
                 "enum": [
-                  "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/banner.json",
-                  "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/image.json",
-                  "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/video.json"
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/banner.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/video.json"
                 ]
               }
             }

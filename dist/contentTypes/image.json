@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/image.json",
+  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
   "title": "Image",
   "description": "Image Accelerator",
   "allOf": [
@@ -45,7 +45,7 @@
       "description": "Roundel Image",
       "type": "array",
       "items": {
-        "$ref": "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/roundel.json"
+        "$ref": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/roundel.json"
       },
       "minItems": 0,
       "maxItems": 4,

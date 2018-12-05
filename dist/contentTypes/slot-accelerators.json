@@ -1,6 +1,6 @@
 {
 	"$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-	"id": "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/slot-accelerators.json",
+	"id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/slot-accelerators.json",
 	"title": "All accelerators",
 	"description": "All accelerators",
 	"allOf": [
@@ -27,18 +27,18 @@
 							"contentType": {
 								"title": "Select accelerators content:",
 								"enum": [
-									"https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/banner.json",
-									"https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/blog.json",
-									"https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/card.json",
-									"https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/cardlist.json",
-									"https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/homepage.json",
-									"https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/image.json",
-									"https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/promobanner.json",
-									"https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/slider.json",
-									"https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/splitblock.json",
-									"https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/externalblock.json",
-									"https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/text.json",
-									"https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/video.json"
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/banner.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/blog.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/card.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/cardlist.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/homepage.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobanner.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/slider.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/splitblock.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/externalblock.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/text.json",
+									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/video.json"
 								]
 							}
 						}

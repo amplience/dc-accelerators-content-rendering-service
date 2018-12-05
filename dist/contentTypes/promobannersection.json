@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/promobannersection.json",
+  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobannersection.json",
   "title": "Promo Banner Section",
   "description": "Promo Banner Section",
   "allOf": [
@@ -70,7 +70,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/link.json"
+          "$ref": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/link.json"
         }
       ]
     }

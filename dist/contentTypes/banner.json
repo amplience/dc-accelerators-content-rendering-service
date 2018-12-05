@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/banner.json",
+  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/banner.json",
   "title": "Banner Accelerator",
   "description": "Banner Accelerator",
   "allOf": [
@@ -36,7 +36,7 @@
               "contentType": {
                 "title": "image",
                 "enum": [
-                  "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/image.json"
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
                 ]
               }
             }
@@ -74,7 +74,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/link.json"
+          "$ref": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/link.json"
         }
       ]
     },
