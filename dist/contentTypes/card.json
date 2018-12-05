@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/card.json",
+  "id": "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/card.json",
   "title": "Card Accelerator",
   "description": "Card Accelerator",
   "allOf": [
@@ -29,7 +29,7 @@
             "contentType": {
               "title": "image",
               "enum": [
-                "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
+                "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/image.json"
               ]
             }
           }
@@ -65,7 +65,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/link.json"
+          "$ref": "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/link.json"
         }
       ]
     }

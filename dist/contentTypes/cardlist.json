@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/cardlist.json",
+  "id": "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/cardlist.json",
   "title": "Card List Accelerator",
   "description": "Card List Accelerator",
   "allOf": [
@@ -39,7 +39,7 @@
               "contentType": {
                 "title": "Card Content",
                 "enum": [
-                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/card.json"
+                  "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/card.json"
                 ]
               }
             }

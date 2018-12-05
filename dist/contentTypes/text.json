@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/text.json",
+  "id": "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/text.json",
   "title": "Text Acclerator",
   "description": "Text Accelerator",
   "allOf": [

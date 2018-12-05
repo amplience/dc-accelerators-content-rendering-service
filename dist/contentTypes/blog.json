@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/blog.json",
+  "id": "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/blog.json",
   "title": "Blog Accelerator",
   "description": "Blog Accelerator",
   "allOf": [
@@ -22,7 +22,7 @@
       "description": "",
       "allOf": [
         {
-          "$ref": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/snippet.json"
+          "$ref": "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/snippet.json"
         }
       ]
     },
@@ -45,12 +45,12 @@
               "contentType": {
                 "title": "Content",
                 "enum": [
-                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/banner.json",
-                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
-                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/video.json",
-                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/text.json",
-                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/cardlist.json",
-                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/blog.json"
+                  "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/banner.json",
+                  "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/image.json",
+                  "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/video.json",
+                  "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/text.json",
+                  "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/cardlist.json",
+                  "https://solutionsadisws.s3.amazonaws.com/DC/accelerators/2.0.0/contentTypes/blog.json"
                 ]
               }
             }
