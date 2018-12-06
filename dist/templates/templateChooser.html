@@ -1,6 +1,3 @@
-{{#if type ~}}
-{{> acc-template-banner-image this.[0]}}
-{{else}}
 {{#if (test this.[@type] (toRegex ".*/text")) ~}}
 {{> acc-template-text }}
 {{~/if}}
@@ -39,5 +36,4 @@
 {{~/if}}
 {{#if (test this.[@type] (toRegex ".*/homepage")) ~}}
 {{> acc-template-homepage }}
-{{~/if}}
 {{~/if}}
