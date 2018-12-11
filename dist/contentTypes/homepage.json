@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/homepage.json",
+  "id": "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/homepage.json",
   "title": "Homepage Accelerator",
   "description": "Homepage Accelerator",
   "allOf": [
@@ -25,14 +25,14 @@
               "contentType": {
                 "title": "Content Types",
                 "enum": [
-                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/slider.json",
-                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobanner.json",
-                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/video.json",
-                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/text.json",
-                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/externalblock.json",
-                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/splitblock.json",
-                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/cardlist.json",
-                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
+                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/slider.json",
+                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/promobanner.json",
+                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/video.json",
+                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/text.json",
+                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/externalblock.json",
+                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/splitblock.json",
+                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/cardlist.json",
+                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/image.json"
                 ]
               }
             }

@@ -1,3 +1,5 @@
 {
-  "CONTENT_TYPE_BASEPATH": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators"
+  "CONTENT_TYPE_BASEPATH": "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes",
+  "COMPANY_TAG": "any",
+  "VISUALIZATION_BASEPATH": "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist"
 }

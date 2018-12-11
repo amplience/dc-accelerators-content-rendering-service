@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobanner.json",
+  "id": "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/promobanner.json",
   "title": "Promotional Banner",
   "description": "Promotional banner",
   "allOf": [
@@ -22,7 +22,7 @@
               "contentType": {
                 "title": "Promo section",
                 "enum": [
-                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobannersection.json"
+                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/promobannersection.json"
                 ]
               }
             }

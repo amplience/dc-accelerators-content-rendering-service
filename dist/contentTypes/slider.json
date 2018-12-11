@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/slider.json",
+  "id": "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/slider.json",
   "title": "Slider Accelerator",
   "description": "Slider Accelerator",
   "allOf": [
@@ -29,9 +29,9 @@
               "contentType": {
                 "title": "slides",
                 "enum": [
-                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/banner.json",
-                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
-                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/video.json"
+                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/banner.json",
+                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/image.json",
+                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/video.json"
                 ]
               }
             }

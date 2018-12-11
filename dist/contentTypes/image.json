@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+  "id": "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/image.json",
   "title": "Image",
   "description": "Image Accelerator",
   "allOf": [
@@ -45,7 +45,7 @@
       "description": "Roundel Image",
       "type": "array",
       "items": {
-        "$ref": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/roundel.json"
+        "$ref": "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/roundel.json"
       },
       "minItems": 0,
       "maxItems": 4,
