@@ -1,6 +1,6 @@
 {
 	"$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-	"id": "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/slot-accelerators.json",
+	"id": "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/slot-accelerators.json",
 	"title": "All accelerators",
 	"description": "All accelerators",
 	"allOf": [
@@ -27,18 +27,18 @@
 							"contentType": {
 								"title": "Select accelerators content:",
 								"enum": [
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/banner.json",
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/blog.json",
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/card.json",
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/cardlist.json",
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/homepage.json",
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/image.json",
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/promobanner.json",
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/slider.json",
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/splitblock.json",
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/externalblock.json",
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/text.json",
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/video.json"
+									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/banner.json",
+									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/blog.json",
+									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/card.json",
+									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/cardlist.json",
+									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/homepage.json",
+									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/image.json",
+									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/promobanner.json",
+									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/slider.json",
+									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/splitblock.json",
+									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/externalblock.json",
+									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/text.json",
+									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/video.json"
 								]
 							}
 						}

@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/blog.json",
+  "id": "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/blog.json",
   "title": "Blog Accelerator",
   "description": "Blog Accelerator",
   "allOf": [
@@ -22,7 +22,7 @@
       "description": "",
       "allOf": [
         {
-          "$ref": "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/snippet.json"
+          "$ref": "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/snippet.json"
         }
       ]
     },
@@ -45,12 +45,12 @@
               "contentType": {
                 "title": "Content",
                 "enum": [
-                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/banner.json",
-                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/image.json",
-                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/video.json",
-                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/text.json",
-                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/cardlist.json",
-                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-CRS-test-vis/dist/contentTypes/blog.json"
+                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/banner.json",
+                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/image.json",
+                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/video.json",
+                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/text.json",
+                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/cardlist.json",
+                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/blog.json"
                 ]
               }
             }
