@@ -5,13 +5,13 @@
     <title>Slider</title>
 
     <link rel="stylesheet"
-          href="https://dev-solutions.s3.amazonaws.com/dc-renders/dist/renders/slider/slider.min.css"/>
+          href="{VISUALIZATION_BASEPATH}/renders/slider/slider.min.css"/>
     <link rel="stylesheet"
-          href="https://dev-solutions.s3.amazonaws.com/dc-renders/dist/renders/banner/banner.min.css"/>
+          href="{VISUALIZATION_BASEPATH}/renders/banner/banner.min.css"/>
     <link rel="stylesheet"
-          href="https://dev-solutions.s3.amazonaws.com/dc-renders/dist/renders/image/image.min.css"/>
+          href="{VISUALIZATION_BASEPATH}/renders/image/image.min.css"/>
     <link rel="stylesheet"
-          href="https://dev-solutions.s3.amazonaws.com/dc-renders/dist/renders/video/video.min.css"/>
+          href="{VISUALIZATION_BASEPATH}/renders/video/video.min.css"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
     <style>
@@ -21,26 +21,15 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        video::-webkit-media-controls {
-            position: static;
-        }
-
-        video::-webkit-media-controls-enclosure {
-            width: 100%;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-        }
-
     </style>
 </head>
 <body>
 
 <div class="js_slider_wrap" style="margin:0 auto;"></div>
 
-<script src="https://dev-solutions.s3.amazonaws.com/dc-renders/dist/reusable/utils.js"></script>
-<script src="https://dev-solutions.s3.amazonaws.com/dc-renders/dist/reusable/lory.min.js"></script>
-<script src="https://dev-solutions.s3.amazonaws.com/dc-renders/dist/renders/slider/package/sliderHelper.js"></script>
+<script src="{VISUALIZATION_BASEPATH}/reusable/utils.js"></script>
+<script src="{VISUALIZATION_BASEPATH}/reusable/lory.min.js"></script>
+<script src="{VISUALIZATION_BASEPATH}/renders/slider/package/sliderHelper.js"></script>
 
 <script>
 
@@ -70,7 +59,7 @@
         auth: {
             baseUrl: ('//' + parsedParams['vse']),
             id: parsedParams['content'],
-            store: 'any',
+            store: '{COMPANY_TAG}',
             templateName: 'acc-template-slider'
         },
         callback: function (data) {

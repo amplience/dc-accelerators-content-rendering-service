@@ -31,7 +31,7 @@
 
 <div class="js_external_wrap"></div>
 
-<script src="https://dev-solutions.s3.amazonaws.com/dc-renders/dist/reusable/utils.js"></script>
+<script src="{VISUALIZATION_BASEPATH}/reusable/utils.js"></script>
 
 <script>
 
@@ -61,7 +61,7 @@
         auth: {
             baseUrl: ('//' + parsedParams['vse']),
             id: parsedParams['content'],
-            store: 'any',
+            store: '{COMPANY_TAG}',
             templateName: 'acc-template-externalBlock'
         },
         callback: function (data) {
