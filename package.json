@@ -11,7 +11,7 @@
   "author": "Amplience",
   "dependencies": {
     "cms-javascript-sdk": "github:amplience/cms-javascript-sdk#2d7cb9d",
-    "dc-accelerators": "github:amplience/dc-accelerators#release-v2.0.0",
+    "dc-accelerators": "github:amplience/dc-accelerators#v2.0.0",
     "dc-accelerators-content-types": "github:amplience/dc-accelerators-content-types",
     "lory.js": "2.2.1",
     "showdown": "1.7.1"
