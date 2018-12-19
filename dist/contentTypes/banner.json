@@ -43,6 +43,7 @@
           }
         ]
       },
+      "maxItems": 1,
       "title": "Banner Image",
       "description": "Select or create an image content"
     },
