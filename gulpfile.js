@@ -212,10 +212,6 @@ gulp.task('concatAll', ['build'], function () {
         )
         .pipe(concat('libs.min.js'))
         .pipe(gulp.dest('./dist/renders/all'));
-    gulp
-        .src(['./dist/renders/*/*.min.css'])
-        .pipe(concat('styles.min.css'))
-        .pipe(gulp.dest('./dist/renders/all'));
 });
 
 gulp.task('del', function () {
