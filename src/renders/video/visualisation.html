@@ -5,7 +5,7 @@
     <title>Video</title>
 
     <link rel="stylesheet"
-          href="https://dev-solutions.s3.amazonaws.com/dc-renders/dist/renders/video/video.min.css"/>
+          href="{VISUALIZATION_BASEPATH}/renders/video/video.min.css"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
     <style>
@@ -15,24 +15,13 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        video::-webkit-media-controls {
-            position: static;
-        }
-
-        video::-webkit-media-controls-enclosure {
-            width: 100%;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-        }
-
     </style>
 </head>
 <body>
 
 <div class="js_video_wrap"></div>
 
-<script src="https://dev-solutions.s3.amazonaws.com/dc-renders/dist/reusable/utils.js"></script>
+<script src="{VISUALIZATION_BASEPATH}/reusable/utils.js"></script>
 
 <script>
 
@@ -62,7 +51,7 @@
         auth: {
             baseUrl: ('//' + parsedParams['vse']),
             id: parsedParams['content'],
-            store: 'any',
+            store: '{COMPANY_TAG}',
             templateName: 'acc-template-video'
         },
         callback: function (data) {

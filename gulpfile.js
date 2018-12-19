@@ -44,6 +44,16 @@ var replace = function () {
     });
 }
 
+var replaceVisualization = function () {
+    return es.map(function (file, cb) {
+        var fileContent = file.contents.toString();
+        fileContent = fileContent.replace(/\{VISUALIZATION_BASEPATH\}/g, toReplace.VISUALIZATION_BASEPATH);
+        fileContent = fileContent.replace(/\{COMPANY_TAG\}/g, toReplace.COMPANY_TAG);
+        file.contents = new Buffer(fileContent);
+        cb(null, file);
+    });
+}
+
 gulp.task('addContentTypes', ['build'], function (cb) {
     for (var module in dependencies) {
         var moduleName = module.toLowerCase();
@@ -52,7 +62,13 @@ gulp.task('addContentTypes', ['build'], function (cb) {
             .pipe(replace())
             .pipe(
                 gulp.dest('./dist/contentTypes/')
-            )
+            );
+
+        gulp.src('./src/reusable/slotContentTypes/slot-accelerators.json')
+            .pipe(replace())
+            .pipe(
+                gulp.dest('./dist/contentTypes/')
+            );
 
         if (contentDependencies[module]) {
             contentDependencies[module].forEach(function (dependency) {
@@ -70,6 +86,13 @@ gulp.task('addContentTypes', ['build'], function (cb) {
     }, 500)
 });
 
+gulp.task('sfcc-copy', function () {
+    gulp.src('./src/reusable/slotContentTypes/sfcc-slot-accelerators.json')
+        .pipe(replace())
+        .pipe(
+            gulp.dest('./dist/contentTypes/')
+        );
+});
 
 gulp.task('addPackageStyles', function () {
     return gulp.src([
@@ -189,6 +212,10 @@ gulp.task('concatAll', ['build'], function () {
         )
         .pipe(concat('libs.min.js'))
         .pipe(gulp.dest('./dist/renders/all'));
+    gulp
+        .src(['./dist/renders/*/*.min.css'])
+        .pipe(concat('styles.min.css'))
+        .pipe(gulp.dest('./dist/renders/all'));
 });
 
 gulp.task('del', function () {
@@ -237,9 +264,9 @@ gulp.task('renders-types-copy', function () {
 gulp.task('renders-files-copy', function () {
     return gulp
         .src([
-            'src/renders/**/visualisation.html',
-            'src/renders/**/templates/*.html'
+            'src/renders/**/visualisation.html'
         ])
+        .pipe(replaceVisualization())
         .pipe(
             rename(function (path) {
                 var name = path.dirname.replace('/templates', '');
@@ -247,6 +274,20 @@ gulp.task('renders-files-copy', function () {
             })
         )
         .pipe(gulp.dest('dist/renders'));
+});
+
+gulp.task('templates-copy', function () {
+    return gulp
+        .src([
+            'src/renders/**/templates/*.html',
+            'src/reusable/templateChooser.html'
+        ])
+        .pipe(
+            rename(function (path) {
+                path.dirname = '';
+            })
+        )
+        .pipe(gulp.dest('dist/templates'));
 });
 
 gulp.task('renders-js-min', function (cb) {
@@ -351,6 +392,7 @@ gulp.task(
         'del',
         'copy-node-modules',
         'copy-icons',
+        'templates-copy',
         'addLoryLicense',
         'addShowdownLicense',
         'reusable-js-min',
@@ -363,6 +405,10 @@ gulp.task(
 gulp.task('buildAllWithoutReload', ['build', 'addDependencies', 'addContentTypes', 'concatAll']);
 
 gulp.task('buildAll', ['buildAllWithoutReload'], function () {
+    return gulp.src('*').pipe(connect.reload());
+});
+
+gulp.task('sfcc', ['buildAllWithoutReload', 'sfcc-copy'], function () {
     return gulp.src('*').pipe(connect.reload());
 });
 
