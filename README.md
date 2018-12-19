@@ -42,6 +42,8 @@ The content rendering service automates the process of combining JSON content wi
 
 Before building the project, the basepath for the content types needs to be defined. This will be the location where the content types are stored. To configure this, open up the `.replace.json` file and change the content type basepath to the root URL where you are storing the content types.
 
+In the file there is also a visualization basepath. This will be the location where you place the content in your dist folder after the project has been built. The visualization files are using this basepath to reference the correct css and javascript files in the project. The company tag can remain as "any", or be specified to a certain company store tag.
+
 If you can't view the .replace.json file, you need to activate the feature to view hidden files in your operating system. Information on how to show hidden files for Windows, Mac and Unix this is found below:
 
 ##### Windows
@@ -119,6 +121,9 @@ https://github.com/amplience/dc-accelerators-content-types
 
 When the project is built using gulp, the content types will be pulled from Github and placed in `dist/contentTypes`. The IDs of these content types will be the same as the basepath configured in .replace.json. For example, the image.json content type will have the ID `YOUR_BASEPATH_URL + /image.json`
 
+To use the content rendering service, the handlebars templates need to be placed in a repository in the Amplience Content Hub so that they can be requested by the API. All of the templates can be found in `dist/templates`.
+For more information on using the content rendering service, visit our documentation site <a href="https://docs.amplience.net/integration/contentrenderingservice.html"> here </a>
+
 ## Setting up the Transformation Templates
 
 Before setting up transformation templates, you need to add an empty image to the account. This image will act as a background for the layers in the transformation templates, before they are populated with images. The empty image `empty.png` can be found in the root repository.
@@ -144,6 +149,18 @@ To add a point of interest transformation template, follow the same instructions
 scaleFit=poi&poi={$this.metadata.pointOfInterest.x},{$this.metadata.pointOfInterest.y},{$this.metadata.pointOfInterest.w},{$this.metadata.pointOfInterest.h}
 ```
 
+To add a roundel transformation template for the banner accelerator, follow the same instructions with "Friendly Name" and "Template Name" set to banner-roundel, and with these parameters in the "Additional Parameters" box:
+
+```
+myasset=empty&p1_img=empty&p2_img=empty&p3_img=empty&p4_img=empty&qlt=90&roundelRatio1=1&roundelRatio2=1&roundelRatio3=1&roundelRatio4=1&layer1=[src=/i//{$p1_img}&w={$root.layer0.info.canvas.width*$roundelRatio1}&left={$root.layer0.info.canvas.width-10}&bottom=10&anchor=BR&visible={$p1_img!=$myasset}&img404=roundel_fallback]&layer2=[src=/i//{$p2_img}&w={$root.layer0.info.canvas.width*$roundelRatio2}&left=10&bottom=10&anchor=BL&visible={$p2_img!=$myasset}]&layer3=[src=/i//{$p3_img}&w={$root.layer0.info.canvas.width*$roundelRatio3}&left=10&top=10&anchor=TL&visible={$p3_img!=$myasset}]&layer4=[src=/i//{$p4_img}&w={$root.layer0.info.canvas.width*$roundelRatio4}&left={$root.layer0.info.canvas.width-10}&top=10&anchor=TR&visible={$p4_img!=$myasset}]
+```
+
+To add a point of interest transformation template for the banner accelerator, follow the same instructions with "Friendly Name" and "Template Name" set to poi, and with these parameters in the "Additional Parameters" box:
+
+```
+layer0=[scaleFit=poi&poi={$this.metadata.pointOfInterest.x},{$this.metadata.pointOfInterest.y},{$this.metadata.pointOfInterest.w},{$this.metadata.pointOfInterest.h}&sm=c&aspect=1:1&w=768&h=768]
+```
+
 ## Setting up the Content Types
 
 When the content types have been placed at the same basepath URL as you built the project with (see section "configuring the basebath"), you can start the process of registering the content types in Dynamic Content:
@@ -152,23 +169,23 @@ When the content types have been placed at the same basepath URL as you built th
 - Click on the button "Register content type".
 - Add the content type URL and the content type label. It's important that the URL is the same as the URL where the content type is hosted. Using the image content type as an example again, the URL for it would be `YOUR_BASEPATH_URL + /image.json`. You can also add icons, cards, visualisations and associated repositories if needed.
 - Add a content type icon. You can either choose one from Amplience or enter the URL where your own icon is located. The URLs for the icons can be found below.
-- Add a content type card. You can either choose one from Amplience or enter the URL where your own card is located. The URLs for the cards can be found below.
-- Choose associated repositories for the content types. Content types should not be associated with slot repositories.
-- Add a visualisation. The visualisation files for each specific render can be found in their respective render folders in `dist/renders`, located inside the package folder. For example, the image visualisation file is located in `dist/renders/image/package`. The render folders need to be hosted at an http location as well. When that has been done you need to add the URL for the visualisation.html file followed by the parameters "vse" and "content", i.e. 
+- Add a content type card. You can either choose one from Amplience or enter the URL where your own card is located. The values for the cards can be found below.
+- Choose associated repositories for the content types. The content type needs to be associated with a repository for you to be able to create content there. Content types should not be associated with slot repositories.
+- Add a visualisation. The visualisation files for each specific render can be found in their respective render folders in `dist/renders`, located inside the package folder. For example, the image visualisation file is located in `dist/renders/image/package`. The render folders need to be hosted at your basepath location as well. When that has been done you need to add the URL for the visualisation.html file followed by the parameters "vse" and "content", i.e. 
 
 	```?vse={{vse.domain}}&content={{content.sys.id}}```
 
 	For example, if the basepath for the visualisation is 
 
-	```YOUR_HTTP_LOCATION/dist/renders/image/package/visualisation.html```
+	```YOUR_BASEPATH/dist/renders/image/package/visualisation.html```
 
 	then the URL for the visualisation would be
 
-	```YOUR_HTTP_LOCATION/dist/renders/image/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}```
+	```YOUR_BASEPATH/dist/renders/image/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}```
 	You also need to add a label for the visualisation.
 
 - Click save.
-- Repeat this process for all the content types needed for your render (dependencies are listed below).
+- Repeat this process for all the content types needed for your render.
 - Navigate to the production tab and select "Create content".
 - Select the content type you wish to use for your content, fill out the content form and click save.
 - Enter the name of the content and which folder to save it in and click save.
@@ -180,17 +197,21 @@ When the content types have been placed at the same basepath URL as you built th
 - ##### Icon
 
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-imagewithroundel.png`
+	
+	The icons can also be found in `/dist/icons` if you want to host them somewhere yourself.
 
 - ##### Card
 
 	Choose the gallery card. The pointers you need to add for the card are:
 	- headline: /roundelPosition
-	- image0: /image
+	- image0: /roundel
 
 #### Link
 - ##### Icon
 
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-link.png`
+	
+	The icons can also be found in `/dist/icons` if you want to host them somewhere yourself.
 
 - ##### Card
 
@@ -202,20 +223,24 @@ When the content types have been placed at the same basepath URL as you built th
 - ##### Icon
 
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-image.png`
+	
+	The icons can also be found in `/dist/icons` if you want to host them somewhere yourself.
 - ##### Card
 
-	Choose the gallery card. The pointers you need to add for the card are:
-	- headline: /_title
-	- image0: /image
+	Choose the photo card. The pointers you need to add for the card are:
+	- image: /image
+	- imageAlt: /imageAltText
 - ##### Visualisation
 	The visualisation file is located in `dist/renders/image/package`
-	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`
+	Put the render folder in your basepath that you defined in .replace.json. The url for the 	visualisation to register the content type with will then be `BASEPATH + /renders/image/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}`
 	
 #### Text
 
 - ##### Icon
 
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-text.png`
+	
+	The icons can also be found in `/dist/icons` if you want to host them somewhere yourself.
 - ##### Card
 
 	Choose the text card. The pointer you need to add for the card is:
@@ -223,13 +248,15 @@ When the content types have been placed at the same basepath URL as you built th
 	
 - ##### Visualisation
 	The visualisation file is located in `dist/renders/text/package`
-	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`
+	Put the render folder in your basepath that you defined in .replace.json. The url for the 	visualisation to register the content type with will then be `BASEPATH + /renders/text/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}`
 
 #### Video
 
 - ##### Icon
 
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-video.png`
+	
+	The icons can also be found in `/dist/icons` if you want to host them somewhere yourself.
 	
 - ##### Card
 
@@ -239,84 +266,101 @@ When the content types have been placed at the same basepath URL as you built th
 - ##### Visualisation
 
 	The visualisation file is located in `dist/renders/video/package`
-	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`
+	Put the render folder in your basepath that you defined in .replace.json. The url for the 	visualisation to register the content type with will then be `BASEPATH + /renders/video/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}`
 	
 #### Card
 
 - ##### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-card.png`
 	
+	The icons can also be found in `/dist/icons` if you want to host them somewhere yourself.
+	
 - ##### Card
 	Choose the gallery card. The pointers you need to add for the card are:
-	- headline: /_title
-	- image0: /image/image
+	- headline: /cardName
+	- image0: /cardImage/image
 - ##### Visualisation
 	The visualisation file is located in `dist/renders/card/package`
-	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`
+	Put the render folder in your basepath that you defined in .replace.json. The url for the 	visualisation to register the content type with will then be `BASEPATH + /renders/card/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}`
 
-#### Card List
+#### Card list
 
 - ##### Icon
 
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-cardlist.png`
+	
+	The icons can also be found in `/dist/icons` if you want to host them somewhere yourself.
 - ##### Card
 
 	Choose the gallery card. The pointers you need to add for the card are:
-	- headline: /_title
-	- image0: /cards/0/image/image
-	- image1: /cards/1/image/image
-	- image2: /cards/2/image/image
+	- headline: /header
+	- image0: /cards/0/cardImage/image	
+	- image1: /cards/1/cardImage/image
+	- image2: /cards/2/cardImage/image
+	- image3: /cards/3/cardImage/image
 - ##### Visualisation
 	The visualisation file is located in `dist/renders/cardList/package`
-	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`
+	Put the render folder in your basepath that you defined in .replace.json. The url for the 	visualisation to register the content type with will then be `BASEPATH + /renders/cardList/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}`
 	
 #### Banner
 - ##### Icon
 
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-banner.png`
+	
+	The icons can also be found in `/dist/icons` if you want to host them somewhere yourself.
 
 - ##### Card
 
 	Choose the gallery card. The pointers you need to add for the card are:
-	- headline: /_title
-	- image0: /image/image
+	- headline: /header
+	- image: /bannerImage/0/image
 	
 - ##### Visualisation
 	The visualisation file is located in `dist/renders/banner/package`
-	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`
+	Put the render folder in your basepath that you defined in .replace.json. The url for the 	visualisation to register the content type with will then be `BASEPATH + /renders/banner/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}`
 	
 #### Slider
 - ##### Icon
 
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-slider.png`
+	
+	The icons can also be found in `/dist/icons` if you want to host them somewhere yourself.
 - ##### Card
 
-	Choose the gallery card. The pointers you need to add for the card are:
+	Choose the gallery card. Examples of the pointers you need to add for the card are:
 	- headline: /_title
-	- image0: /slides/0/image
-	- image1: /slides/1/image
-	- image2: /slides/2/image
+	- image0: /slides/0/bannerImage/0/image
+	- image1: /slides/1/bannerImage/0/image
+	- image2: /slides/2/bannerImage/0/image	- image3: /slides/3/bannerImage/0/image
 - ##### Visualisation
 	The visualisation file is located in `dist/renders/slider/package`
-	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`
+	Put the render folder in your basepath that you defined in .replace.json. The url for the 	visualisation to register the content type with will then be `BASEPATH + /renders/slider/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}`
 
 #### Split block
 
 - ##### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-splitblock.png`
 	
+	The icons can also be found in `/dist/icons` if you want to host them somewhere yourself.
+	
 - ##### Card
-	Choose the text card. The pointer you need to add for the card is:
-	- headline: /_title
+	Choose the gallery card. Examples of pointers you need to add for the card are:
+	- headline: /content/0/text
+	- image0: /content/0/image
+	- image1: /content/1/image
+	- image2: /content/0/video
+	- image3: /content/1/video
 	
 - ##### Visualisation
 	The visualisation file is located in `dist/renders/splitBlock/package`
-	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`
+	Put the render folder in your basepath that you defined in .replace.json. The url for the 	visualisation to register the content type with will then be `BASEPATH + /renders/splitBlock/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}`
 	
-#### Promobanner section
+#### Promo banner section
 - ##### Icon
 
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-promobannersection.png`
+	
+	The icons can also be found in `/dist/icons` if you want to host them somewhere yourself.
 
 - ##### Card
 
@@ -324,11 +368,17 @@ When the content types have been placed at the same basepath URL as you built th
 	- headline: /_title
 	- image0: /icon
 
-#### Promobanner
+- ##### Visualisation
+	The visualisation file is located in `dist/renders/promoBannerSection/package`
+	Put the render folder in your basepath that you defined in .replace.json. The url for the 	visualisation to register the content type with will then be `BASEPATH + /renders/promoBannerSection/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}`
+
+#### Promo banner
 
 - ##### Icon
 
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-promobanner.png`
+	
+	The icons can also be found in `/dist/icons` if you want to host them somewhere yourself.
 - ##### Card
 	Choose the gallery card. The pointers you need to add for the card are:
 	- headline: /_title
@@ -337,36 +387,42 @@ When the content types have been placed at the same basepath URL as you built th
 	- image2: /bannerSection/2/icon
 - ##### Visualisation
 	The visualisation file is located in `dist/renders/promoBanner/package`
-	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`
+	Put the render folder in your basepath that you defined in .replace.json. The url for the 	visualisation to register the content type with will then be `BASEPATH + /renders/promoBanner/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}`
 
-#### External Block
+#### External block
 
 - ##### Icon
 
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-externalblock.png`
+	
+	The icons can also be found in `/dist/icons` if you want to host them somewhere yourself.
 - ##### Card
-	Choose the gallery text. The pointer you need to add for the card is:
+	Choose the text card. The pointer you need to add for the card is:
 	- headline: /external
 - ##### Visualisation
 	The visualisation file is located in `dist/renders/externalBlock/package`
-	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`
+	Put the render folder in your basepath that you defined in .replace.json. The url for the 	visualisation to register the content type with will then be `BASEPATH + /renders/externalBlock/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}`
 
 #### Snippet
 - ##### Icon
 
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-blogsnippet.png`
+	
+	The icons can also be found in `/dist/icons` if you want to host them somewhere yourself.
 
 - ##### Card
 
 	Choose the gallery card. The pointers you need to add for the card are:
-	- headline: /_title
-	- image0: /image
+	- headline: /title
+	- image0: /image/image
 
 #### Blog
 
 - ##### Icon
 
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-blogpost.png`
+	
+	The icons can also be found in `/dist/icons` if you want to host them somewhere yourself.
 - ##### Card
 
 	Choose the gallery card. The pointers you need to add for the card are:
@@ -375,23 +431,25 @@ When the content types have been placed at the same basepath URL as you built th
 - ##### Visualisation
 
 	The visualisation file is located in `dist/renders/blog/package`
-	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`
+	Put the render folder in your basepath that you defined in .replace.json. The url for the 	visualisation to register the content type with will then be `BASEPATH + /renders/blog/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}`
 
 #### Homepage
 
 - ##### Icon
 
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-page.png`
-
-- ##### Card
-
-	Choose the text card.The pointer you need to add for the card is:
-	- headline: /_title
+	
+	The icons can also be found in `/dist/icons` if you want to host them somewhere yourself.
 
 - ##### Visualisation
 
 	The visualisation file is located in `dist/renders/homepage/package`
-	When the render folder with the visualisation file has been put in an http location, the url for the 	visualisation should be `URL_FOR_VISUALISATION_FILE + ?vse={{vse.domain}}&content={{content.sys.id}}`	
+	Put the render folder in your basepath that you defined in .replace.json. The url for the 	visualisation to register the content type with will then be `BASEPATH + /renders/homepage/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}`
+
+#### Slot-accelerators
+
+This content type contains the references to assign all the other content types to slots within the Dynamic Content platform. It is registered the same way as other content types in the development tab in Dynamic Content, but is associated with a slot repository rather than a content repository.
+
 ## Generated Builds
 Built renders are located in `dist/renders` folder.
 Here you can find unminified and minified css, handlebars templates and the visualisation html page.

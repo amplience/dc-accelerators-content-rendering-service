@@ -44,6 +44,16 @@ var replace = function () {
     });
 }
 
+var replaceVisualization = function () {
+    return es.map(function (file, cb) {
+        var fileContent = file.contents.toString();
+        fileContent = fileContent.replace(/\{VISUALIZATION_BASEPATH\}/g, toReplace.VISUALIZATION_BASEPATH);
+        fileContent = fileContent.replace(/\{COMPANY_TAG\}/g, toReplace.COMPANY_TAG);
+        file.contents = new Buffer(fileContent);
+        cb(null, file);
+    });
+}
+
 gulp.task('addContentTypes', ['build'], function (cb) {
     for (var module in dependencies) {
         var moduleName = module.toLowerCase();
@@ -256,6 +266,7 @@ gulp.task('renders-files-copy', function () {
         .src([
             'src/renders/**/visualisation.html'
         ])
+        .pipe(replaceVisualization())
         .pipe(
             rename(function (path) {
                 var name = path.dirname.replace('/templates', '');

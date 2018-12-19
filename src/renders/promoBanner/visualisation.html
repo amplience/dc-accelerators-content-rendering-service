@@ -5,7 +5,7 @@
     <title>Promo banner</title>
 
     <link rel="stylesheet"
-          href="https://dev-solutions.s3.amazonaws.com/dc-renders/dist/renders/promoBanner/promoBanner.min.css"/>
+          href="{VISUALIZATION_BASEPATH}/renders/promoBanner/promoBanner.min.css"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
     <style>
@@ -22,7 +22,7 @@
 <div class="js_promoBanner_wrap" style="max-width:1024px; margin:20px auto;"></div>
 
 
-<script src="https://dev-solutions.s3.amazonaws.com/dc-renders/dist/reusable/utils.js"></script>
+<script src="{VISUALIZATION_BASEPATH}/reusable/utils.js"></script>
 
 <script>
 
@@ -52,7 +52,7 @@
         auth: {
             baseUrl: ('//' + parsedParams['vse']),
             id: parsedParams['content'],
-            store: 'any',
+            store: '{COMPANY_TAG}',
             templateName: 'acc-template-promoBanner'
         },
         callback: function (data) {
