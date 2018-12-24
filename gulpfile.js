@@ -199,7 +199,7 @@ gulp.task('concatAll', ['build'], function () {
     gulp
         .src([
             './dist/reusable/*.js',
-            './src/renders/slider/js/sliderHelper.js',
+            './dist/renders/slider/sliderHelper.js',
             '!./dist/reusable/lory.min.js',
             '!./dist/reusable/showdown.min.js'
         ])
