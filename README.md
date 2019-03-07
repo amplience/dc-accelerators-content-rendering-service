@@ -143,19 +143,19 @@ myasset=empty&p1_img=empty&p2_img=empty&p3_img=empty&p4_img=empty&qlt=90&roundel
 - Click "Create".
 - Go back to your newly created transformation template in the menu, click on the cogwheel icon and select "Publish".
 
-To add a point of interest transformation template, follow the same instructions with "Friendly Name" and "Template Name" set to poi, and with these parameters in the "Additional Parameters" box:
+To add a point of interest transformation template, follow the same instructions with "Friendly Name" and "Template Name" set to "poi", and with these parameters in the "Additional Parameters" box:
 
 ```
 scaleFit=poi&poi={$this.metadata.pointOfInterest.x},{$this.metadata.pointOfInterest.y},{$this.metadata.pointOfInterest.w},{$this.metadata.pointOfInterest.h}
 ```
 
-To add a roundel transformation template for the banner accelerator, follow the same instructions with "Friendly Name" and "Template Name" set to banner-roundel, and with these parameters in the "Additional Parameters" box:
+To add a roundel transformation template for the banner accelerator, follow the same instructions with "Friendly Name" and "Template Name" set to "banner-roundel", and with these parameters in the "Additional Parameters" box:
 
 ```
 myasset=empty&p1_img=empty&p2_img=empty&p3_img=empty&p4_img=empty&qlt=90&roundelRatio1=1&roundelRatio2=1&roundelRatio3=1&roundelRatio4=1&layer1=[src=/i//{$p1_img}&w={$root.layer0.info.canvas.width*$roundelRatio1}&left={$root.layer0.info.canvas.width-10}&bottom=10&anchor=BR&visible={$p1_img!=$myasset}&img404=roundel_fallback]&layer2=[src=/i//{$p2_img}&w={$root.layer0.info.canvas.width*$roundelRatio2}&left=10&bottom=10&anchor=BL&visible={$p2_img!=$myasset}]&layer3=[src=/i//{$p3_img}&w={$root.layer0.info.canvas.width*$roundelRatio3}&left=10&top=10&anchor=TL&visible={$p3_img!=$myasset}]&layer4=[src=/i//{$p4_img}&w={$root.layer0.info.canvas.width*$roundelRatio4}&left={$root.layer0.info.canvas.width-10}&top=10&anchor=TR&visible={$p4_img!=$myasset}]
 ```
 
-To add a point of interest transformation template for the banner accelerator, follow the same instructions with "Friendly Name" and "Template Name" set to poi, and with these parameters in the "Additional Parameters" box:
+To add a point of interest transformation template for the banner accelerator, follow the same instructions with "Friendly Name" and "Template Name" set to "banner-poi", and with these parameters in the "Additional Parameters" box:
 
 ```
 layer0=[scaleFit=poi&poi={$this.metadata.pointOfInterest.x},{$this.metadata.pointOfInterest.y},{$this.metadata.pointOfInterest.w},{$this.metadata.pointOfInterest.h}&sm=c&aspect=1:1&w=768&h=768]
