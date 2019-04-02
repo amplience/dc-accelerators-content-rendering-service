@@ -2,14 +2,14 @@
   "banner": [
     "link"
   ],
-  "blog": [
+  "blogPost": [
     "link",
     "snippet"
   ],
   "image": [
     "roundel"
   ],
-  "promoBanner": [
-    "promobannersection"
+  "promoList": [
+    "promo"
   ]
 }

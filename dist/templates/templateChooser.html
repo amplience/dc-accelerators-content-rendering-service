@@ -10,6 +10,10 @@
 {{> acc-template-promoBanner }}
 {{~/if}}
 
+{{#if (test this.[@type] (toRegex ".*/promolist")) ~}}
+{{> acc-template-promoList }}
+{{~/if}}
+
 {{#if (test this.[@type] (toRegex ".*/splitblock")) ~}}
 {{> acc-template-splitBlock }}
 {{~/if}}
@@ -38,6 +42,10 @@
 {{> acc-template-card }}
 {{~/if}}
 
+{{#if (test this.[@type] (toRegex ".*/blogpost")) ~}}
+{{> acc-template-blogPost }}
+{{~/if}}
+
 {{#if (test this.[@type] (toRegex ".*/blog")) ~}}
 {{> acc-template-blog }}
 {{~/if}}
@@ -48,4 +56,8 @@
 
 {{#if (test this.[@type] (toRegex ".*/homepage")) ~}}
 {{> acc-template-homepage }}
+{{~/if}}
+
+{{#if (test this.[@type] (toRegex ".*/page")) ~}}
+{{> acc-template-page }}
 {{~/if}}
