@@ -87,11 +87,22 @@ gulp.task('addContentTypes', ['build'], function (cb) {
 });
 
 gulp.task('sfcc-copy', function () {
-    gulp.src('./src/reusable/slotContentTypes/sfcc-slot-accelerators.json')
+    return gulp.src('./src/reusable/slotContentTypes/sfcc-slot-accelerators.json')
         .pipe(replace())
         .pipe(
             gulp.dest('./dist/contentTypes/')
         );
+});
+
+gulp.task('sfcc-templates-copy', function () {
+    return gulp
+        .src('src/reusable/sfcc-contentWrapper.html')
+        .pipe(
+            rename(function (path) {
+                path.dirname = '';
+            })
+        )
+        .pipe(gulp.dest('dist/templates'));
 });
 
 gulp.task('addPackageStyles', function () {
@@ -408,7 +419,7 @@ gulp.task('buildAll', ['buildAllWithoutReload'], function () {
     return gulp.src('*').pipe(connect.reload());
 });
 
-gulp.task('sfcc', ['buildAllWithoutReload', 'sfcc-copy'], function () {
+gulp.task('sfcc', ['buildAllWithoutReload', 'sfcc-copy', 'sfcc-templates-copy'], function () {
     return gulp.src('*').pipe(connect.reload());
 });
 

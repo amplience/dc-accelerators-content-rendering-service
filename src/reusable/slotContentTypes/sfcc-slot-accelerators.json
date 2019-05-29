@@ -5,9 +5,9 @@
 			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
 		}
 	],
-	"id": "http://dev-tupperware.s3-website-eu-west-1.amazonaws.com/sfccdev/sfcc-slot-full.json",
-	"title": "content-type-slot-example.json",
-	"description": "content-type-slot-example.json description",
+	"id": "{CONTENT_TYPE_BASEPATH}/sfcc-slot-accelerators.json",
+	"title": "SFCC Slot all accelerators",
+	"description": "SFCC Slot all accelerators",
 	"type": "object",
 	"properties": {
 		"_environment": {

@@ -72,7 +72,7 @@ If using macOS older than Sierra, there is another way to show hidden files:
 
 For Unix-based systems, go to the directory where you want to view hidden files and press `ctrl + h`
     
-## Installation
+## Installation - Standard Accelerators
 
 Note that the installation requires Node version 6.14.3 or higher.
 
@@ -86,6 +86,20 @@ $ npm install --global gulp-cli
 $ gulp
 ```
 Open a page with desired render, e.g. localhost:9100/dist/renders/image/index.html
+
+## Installation - Salesforce Commerce Cloud Accelerators
+
+Salesforce Commerce Cloud (SFCC) accelerators can be installed in addition to the standard accelerators using the following commands:
+
+```bash
+# Install dependencies 
+$ npm install
+$ npm install --global gulp-cli
+
+# Build project
+$ gulp sfcc
+```
+
 ## Demo
 Here you can find the Dynamic Content Inventory, where all the accelerator modules are shown:
 
