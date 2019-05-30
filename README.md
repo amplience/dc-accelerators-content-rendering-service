@@ -100,6 +100,16 @@ $ npm install --global gulp-cli
 $ gulp sfcc
 ```
 
+On top of the standard build, the following files will be generated that can be used with the Amplience Dynamic Content SFCC Integration:
+* ##### dist/contentTypes/sfcc-slot-accelerators.json
+
+  slot content type schema
+* ##### dist/templates/sfcc-contentWrapper.htm
+
+  rendering service 'wrapper' template
+
+For more information see <a href="https://docs.amplience.net/integration/sfccsetup.html">docs.amplience.net/integration/sfccsetup.html</a>
+
 ## Demo
 Here you can find the Dynamic Content Inventory, where all the accelerator modules are shown:
 
