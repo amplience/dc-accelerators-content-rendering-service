@@ -19,6 +19,9 @@
 				"sfcc_category_slot": {
 					"$ref": "https://raw.githubusercontent.com/amplience/dc-integrations-sfcc/master/content-types/sfcc/sfcc.json#/definitions/sfcc_category_slot"
 				},
+				"sfcc_folder_slot": {
+					"$ref": "https://raw.githubusercontent.com/amplience/dc-integrations-sfcc/master/content-types/sfcc/sfcc.json#/definitions/sfcc_folder_slot"
+				},
 				"sfcc_site": {
 					"$ref": "https://raw.githubusercontent.com/amplience/dc-integrations-sfcc/master/content-types/sfcc/sfcc.json#/definitions/sfcc_site"
 				}
