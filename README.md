@@ -104,7 +104,7 @@ On top of the standard build, the following files will be generated that can be 
 * ##### dist/contentTypes/sfcc-slot-accelerators.json
 
   slot content type schema
-* ##### dist/templates/sfcc-contentWrapper.htm
+* ##### dist/templates/sfcc-contentWrapper.html
 
   rendering service 'wrapper' template
 
