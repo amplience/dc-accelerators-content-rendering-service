@@ -11,8 +11,8 @@
   "author": "Amplience",
   "dependencies": {
     "cms-javascript-sdk": "github:amplience/cms-javascript-sdk#2d7cb9d",
-    "dc-accelerators": "github:amplience/dc-accelerators#v3.0.0",
-    "dc-accelerators-content-types": "github:amplience/dc-accelerators-content-types#v2.0.0",
+    "dc-accelerators": "github:amplience/dc-accelerators#e0a61514be3ec070ffbc3c7559eb4765faf37d83",
+    "dc-accelerators-content-types": "github:amplience/dc-accelerators-content-types#fccb8a4c3d27c90ef53f92a821b02751f884f6d2",
     "lory.js": "2.2.1",
     "showdown": "1.7.1"
   },
