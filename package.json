@@ -1,7 +1,10 @@
 {
   "name": "dc-accelerators-content-rendering-service",
   "version": "1.0.0",
-  "scripts": {},
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
   "repository": {
     "type": "git",
     "url": ""
@@ -17,6 +20,11 @@
     "showdown": "1.7.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@storybook/addon-notes": "^5.1.1",
+    "@storybook/addon-viewport": "^5.1.1",
+    "@storybook/html": "^5.1.1",
+    "babel-loader": "^8.0.6",
     "del": "3.0.0",
     "event-stream": "^4.0.1",
     "gulp": "^4.0.0",
@@ -34,12 +42,18 @@
     "gulp-sourcemaps": "2.6.0",
     "gulp-uglify": "3.0.0",
     "gulp-watch": "^5.0.1",
+    "handlebars": "^4.1.2",
+    "handlebars-helpers": "^0.10.0",
     "jasmine-core": "^2.7.0",
     "karma": "^4.0.1",
     "karma-chrome-launcher": "^2.2.0",
     "karma-jasmine": "^1.1.0",
     "lodash": "^4.17.11",
-    "pump": "1.0.2"
+    "pump": "1.0.2",
+    "kind-of": "^6.0.2",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.33.0"
   },
   "directories": {},
   "keywords": [
