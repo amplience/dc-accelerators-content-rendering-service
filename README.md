@@ -188,7 +188,7 @@ For more information on using the content rendering service, visit our documenta
 
 Before setting up transformation templates, you need to add an empty image to the account. This image will act as a background for the layers in the transformation templates, before they are populated with images. The empty image `empty.png` can be found in the root repository.
 
-To display image content correctly with roundels, the handlebars template makes use of a transformation template. This needs to be set up within your Amplience account before the renders will work properly.
+To display image content correctly with roundels, the handlebars template makes use of a transformation template (by default roundel is set to the center of the image). This needs to be set up within your Amplience account before the renders will work properly.
 
 - Log in to Amplience OnDemand and open up the "tools" menu.
 - Select the "Transformation Templates" option in the menu.
@@ -197,7 +197,7 @@ To display image content correctly with roundels, the handlebars template makes 
 - In the "Additional Parameters" box, enter these parameters:
 
 ```
-myasset=empty&p1_img=empty&p2_img=empty&p3_img=empty&p4_img=empty&qlt=90&roundelRatio=1&layer0=[src=/i//{$prod_img}&w=1350]&layer1=[src=/i//{$p1_img}&w={376*$roundelRatio}&right=10&bottom=10&anchor=BR&visible={$p1_img!=$myasset}&img404=roundel_fallback]&layer2=[src=/i//{$p2_img}&w={376*$roundelRatio}&left=10&bottom=10&anchor=BL&visible={$p2_img!=$myasset}]&layer3=[src=/i//{$p3_img}&w={376*$roundelRatio}&left=10&top=10&anchor=TL&visible={$p3_img!=$myasset}]&layer4=[src=/i//{$p4_img}&w={376*$roundelRatio}&right=10&top=10&anchor=TR&visible={$p4_img!=$myasset}]  
+myasset=empty&p1_img=empty&p2_img=empty&p3_img=empty&p4_img=empty&p5_img=empty&qlt=90&roundelRatio=1&layer0=[src=/i//{$prod_img}&w=1350]&layer1=[src=/i//{$p1_img}&w={376*$roundelRatio}&right=10&bottom=10&anchor=BR&visible={$p1_img!=$myasset}]&layer2=[src=/i//{$p2_img}&w={376*$roundelRatio}&left=10&bottom=10&anchor=BL&visible={$p2_img!=$myasset}]&layer3=[src=/i//{$p3_img}&w={376*$roundelRatio}&left=10&top=10&anchor=TL&visible={$p3_img!=$myasset}]&layer4=[src=/i//{$p4_img}&w={376*$roundelRatio}&right=10&top=10&anchor=TR&visible={$p4_img!=$myasset}]&layer5=[src=/i//{$p5_img}&w={376*$roundelRatio}&right={$root.layer0.info.canvas.width/2-376*$roundelRatio/2}&top={$root.layer0.info.canvas.height/2-376*$roundelRatio/2}&anchor=TR&visible={$p5_img!=$myasset}]
 ```
 
 - Click "Create".
@@ -209,10 +209,10 @@ To add a point of interest transformation template, follow the same instructions
 scaleFit=poi&poi={$this.metadata.pointOfInterest.x},{$this.metadata.pointOfInterest.y},{$this.metadata.pointOfInterest.w},{$this.metadata.pointOfInterest.h}
 ```
 
-To add a roundel transformation template for the banner accelerator, follow the same instructions with "Friendly Name" and "Template Name" set to "banner-roundel", and with these parameters in the "Additional Parameters" box:
+To add a roundel transformation template for the banner accelerator (by default roundel is set to the center of the image), follow the same instructions with "Friendly Name" and "Template Name" set to "banner-roundel", and with these parameters in the "Additional Parameters" box:
 
 ```
-myasset=empty&p1_img=empty&p2_img=empty&p3_img=empty&p4_img=empty&qlt=90&roundelRatio1=1&roundelRatio2=1&roundelRatio3=1&roundelRatio4=1&layer1=[src=/i//{$p1_img}&w={$root.layer0.info.canvas.width*$roundelRatio1}&left={$root.layer0.info.canvas.width-10}&bottom=10&anchor=BR&visible={$p1_img!=$myasset}&img404=roundel_fallback]&layer2=[src=/i//{$p2_img}&w={$root.layer0.info.canvas.width*$roundelRatio2}&left=10&bottom=10&anchor=BL&visible={$p2_img!=$myasset}]&layer3=[src=/i//{$p3_img}&w={$root.layer0.info.canvas.width*$roundelRatio3}&left=10&top=10&anchor=TL&visible={$p3_img!=$myasset}]&layer4=[src=/i//{$p4_img}&w={$root.layer0.info.canvas.width*$roundelRatio4}&left={$root.layer0.info.canvas.width-10}&top=10&anchor=TR&visible={$p4_img!=$myasset}]
+myasset=empty&p1_img=empty&p2_img=empty&p3_img=empty&p4_img=empty&p5_img=empty&qlt=90&roundelRatio1=1&roundelRatio2=1&roundelRatio3=1&roundelRatio4=1&roundelRatio5=1&layer1=[src=/i//{$p1_img}&w={$root.layer0.info.canvas.width*$roundelRatio1}&left={$root.layer0.info.canvas.width-10}&bottom=10&anchor=BR&visible={$p1_img!=$myasset}]&layer2=[src=/i//{$p2_img}&w={$root.layer0.info.canvas.width*$roundelRatio2}&left=10&bottom=10&anchor=BL&visible={$p2_img!=$myasset}]&layer3=[src=/i//{$p3_img}&w={$root.layer0.info.canvas.width*$roundelRatio3}&left=10&top=10&anchor=TL&visible={$p3_img!=$myasset}]&layer4=[src=/i//{$p4_img}&w={$root.layer0.info.canvas.width*$roundelRatio4}&left={$root.layer0.info.canvas.width-10}&top=10&anchor=TR&visible={$p4_img!=$myasset}]?&layer5=[src=/i//{$p5_img}&w={$root.layer0.info.canvas.width*$roundelRatio5}&right={$root.layer0.info.canvas.width/2-$root.layer0.info.canvas.width*$roundelRatio5/2}&top={$root.layer0.info.canvas.height/2-$root.layer0.info.canvas.width*$roundelRatio5/2}&anchor=TR&visible={$p5_img!=$myasset}]
 ```
 
 To add a point of interest transformation template for the banner accelerator, follow the same instructions with "Friendly Name" and "Template Name" set to "banner-poi", and with these parameters in the "Additional Parameters" box:
