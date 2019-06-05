@@ -3,6 +3,11 @@
   "id": "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/link.json",
   "title": "Link Accelerator",
   "description": "Link Accelerator",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
   "propertyOrder": [
     "label",
     "value"

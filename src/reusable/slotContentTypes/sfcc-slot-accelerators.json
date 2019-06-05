@@ -5,9 +5,9 @@
 			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
 		}
 	],
-	"id": "http://dev-tupperware.s3-website-eu-west-1.amazonaws.com/sfccdev/sfcc-slot-full.json",
-	"title": "content-type-slot-example.json",
-	"description": "content-type-slot-example.json description",
+	"id": "{CONTENT_TYPE_BASEPATH}/sfcc-slot-accelerators.json",
+	"title": "SFCC Slot all accelerators",
+	"description": "SFCC Slot all accelerators",
 	"type": "object",
 	"properties": {
 		"_environment": {
@@ -18,6 +18,9 @@
 				},
 				"sfcc_category_slot": {
 					"$ref": "https://raw.githubusercontent.com/amplience/dc-integrations-sfcc/master/content-types/sfcc/sfcc.json#/definitions/sfcc_category_slot"
+				},
+				"sfcc_folder_slot": {
+					"$ref": "https://raw.githubusercontent.com/amplience/dc-integrations-sfcc/master/content-types/sfcc/sfcc.json#/definitions/sfcc_folder_slot"
 				},
 				"sfcc_site": {
 					"$ref": "https://raw.githubusercontent.com/amplience/dc-integrations-sfcc/master/content-types/sfcc/sfcc.json#/definitions/sfcc_site"
