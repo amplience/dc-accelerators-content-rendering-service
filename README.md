@@ -107,6 +107,42 @@ On top of the standard build, the following files will be generated that can be 
 * ##### dist/templates/sfcc-contentWrapper.html
 
   rendering service 'wrapper' template
+  
+As accelerators need some post-rendering processes to be done, add this script to trigger them to the head section of the page, please:
+```html
+<script>
+    function bindReady(handler) {
+      var isReady = false;
+    
+      function ready() {
+        if (isReady) {
+          return;
+        }
+        isReady = true;
+        handler();
+      }
+    
+      if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', ready, false);
+      } else if (window.attachEvent) {
+        window.attachEvent('onload', ready);
+      } else {
+        var fn = window.onload;
+        window.onload = function() {
+          fn && fn();
+          ready();
+        };
+      }
+    }
+    
+    bindReady(function() {
+      AmpCa.utils = new AmpCa.Utils();
+      AmpCa.utils.postProcessing.execHtmlService('homepage', {});
+      loryHelpers.initSliders(document.querySelectorAll('.js_slider'));
+    });
+</script>
+```
+Make sure AmpCa is already reachable, include script after connecting libs.min.js file.
 
 For more information see <a href="https://docs.amplience.net/integration/sfccsetup.html">docs.amplience.net/integration/sfccsetup.html</a>
 

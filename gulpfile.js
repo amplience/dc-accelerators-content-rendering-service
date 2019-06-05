@@ -19,6 +19,7 @@ var addSrc = require('gulp-add-src');
 
 var connect = require('gulp-connect');
 var watch = require('gulp-watch');
+var _ = require('lodash');
 var name;
 
 var dependencies = require('./dependencies.json');
@@ -38,7 +39,7 @@ var replace = function () {
     return es.map(function (file, cb) {
         var fileContent = file.contents.toString();
         fileContent = fileContent.replace(/\{CONTENT_TYPE_BASEPATH\}/g, toReplace.CONTENT_TYPE_BASEPATH);
-        file.contents = new Buffer(fileContent);
+        file.contents = new Buffer.from(fileContent);
         // send the updated file down the pipe
         cb(null, file);
     });
@@ -49,12 +50,12 @@ var replaceVisualization = function () {
         var fileContent = file.contents.toString();
         fileContent = fileContent.replace(/\{VISUALIZATION_BASEPATH\}/g, toReplace.VISUALIZATION_BASEPATH);
         fileContent = fileContent.replace(/\{COMPANY_TAG\}/g, toReplace.COMPANY_TAG);
-        file.contents = new Buffer(fileContent);
+        file.contents = new Buffer.from(fileContent);
         cb(null, file);
     });
-}
+};
 
-gulp.task('addContentTypes', ['build'], function (cb) {
+gulp.task('addContentTypes', function (cb) {
     for (var module in dependencies) {
         var moduleName = module.toLowerCase();
 
@@ -113,7 +114,7 @@ gulp.task('addPackageStyles', function () {
         .pipe(gulp.dest('dist/renders'))
 });
 
-gulp.task('addMinStyles', ['addPackageStyles'], function () {
+gulp.task('addMinStyles', function () {
     return gulp.src([
         './dist/renders/*/package/*.min.css',
         './dist/renders/*/package/*.js'
@@ -127,7 +128,10 @@ gulp.task('addMinStyles', ['addPackageStyles'], function () {
 });
 
 
-gulp.task('addDependencies', ['build', 'addContentTypes'], function () {
+gulp.task('addDependencies', function (done) {
+    var countCb = Object.keys(dependencies).length;
+    var cb = _.after(countCb, done);
+
     for (var module in dependencies) {
         var fullReusable = [reusable];
         for (var res in excludeReusable) {
@@ -137,6 +141,8 @@ gulp.task('addDependencies', ['build', 'addContentTypes'], function () {
         if (excludeReusable[module]) {
             fullReusable.splice(fullReusable.indexOf(excludeReusable[module]), 1);
         }
+
+        var eachCb = _.after(dependencies[module].length, cb);
 
         dependencies[module].forEach(function (currentDependency) {
             if (excludeReusable[currentDependency]) {
@@ -157,15 +163,17 @@ gulp.task('addDependencies', ['build', 'addContentTypes'], function () {
                         currentDependency
                     )
                 );
+            eachCb();
         });
 
         gulp
             .src(fullReusable)
             .pipe(gulp.dest('./dist/renders/' + module + '/package/' + libName));
+        cb();
     }
 });
 
-gulp.task('minifyPack', ['build'], function () {
+gulp.task('minifyPack', function () {
     for (var mod in dependencies) {
         (function () {
             let module = mod;
@@ -206,7 +214,7 @@ gulp.task('minifyPack', ['build'], function () {
     }
 });
 
-gulp.task('concatAll', ['build'], function () {
+gulp.task('concatAll', function (done) {
     gulp
         .src([
             './dist/reusable/*.js',
@@ -227,10 +235,12 @@ gulp.task('concatAll', ['build'], function () {
         .src(['./dist/renders/*/*.min.css'])
         .pipe(concat('styles.min.css'))
         .pipe(gulp.dest('./dist/renders/all'));
+
+    done();
 });
 
 gulp.task('del', function () {
-    return del.sync(['dist']);
+    return del('dist');
 });
 
 gulp.task('renders-html', function () {
@@ -333,6 +343,7 @@ gulp.task('reusable-js-min', function (cb) {
         cb
     );
 });
+
 gulp.task('copy-node-modules', function () {
     return gulp
         .src([
@@ -351,7 +362,7 @@ gulp.task('copy-icons', function () {
         .pipe(gulp.dest('dist/icons'));
 });
 
-gulp.task('addLoryLicense', ['copy-node-modules'], function () {
+gulp.task('addLoryLicense', function () {
     return gulp
         .src('node_modules/lory.js/LICENSE')
         .pipe(insert.prepend('/*'))
@@ -361,7 +372,7 @@ gulp.task('addLoryLicense', ['copy-node-modules'], function () {
         .pipe(gulp.dest('dist/reusable'));
 });
 
-gulp.task('addShowdownLicense', ['copy-node-modules'], function () {
+gulp.task('addShowdownLicense', function () {
     return gulp
         .src('node_modules/showdown/license.txt')
         .pipe(insert.prepend('/*'))
@@ -384,7 +395,7 @@ gulp.task('copy-viewer-kit-modules', function () {
 
 gulp.task(
     'renders-build',
-    [
+    gulp.series(
         'renders-html',
         'renders-js-copy',
         'renders-files-copy',
@@ -392,14 +403,14 @@ gulp.task(
         'renders-js-min',
         'addPackageStyles',
         'addMinStyles'
-    ],
+    ),
     function () {
     }
 );
 
 gulp.task(
     'build',
-    [
+    gulp.series(
         'del',
         'copy-node-modules',
         'copy-icons',
@@ -408,42 +419,43 @@ gulp.task(
         'addShowdownLicense',
         'reusable-js-min',
         'renders-build'
-    ],
+    ),
     function () {
     }
 );
 
-gulp.task('buildAllWithoutReload', ['build', 'addDependencies', 'addContentTypes', 'concatAll']);
+gulp.task('buildAllWithoutReload', gulp.series('build', 'addDependencies', 'addContentTypes', 'concatAll'));
 
-gulp.task('buildAll', ['buildAllWithoutReload'], function () {
+gulp.task('buildAll', gulp.series('buildAllWithoutReload'), function () {
     return gulp.src('*').pipe(connect.reload());
 });
 
-gulp.task('sfcc', ['buildAllWithoutReload', 'sfcc-copy', 'sfcc-templates-copy'], function () {
+gulp.task('sfcc', gulp.series('buildAllWithoutReload', 'sfcc-copy', 'sfcc-templates-copy'), function () {
     return gulp.src('*').pipe(connect.reload());
 });
 
-gulp.task(
-    'buildAllMin',
-    ['build', 'addDependencies', 'addContentTypes', 'minifyPack', 'server'],
-    function () {
-        return gulp.src('*').pipe(connect.reload());
-    }
-);
-
-gulp.task('server', function () {
-    return connect.server({
+gulp.task('server', function (done) {
+    connect.server({
         port: 9100,
         hostname: '0.0.0.0',
         livereload: true,
         debug: true
     });
+
+    done();
 });
 
-gulp.task('watch', ['buildAll'], function () {
-    return watch(['./src/**/*'], function () {
-        gulp.start('buildAll');
-    });
+gulp.task(
+    'buildAllMin',
+    gulp.series('build', 'addDependencies', 'addContentTypes', 'minifyPack', 'server'),
+    function () {
+        return gulp.src('*').pipe(connect.reload());
+    }
+);
+
+gulp.task('watch', function (done) {
+    gulp.watch('src/**/*', gulp.series(['buildAll']));
+    done();
 });
 
-gulp.task('default', ['watch', 'server']);
+gulp.task('default', gulp.series('buildAll', gulp.parallel('watch', 'server')));
