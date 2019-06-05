@@ -2,7 +2,7 @@
   "banner": [
     "image"
   ],
-  "blog": [
+  "blogPost": [
     "text",
     "image",
     "video",
@@ -12,10 +12,10 @@
     "cardList"
   ],
   "externalBlock": [],
-  "homepage": [
+  "page": [
     "slider",
     "banner",
-    "promoBanner",
+    "promoList",
     "video",
     "text",
     "externalBlock",
@@ -32,7 +32,7 @@
     "image",
     "card"
   ],
-  "promoBanner": [],
+  "promoList": [],
   "slider": [
     "banner",
     "image",

@@ -21,7 +21,7 @@
     "roundelRatio": {
       "type": "number",
       "title": "Roundel Ratio",
-      "description": "A value between 0 and 10 e.g. 0.6",
+      "description": "A value between 0 and 10 e.g. 0.6 (1 by default)",
       "minimum": 0,
       "maximum": 10
     },
@@ -34,7 +34,7 @@
         "Bottom Right"
       ],
       "title": "Roundel Position",
-      "description": "Roundel Position"
+      "description": "Roundel Position (centered by default)"
     }
   }
 }
