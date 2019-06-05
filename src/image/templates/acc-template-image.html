@@ -39,7 +39,7 @@
             seoText}}/{{encodeURI seoText}}{{/if}}?w=1536{{> acc-template-roundel }} 2x"
             media="(max-width: 768px)">
     <img
-            src="/acc-template-image.html/{{image.defaultHost}}/i/{{image.endpoint}}/{{encodeURI image.name}}{{#if seoText}}/{{encodeURI
+            src="//{{image.defaultHost}}/i/{{image.endpoint}}/{{encodeURI image.name}}{{#if seoText}}/{{encodeURI
                     seoText}}{{/if}}?w=1600{{> acc-template-roundel }}"
             srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{encodeURI image.name}}{{#if seoText}}/{{encodeURI
                     seoText}}{{/if}}.webp?w=1600{{> acc-template-roundel }} 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{encodeURI
@@ -51,5 +51,3 @@
             class="amp-dc-image-pic" {{#if imageAltText}} alt="{{imageAltText}}" {{/if}}/>
 
 </picture>
-
-
