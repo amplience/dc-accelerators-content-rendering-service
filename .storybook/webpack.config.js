@@ -13,10 +13,26 @@ module.exports = async ({ config, mode }) => {
     include: path.resolve(__dirname, '../'),
   });
 
+  // handlebars-helpers uses lazy-cache which is not supported by webpack. The unlazy-loader plugin resolves this.
+  config.module.rules.push({
+    test: /handlebars-helpers\/.*\.js$/,
+    use: ['unlazy-loader'],
+    include: path.resolve(__dirname, '../'),
+  });
+
   config.node = {
     readline: 'empty',
     fs: 'empty'
   }
+
+  config.resolve = {
+    alias: {
+      'handlebars': 'handlebars/dist/handlebars.js',
+      'handlebars-helpers': 'handlebars-helpers/index.js'
+    }
+  }
+
+  config.module.unknownContextCritical = false;
 
   // Return the altered config
   return config;

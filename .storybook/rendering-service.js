@@ -1,3 +1,8 @@
+/**
+ * This service mirrors the functionality of the Amplience rendering service. 
+ * It allows local creating and debugging of templates before deploying them to the Amplience rendering service.
+ */
+
 import handlebars from 'handlebars';
 import helpers from 'handlebars-helpers';
 
