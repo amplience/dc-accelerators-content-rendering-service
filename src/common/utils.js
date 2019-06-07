@@ -105,6 +105,8 @@
         if (data.navigation) {
             this.navigationDots(element, slider, data);
         }
+
+        this.enableSwipeGesturesOnVideo(element);
     }
 
     Slider.prototype.disableNavButtons = function (element, sliderInstance) {
@@ -177,6 +179,38 @@
         attachNavEvents();
         element.addEventListener('after.lory.slide', selectActiveDot);
         element.addEventListener('on.lory.resize', resetToFirst);
+    }
+
+    Slider.prototype.enableSwipeGesturesOnVideo = function (element) {
+        if (navigator.userAgent.match(/Android/i)) {
+            var videos = element.querySelectorAll(
+                '.amp-dc-slider .amp-dc-video'
+            );
+            videos = Array.prototype.slice.call(videos, 0);
+            videos.forEach(function (video, ix) {
+                var overlay = document.createElement('div');
+                overlay.style.width = video.clientWidth + 'px';
+                overlay.style.height = video.clientHeight - 30 + 'px';
+                overlay.style.marginBottom = -video.clientHeight + 30 + 'px';
+                overlay.className = 'inactive-video';
+                video.parentNode.parentNode.insertBefore(
+                    overlay,
+                    video.parentNode
+                );
+                overlay.addEventListener('click', function () {
+                    overlay.classList.add('no-overlay');
+                    video.play();
+                });
+                video.addEventListener('pause', function () {
+                    overlay.classList.remove('no-overlay');
+                });
+                window.addEventListener('resize', function () {
+                    overlay.style.width = video.clientWidth + 'px';
+                    overlay.style.height = video.clientHeight - 30 + 'px';
+                    overlay.style.marginBottom = -video.clientHeight + 30 + 'px';
+                });
+            });
+        }
     }
 
 

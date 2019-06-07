@@ -151,6 +151,19 @@ const sampleContent = {
   "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/slider.json"
 };
 
+const sampleVideoContent = {
+  "@id": "http://content.cms.amplience.com/05c1affc-ac26-4f4f-98dc-9f12dc912583",
+  "video": {
+    "@id": "http://video.cms.amplience.com/39685e7b-3dbe-43f4-aebe-df94474f994e",
+    "mediaType": "video",
+    "name": "Amplience Overview",
+    "endpoint": "csdemo",
+    "defaultHost": "i1.adis.ws"
+  },
+  "_title": "test_video",
+  "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/video.json"
+};
+
 storiesOf('Slider', module)
   .add('Looping', () => renderContent('acc-template-slider', sampleContent))
   .add('Non-Looping', () => renderContent('acc-template-slider', {
@@ -160,4 +173,8 @@ storiesOf('Slider', module)
   .add('Without Navigation Dots', () => renderContent('acc-template-slider', {
     ... sampleContent,
     navigationDots: false
-  }));
+  }))
+  .add('Video Slide', () => renderContent('acc-template-slider', {
+    ... sampleContent,
+    slides: sampleContent.slides.concat([sampleVideoContent])
+  }))
