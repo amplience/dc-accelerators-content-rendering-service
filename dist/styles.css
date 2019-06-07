@@ -1,3 +1,104 @@
+.amp-dc-blog {
+  overflow: hidden;
+  margin: 40px auto;
+  max-width: 980px;
+  padding: 0 20px;
+}
+
+.amp-dc-blog .amp-dc-block-wrap {
+  margin-top: 50px;
+}
+
+.amp-dc-blog .amp-dc-blog-title {
+  font-size: 2em;
+  text-align: center;
+}
+
+.amp-dc-blog .amp-dc-blog-content {
+  margin-top: 20px;
+}
+
+.amp-dc-snippet .amp-dc-image {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  display: block;
+}
+
+.amp-dc-snippet .amp-dc-image img {
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.amp-dc-snippet .amp-dc-title {
+  text-transform: uppercase;
+  font-size: 2em;
+  margin: 20px;
+}
+
+.amp-dc-snippet .amp-dc-description {
+  padding: 20px;
+}
+
+.amp-dc-snippet .amp-dc-link {
+  margin: 20px;
+  font-weight: bold;
+}
+
+.amp-dc-card {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.amp-dc-card * {
+  margin: 0;
+  padding: 0;
+}
+
+.amp-dc-card .amp-dc-hide {
+  display: none;
+}
+
+.amp-dc-card .amp-dc-card-text-wrap {
+  padding: 10px 0;
+  text-align: center;
+  background-color: #fff;
+}
+
+.amp-dc-card a.amp-dc-card-wrap {
+  display: block;
+  text-decoration: none;
+}
+
+.amp-dc-card a.amp-dc-card-wrap:hover .amp-dc-card-link {
+  text-decoration: underline;
+}
+
+.amp-dc-card .amp-dc-card-name {
+  font-size: 21px;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.amp-dc-card .amp-dc-card-description {
+  font-size: 14px;
+  color: #8F8F8F;
+  display: inline-block;
+}
+
+.amp-dc-card .amp-dc-card-link {
+  margin-top: 7px;
+  color: #8F8F8F;
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
 .amp-dc-banner {
   position: relative;
   overflow: hidden;
@@ -148,107 +249,6 @@
   }
 }
 
-.amp-dc-blog {
-  overflow: hidden;
-  margin: 40px auto;
-  max-width: 980px;
-  padding: 0 20px;
-}
-
-.amp-dc-blog .amp-dc-block-wrap {
-  margin-top: 50px;
-}
-
-.amp-dc-blog .amp-dc-blog-title {
-  font-size: 2em;
-  text-align: center;
-}
-
-.amp-dc-blog .amp-dc-blog-content {
-  margin-top: 20px;
-}
-
-.amp-dc-snippet .amp-dc-image {
-  position: relative;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-  display: block;
-}
-
-.amp-dc-snippet .amp-dc-image img {
-  width: 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.amp-dc-snippet .amp-dc-title {
-  text-transform: uppercase;
-  font-size: 2em;
-  margin: 20px;
-}
-
-.amp-dc-snippet .amp-dc-description {
-  padding: 20px;
-}
-
-.amp-dc-snippet .amp-dc-link {
-  margin: 20px;
-  font-weight: bold;
-}
-
-.amp-dc-card {
-  width: 100%;
-  display: inline-block;
-  vertical-align: top;
-}
-
-.amp-dc-card * {
-  margin: 0;
-  padding: 0;
-}
-
-.amp-dc-card .amp-dc-hide {
-  display: none;
-}
-
-.amp-dc-card .amp-dc-card-text-wrap {
-  padding: 10px 0;
-  text-align: center;
-  background-color: #fff;
-}
-
-.amp-dc-card a.amp-dc-card-wrap {
-  display: block;
-  text-decoration: none;
-}
-
-.amp-dc-card a.amp-dc-card-wrap:hover .amp-dc-card-link {
-  text-decoration: underline;
-}
-
-.amp-dc-card .amp-dc-card-name {
-  font-size: 21px;
-  color: #000;
-  margin-bottom: 5px;
-}
-
-.amp-dc-card .amp-dc-card-description {
-  font-size: 14px;
-  color: #8F8F8F;
-  display: inline-block;
-}
-
-.amp-dc-card .amp-dc-card-link {
-  margin-top: 7px;
-  color: #8F8F8F;
-  font-size: 16px;
-  font-weight: bold;
-  white-space: nowrap;
-}
-
 .amp-dc-image {
   min-width: 0;
 }
@@ -380,28 +380,6 @@
   }
 }
 
-.amp-dc-image {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-  display: block;
-}
-
-.amp-dc-image .amp-dc-image-pic {
-  display: block;
-}
-
-.amp-dc-image img {
-  width: 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 .amp-dc-homepage {
   overflow: hidden;
   max-width: 1600px;
@@ -525,6 +503,28 @@
   .header-wrap .customer-menu .second-nav {
     display: none;
   }
+}
+
+.amp-dc-image {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  display: block;
+}
+
+.amp-dc-image .amp-dc-image-pic {
+  display: block;
+}
+
+.amp-dc-image img {
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .amp-dc-promo-banner {

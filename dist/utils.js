@@ -95,7 +95,7 @@
             autoplay: element.getAttribute('data-autoplay') === 'true'
         };
 
-        var lory = typeof require === 'function' ? require('lory.js').lory : lory;
+        var lory = window.lory ? window.lory : (typeof require === 'function' ? require('lory.js').lory : null);
         var slider = lory(element, data);
 
         if (!data.infinite) {
@@ -162,6 +162,7 @@
                 $dot.classList.remove('active');
             });
 
+            console.log(sliderSettings);
             var currentSlide = sliderSettings.infinite ?
                 evt.detail.currentSlide - 1 :
                 evt.detail.currentSlide;
