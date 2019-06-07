@@ -10,7 +10,7 @@
         this.initBackgroundColor(element);
     }
 
-    Banner.prototype.initBackgroundColor = function(element) {
+    Banner.prototype.initBackgroundColor = function (element) {
         var infoPanel = element.querySelector('.amp-dc-banner-info');
         var dataColor = infoPanel.getAttribute('data-color') || 'fff';
         var dataOpacity = Number(infoPanel.getAttribute('data-opacity') || '1');
@@ -84,7 +84,119 @@
         }, 5000);
     }
 
-    
+    /**
+     * Slider - Javascript is used to add animation and navigation functionality to the slider
+     * @param element 
+     */
+    function Slider(element) {
+
+        var data = {
+            infinite: element.getAttribute('data-infinite') === 'true',
+            navigation: element.getAttribute('data-navigation') === 'true',
+            autoplay: element.getAttribute('data-autoplay') === 'true'
+        };
+
+        var lory = typeof require === 'function' ? require('lory.js').lory : lory;
+        var slider = lory(element, data);
+
+        if (!data.infinite) {
+            this.disableNavButtons(element, slider);
+        }
+
+        if (!data.navigation) {
+            this.navigationDots(element, slider, data);
+        }
+
+        /**
+         * var infinite = $slider.getAttribute('data-infinite') === 'true';
+      var navDots = $slider.getAttribute('data-navigation') === 'true';
+      var sliderSettings = {};
+      if (infinite) {
+        sliderSettings.infinite = 1;
+      }
+
+      var slider = lory($slider, sliderSettings);
+
+      if (!infinite) {
+        self.disableNavButtons($slider, slider);
+      }
+
+      if (navDots) {
+        self.navigationDots($slider, slider, sliderSettings);
+      } */
+    }
+
+    Slider.prototype.disableNavButtons = function (element, sliderInstance) {
+        var $slides = Array.prototype.slice.call(
+            element.querySelectorAll('.js_dc_slide'),
+            0
+        );
+        var $prevButton = element.querySelector('.js_prev');
+        var $nextButton = element.querySelector('.js_next');
+        var disabledClass = 'ctrl-disabled';
+
+        var navButtonsBehave = function (evt) {
+            var slideIndex = sliderInstance.returnIndex();
+            if (slideIndex === 0) {
+                $prevButton.classList.add(disabledClass);
+                $nextButton.classList.remove(disabledClass);
+            } else if (slideIndex === $slides.length - 1) {
+                $prevButton.classList.remove(disabledClass);
+                $nextButton.classList.add(disabledClass);
+            } else {
+                $prevButton.classList.remove(disabledClass);
+                $nextButton.classList.remove(disabledClass);
+            }
+        };
+
+        if (sliderInstance.returnIndex() === 0) {
+            $prevButton.classList.add(disabledClass);
+        }
+
+        element.addEventListener('after.lory.slide', navButtonsBehave);
+        element.addEventListener('on.lory.resize', navButtonsBehave);
+    }
+
+    Slider.prototype.navigationDots = function (element, sliderInstance, sliderSettings) {
+        var dots = Array.prototype.slice.call(
+            element.querySelectorAll('.js_dc_slider_dot'),
+            0
+        );
+
+        var attachNavEvents = function () {
+            dots.forEach(function ($dot, ind) {
+                if (ind === 0) {
+                    $dot.classList.add('active');
+                }
+                $dot.addEventListener('click', function (evt) {
+                    sliderInstance.slideTo(ind);
+                });
+            });
+        };
+
+        var selectActiveDot = function (evt) {
+            dots.forEach(function ($dot, ind) {
+                $dot.classList.remove('active');
+            });
+
+            var currentSlide = sliderSettings.infinite ?
+                evt.detail.currentSlide - 1 :
+                evt.detail.currentSlide;
+            dots[currentSlide].classList.add('active');
+        };
+
+        var resetToFirst = function () {
+            dots.forEach(function ($dot, ind) {
+                ind === 0 ?
+                    $dot.classList.add('active') :
+                    $dot.classList.remove('active');
+            });
+        };
+
+        attachNavEvents();
+        element.addEventListener('after.lory.slide', selectActiveDot);
+        element.addEventListener('on.lory.resize', resetToFirst);
+    }
 
 
     /**
@@ -94,7 +206,7 @@
 
     function attachComponent(selector, component) {
         [].slice.call(document.querySelectorAll(selector))
-            .forEach(function(element) {
+            .forEach(function (element) {
                 if (!element.component) {
                     element.component = new component(element);
                 }
@@ -104,6 +216,7 @@
     function attachComponents() {
         attachComponent('.amp-dc-banner', Banner);
         attachComponent('.amp-dc-promo-banner', PromoBanner);
+        attachComponent('.amp-dc-slider', Slider);
     }
 
     exports.Utils = exports.Utils || {};

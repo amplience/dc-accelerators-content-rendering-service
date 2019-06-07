@@ -28,7 +28,8 @@ module.exports = async ({ config, mode }) => {
   config.resolve = {
     alias: {
       'handlebars': 'handlebars/dist/handlebars.js',
-      'handlebars-helpers': 'handlebars-helpers/index.js'
+      'handlebars-helpers': 'handlebars-helpers/index.js',
+      'lory.js': 'lory.js/dist/lory.js'
     }
   }
 
