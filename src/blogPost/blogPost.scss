@@ -1,0 +1,49 @@
+.amp-dc-blog {
+    overflow: hidden;
+    margin: 40px auto;
+    max-width: 980px;
+    padding: 0 20px;
+
+    .amp-dc-block-wrap {
+        margin-top: 50px;
+    }
+
+    .amp-dc-blog-title {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .amp-dc-blog-content {
+        margin-top: 20px;
+    }
+}
+
+.amp-dc-snippet {
+    .amp-dc-image {
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+        display: block;
+
+        img {
+            width: 100%;
+            user-select: none;
+        }
+    }
+
+    .amp-dc-title {
+        text-transform: uppercase;
+        font-size: 2em;
+        margin: 20px;
+    }
+
+    .amp-dc-description {
+        padding: 20px;
+    }
+
+    .amp-dc-link {
+        margin: 20px;
+        font-weight: bold;
+    }
+}
