@@ -3,7 +3,7 @@
 (function (exports) {
 
     /**
-     * Banner
+     * Banner - Javascript is used to calculate the background color
      * @param element 
      */
     function Banner(element) {
@@ -34,6 +34,60 @@
     }
 
     /**
+     * Promo Banner - Javascript is used to animate the sections for resolutions that can only show a single section at a time
+     * @param element 
+     */
+    function PromoBanner(element) {
+        var $children = [].slice.call(
+            element.querySelectorAll('.amp-dc-promo-block')
+        );
+        var currentItemNum = 2;
+        var winWidth = window.innerWidth;
+
+        if ($children.length < 2) {
+            $children[0].classList.add('dc-fade-in');
+            return;
+        }
+
+        $children.forEach(function ($child) {
+            $children[currentItemNum - 1].classList.remove('dc-fade-in');
+        });
+
+        $children[currentItemNum - 1].classList.add('dc-fade-in');
+
+        var getNextItem = function () {
+            if (currentItemNum === $children.length) {
+                currentItemNum = 1;
+            } else {
+                currentItemNum += 1;
+            }
+
+            return currentItemNum - 1;
+        };
+
+        setInterval(function () {
+            winWidth = window.innerWidth;
+            var $fadedElems = [].slice.call(
+                element.querySelectorAll('.dc-fade-in')
+            );
+            if (winWidth > 768) {
+                return;
+            }
+
+            var itemToShow = getNextItem();
+            if ($fadedElems.length > 0) {
+                $fadedElems.forEach(function ($fadeElem) {
+                    $fadeElem.classList.remove('dc-fade-in');
+                });
+            }
+            $children[itemToShow].classList.add('dc-fade-in');
+        }, 5000);
+    }
+
+    
+
+
+    /**
      * The code below finds dom elements output from templates
      * and invokes the associated Javascript component
      */
@@ -49,6 +103,7 @@
 
     function attachComponents() {
         attachComponent('.amp-dc-banner', Banner);
+        attachComponent('.amp-dc-promo-banner', PromoBanner);
     }
 
     exports.Utils = exports.Utils || {};
