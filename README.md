@@ -415,7 +415,7 @@ When the content types have been placed at the same basepath URL as you built th
 	The visualisation file is located in `dist/renders/splitBlock/package`
 	Put the render folder in your basepath that you defined in .replace.json. The url for the 	visualisation to register the content type with will then be `BASEPATH + /renders/splitBlock/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}`
 	
-#### Promo banner section
+#### Promo
 - ##### Icon
 
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-promobannersection.png`
@@ -429,10 +429,10 @@ When the content types have been placed at the same basepath URL as you built th
 	- image0: /icon
 
 - ##### Visualisation
-	The visualisation file is located in `dist/renders/promoBannerSection/package`
-	Put the render folder in your basepath that you defined in .replace.json. The url for the 	visualisation to register the content type with will then be `BASEPATH + /renders/promoBannerSection/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}`
+	The visualisation file is located in `dist/renders/promo/package`
+	Put the render folder in your basepath that you defined in .replace.json. The url for the 	visualisation to register the content type with will then be `BASEPATH + /renders/promo/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}`
 
-#### Promo banner
+#### PromoList
 
 - ##### Icon
 
@@ -446,8 +446,8 @@ When the content types have been placed at the same basepath URL as you built th
 	- image1: /bannerSection/1/icon
 	- image2: /bannerSection/2/icon
 - ##### Visualisation
-	The visualisation file is located in `dist/renders/promoBanner/package`
-	Put the render folder in your basepath that you defined in .replace.json. The url for the 	visualisation to register the content type with will then be `BASEPATH + /renders/promoBanner/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}`
+	The visualisation file is located in `dist/renders/promoList/package`
+	Put the render folder in your basepath that you defined in .replace.json. The url for the 	visualisation to register the content type with will then be `BASEPATH + /renders/PromoList/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}`
 
 #### External block
 
@@ -476,7 +476,7 @@ When the content types have been placed at the same basepath URL as you built th
 	- headline: /title
 	- image0: /image/image
 
-#### Blog
+#### Blog Post
 
 - ##### Icon
 
@@ -490,10 +490,10 @@ When the content types have been placed at the same basepath URL as you built th
 	- image0: /snippet/image/image
 - ##### Visualisation
 
-	The visualisation file is located in `dist/renders/blog/package`
-	Put the render folder in your basepath that you defined in .replace.json. The url for the 	visualisation to register the content type with will then be `BASEPATH + /renders/blog/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}`
+	The visualisation file is located in `dist/renders/blogPost/package`
+	Put the render folder in your basepath that you defined in .replace.json. The url for the 	visualisation to register the content type with will then be `BASEPATH + /renders/blogPost/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}`
 
-#### Homepage
+#### Page
 
 - ##### Icon
 
@@ -503,8 +503,8 @@ When the content types have been placed at the same basepath URL as you built th
 
 - ##### Visualisation
 
-	The visualisation file is located in `dist/renders/homepage/package`
-	Put the render folder in your basepath that you defined in .replace.json. The url for the 	visualisation to register the content type with will then be `BASEPATH + /renders/homepage/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}`
+	The visualisation file is located in `dist/renders/page/package`
+	Put the render folder in your basepath that you defined in .replace.json. The url for the 	visualisation to register the content type with will then be `BASEPATH + /renders/page/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}`
 
 #### Slot-accelerators
 
