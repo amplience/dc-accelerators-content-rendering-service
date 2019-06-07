@@ -13,11 +13,9 @@
   "main": "src/",
   "author": "Amplience",
   "dependencies": {
-    "cms-javascript-sdk": "github:amplience/cms-javascript-sdk#2d7cb9d",
     "dc-accelerators": "github:amplience/dc-accelerators#v3.0.0",
     "dc-accelerators-content-types": "github:amplience/dc-accelerators-content-types#v2.0.0",
-    "lory.js": "2.2.1",
-    "showdown": "1.7.1"
+    "lory.js": "2.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
