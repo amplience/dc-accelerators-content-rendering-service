@@ -102,7 +102,7 @@
             this.disableNavButtons(element, slider);
         }
 
-        if (!data.navigation) {
+        if (data.navigation) {
             this.navigationDots(element, slider, data);
         }
     }
