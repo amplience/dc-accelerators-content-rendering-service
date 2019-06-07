@@ -89,7 +89,6 @@
      * @param element 
      */
     function Slider(element) {
-
         var data = {
             infinite: element.getAttribute('data-infinite') === 'true',
             navigation: element.getAttribute('data-navigation') === 'true',
@@ -106,24 +105,6 @@
         if (!data.navigation) {
             this.navigationDots(element, slider, data);
         }
-
-        /**
-         * var infinite = $slider.getAttribute('data-infinite') === 'true';
-      var navDots = $slider.getAttribute('data-navigation') === 'true';
-      var sliderSettings = {};
-      if (infinite) {
-        sliderSettings.infinite = 1;
-      }
-
-      var slider = lory($slider, sliderSettings);
-
-      if (!infinite) {
-        self.disableNavButtons($slider, slider);
-      }
-
-      if (navDots) {
-        self.navigationDots($slider, slider, sliderSettings);
-      } */
     }
 
     Slider.prototype.disableNavButtons = function (element, sliderInstance) {
