@@ -6,6 +6,8 @@
 import handlebars from 'handlebars';
 import helpers from 'handlebars-helpers';
 
+import commonUtils from '../src/common/utils';
+
 helpers(
     [
         'array',
