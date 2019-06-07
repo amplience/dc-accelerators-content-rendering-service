@@ -1,6 +1,6 @@
-<div class="amp-dc-splitBlock{{#if split}} js_dc_split-{{{this.split}}}{{else}} full-size{{/if}}">
+<div class="amp-dc-splitBlock{{#unless split}} full-size{{/unless}}">
     {{#each content}}
-    <div class="amp-dc-split-part">
+    <div class="amp-dc-split-part{{#if ../split}} amp-dc-size-{{itemAt (split ../split "/") @index}}{{/if}}">
         <div class="amp-dc-split-part-wrap">
             {{> templateChooser this}}
         </div>

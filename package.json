@@ -2,6 +2,7 @@
   "name": "dc-accelerators-content-rendering-service",
   "version": "1.0.0",
   "scripts": {
+    "build": "gulp",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -32,6 +33,7 @@
     "gulp-concat": "2.6.1",
     "gulp-connect": "^5.7.0",
     "gulp-declare": "0.3.0",
+    "gulp-flatten": "^0.4.0",
     "gulp-htmlmin": "3.0.0",
     "gulp-insert": "^0.5.0",
     "gulp-processhtml": "^1.2.0",

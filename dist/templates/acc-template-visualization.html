@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Amplience Accelerators Visualization</title>
+        
+        <style>
+            html, body, div {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lory.js/2.2.1/lory.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    </head>
+    <body>
+        <div>
+            {{> templateChooser this}}
+        </div>
+
+        <script>
+            /**
+             * The code below will activate Amplience accelerator components that use Javascript to add functionality
+             */
+            document.addEventListener('DOMContentLoaded', function() {
+                if (window.AmpCa && window.AmpCa.Utils) {
+                    window.AmpCa.Utils.attachComponents();
+                }
+            });
+        </script>
+
+    </body>
+</html>
