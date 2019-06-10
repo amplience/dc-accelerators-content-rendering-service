@@ -14,8 +14,7 @@
   "main": "src/",
   "author": "Amplience",
   "dependencies": {
-    "dc-accelerators": "github:amplience/dc-accelerators#v3.0.0",
-    "dc-accelerators-content-types": "github:amplience/dc-accelerators-content-types#v2.0.0",
+    "dc-accelerators-content-types": "github:amplience/dc-accelerators-content-types#v2.0.1",
     "lory.js": "2.2.1"
   },
   "devDependencies": {
