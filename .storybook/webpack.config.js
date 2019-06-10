@@ -15,7 +15,7 @@ module.exports = async ({ config, mode }) => {
 
   // handlebars-helpers uses lazy-cache which is not supported by webpack. The unlazy-loader plugin resolves this.
   config.module.rules.push({
-    test: /(handlebars-helpers|create-frame|set-getter)\/.*\.js$/,
+    test: /(handlebars-helpers|create-frame|set-getter)[\\\/].*\.js$/,
     use: ['unlazy-loader'],
     include: path.resolve(__dirname, '../'),
   });
