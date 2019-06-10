@@ -241,15 +241,3 @@
 })(
     window.AmpCa = window.AmpCa || {}
 );
-
-/*===========================
- Utils AMD Export
- ===========================*/
-// if (typeof module !== 'undefined') {
-//     module.exports = window.AmpCa.Utils;
-// } else if (typeof define === 'function' && define.amd) {
-//     define([], function () {
-//         'use strict';
-//         return window.AmpCa.Utils;
-//     });
-// }

@@ -57,12 +57,4 @@ const sampleContent = {
 };
 
 storiesOf('Banner', module)
-  .addDecorator(story => {
-    addons.getChannel().emit(CoreEvents.REGISTER_SUBSCRIPTION, () => {
-      console.log('reg sub');
-      console.log('banners', document.querySelectorAll('.amp-dc-banner'));
-      return () => {};
-    });
-    return story();
-  })
   .add('Example Content', () => renderContent('acc-template-banner', sampleContent));
