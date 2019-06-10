@@ -21,7 +21,8 @@ helpers(
         'object',
         'regex',
         'string',
-        'url'
+        'url',
+        'markdown'
     ],
     {
         handlebars: handlebars
