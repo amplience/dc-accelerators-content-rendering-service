@@ -238,6 +238,13 @@
     exports.Utils = exports.Utils || {};
     exports.Utils.attachComponents = attachComponents;
 
+    /**
+     * Automatically activate accelerator components when the page renders
+     */
+    document.addEventListener('DOMContentLoaded', function() {
+        attachComponents();
+    });
+
 })(
     window.AmpCa = window.AmpCa || {}
 );
