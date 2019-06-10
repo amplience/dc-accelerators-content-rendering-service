@@ -6,6 +6,8 @@ import {
   renderContent
 } from '../../.storybook/rendering-service';
 
+import externalBlockStyles from './externalBlock.scss';
+
 const sampleContent = {
   "@id": "http://content.cms.amplience.com/09a41f98-e99e-40b5-8736-dfd10f927e48",
   "_meta": {
