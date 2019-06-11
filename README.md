@@ -58,7 +58,7 @@ This will export the following files:
 
 | file                | description                                                                                                                                                            |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| dist/contentTypes   | [Content Types](https://docs.amplience.net/integration/contenttypes.html) which define th content structure for each component.                                        |
+| dist/contentTypes   | [Content Types](https://docs.amplience.net/integration/contenttypes.html) which define the content structure for each component.                                        |
 | dist/templates      | [Content Rendering Service](https://docs.amplience.net/integration/contentrenderingservice.html#the-content-rendering-service) templates which render content to HTML. |
 | dist/icons          | Icons for each component.                                                                                                                                              |
 | dist/styles.min.css | CSS Styles for the components.                                                                                                                                         |
@@ -67,13 +67,39 @@ This will export the following files:
 
 ### Deploying components
 
-...Something about how deploying content types, templates & TTs to Amplience including card settings, icons etc.
+To make use of these components in your application you must configure them in your Amplience account in addition to including the CSS & JavaScript in your project. The guide below explains how to deploy each type of resource exported in the previous step.
 
-...Something about deploying CSS & JS to your application
+#### Content Types
 
-### Using components
 
-...Something about CSS/JS & init components JS
+#### Content Rendering Templates
+
+
+#### Image Transformation Templates
+
+
+#### CSS & JavaScript
+
+Include a reference to the CSS & JavaScript resources in your application.
+
+```html
+<link rel="stylesheet" href="dist/styles.min.css"/>
+<script src="dist/utils.js"></script>
+```
+
+If you are using the Slider component also include the [lory library](https://github.com/loryjs/lory).
+
+```html
+<script src="dist/lory.min.js"></script>
+```
+
+Interactive components will automatically attach their functionality when the DOM has loaded. If your application asynchronously renders the components you can manually activate the components with the following JavaScript:
+
+```js
+if (window.AmpCa && window.AmpCa.Utils) {
+   window.AmpCa.Utils.attachComponents();
+}
+```
 
 ## Documentation
 
