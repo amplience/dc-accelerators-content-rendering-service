@@ -10,13 +10,6 @@ This project is designed to accelerate implementing Amplience Dynamic Content. I
 
 [![Amplience Dynamic Content Accelerators](media/screenshot.jpeg)](https://amplience.com/dynamic-content)
 
-
-## Table of contents
-- [Installation](#installation)
-- [Demo](#demo)
-- [Getting Help](#getting-help)
-- [License](#license)
-
 ## Demo
 
 * [Working demo](https://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/homepage/index.html?c=d8b929ee-214d-48f0-90c0-4e121ca55a6f&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114) of the accelerator components.
