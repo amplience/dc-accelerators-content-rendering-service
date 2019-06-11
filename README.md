@@ -42,13 +42,14 @@ See the [documentation](#documentation) links below for further details.
 
 Before you can deploy the components you need to run the export process. This will compile, concatenate and minify the CSS & JavaScript as well as collect the templates, icons and content types into a folder to ease deployment.
 
+Steps:
 
-Ensure gulp-cli is installed:
+1. Ensure gulp-cli is installed:
 ```
 npm install --global gulp-cli
 ```
 
-Run gulp:
+2. Run gulp:
 
 ```
 gulp
@@ -67,18 +68,19 @@ This will export the following files:
 
 ### Deploying components
 
-To make use of these components in your application you must configure them in your Amplience account in addition to including the CSS & JavaScript in your project. The guide below explains how to deploy each type of resource exported in the previous step.
+To make use of these components in your application you must configure them in your Amplience account in addition to including the CSS & JavaScript in your project.
 
-#### Content Types
+#### Configure Dynamic Content
 
+To make the components available for use they must be configured in your Dynamic Content account. This includes:
 
-#### Content Rendering Templates
+* [Content Types](https://docs.amplience.net/integration/contenttypes.html)
+* [Content Rendering Templates](https://docs.amplience.net/integration/contentrenderingservice.html)
+* [Image Transformation Templates](https://docs.amplience.net/contenthub/tools.html#templates)
 
+Steps for this can be found in the [configuration guide](./docs/CONFIGURE-DYNAMIC-CONTENT.md).
 
-#### Image Transformation Templates
-
-
-#### CSS & JavaScript
+#### Include CSS & JavaScript
 
 Include a reference to the CSS & JavaScript resources in your application.
 
@@ -103,10 +105,10 @@ if (window.AmpCa && window.AmpCa.Utils) {
 
 ## Documentation
 
-* Hosting content types externally
-* Creating new components
-* Extending Storybook
-* Template depencencies
+* [Creating new components](./docs/CREATING-COMPONENTS.md)
+* [Extending Storybook](./docs/EXTENDING-STORYBOOK.md)
+* [Template dependencies](./docs/TEMPLATE-DEPENDENCIES.md)
+* [Hosting content types externally](./docs/EXTERNAL-CONTENT-TYPES.md)
 
 ## Getting Help
 If you need help please reach out using one of the following channels:
