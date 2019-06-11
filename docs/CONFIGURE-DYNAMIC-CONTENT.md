@@ -2,7 +2,214 @@
 
 ## Content Types
 
+[Content Types](https://docs.amplience.net/integration/contenttypes.html) define the structure, format and validation rules of the content for a given component. 
 
+### Create content type schemas
+
+This step involves uploading the files found under dist/contentTypes into Dynamic Content. The following steps should be repeated for each content type file:
+
+Steps:
+
+1. Open the content type JSON file you wish to create in a text editor
+
+2. Login to [Dynamic Content](https://content.amplience.net)
+
+3. Navigate to the Development -> [Content type schemas screen](https://content.amplience.net/#!/labs/development/schemas/list)
+
+4. Click "Create schema" to add a new content type schema
+
+5. Copy the "id" field from the content type file into the Schema ID field
+
+6. Click Save & open schema
+
+![Create Content Type Schema](../media/configure-cts.jpeg)
+
+7. Copy and paste the entire JSON file into the text editor and press save
+
+Repeat these steps for all of the content types
+
+### Register Content types
+
+Once you have uploaded the content type schemas you can enable them as a content type. This will make the content type visible in the authoring UI. 
+
+You can also setup display settings for the content type including label, icon, card (provides thumbnails of content) and visualization (provides a preview of the component while editing). 
+
+The recommended values for these settings can be found in the table below. You can also modify these at a later date.
+
+Mandatory Steps:
+
+1. Login to [Dynamic Content](https://content.amplience.net)
+
+2. Navigate to the Development -> [Content types screen](https://content.amplience.net/#!/labs/development/content-types/list)
+
+3. Click "Register content type" to enable a new content type
+
+4. Choose your content type schema from the dropdown
+
+5. Enter a label for the content type. This is how content authors will see the content type.
+
+6. Select which repositories should enable the content type from the list of check boxes.
+
+Recommended Steps:
+
+7. Choose an icon / copy icon URL from the recommended values below
+
+8. Choose a card / copy settings from the recommended values below
+
+![Configure Card](../media/configure-card.jpeg)
+
+9. Add a visualization called "Preview" with the following Visualization URL: ```https://{{vse.domain}}/v1/content/demo/content-item/{{content.sys.id}}?template=acc-template-visualization```
+
+![Create Content Type](../media/configure-content-type.jpeg)
+
+#### Recommended Settings
+
+###### Roundel
+- ###### Icon
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-imagewithroundel.png`
+
+- ###### Card
+	Choose the gallery card. The pointers you need to add for the card are:
+	- headline: /roundelPosition
+	- image0: /roundel
+
+##### Link
+- ###### Icon
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-link.png`
+
+- ###### Card
+	Choose the text card. The pointer you need to add for the card is:
+	- headline: /label
+
+##### Image
+- ###### Icon
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-image.png`
+
+- ###### Card
+	Choose the photo card. The pointers you need to add for the card are:
+	- image: /image
+	- imageAlt: /imageAltText
+
+##### Text
+- ###### Icon
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-text.png`
+
+- ###### Card
+	Choose the text card. The pointer you need to add for the card is:
+	- headline: /text
+
+##### Video
+- ###### Icon
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-video.png`
+
+- ###### Card
+	Choose the gallery card. The pointers you need to add for the card are:
+	- headline: /_title
+	- image0: /video
+
+##### Card
+- ###### Icon
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-card.png`
+
+- ###### Card
+	Choose the gallery card. The pointers you need to add for the card are:
+	- headline: /cardName
+	- image0: /cardImage/image
+
+##### Card list
+- ###### Icon
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-cardlist.png`
+
+- ###### Card
+	Choose the gallery card. The pointers you need to add for the card are:
+	- headline: /header
+	- image0: /cards/0/cardImage/image	
+	- image1: /cards/1/cardImage/image
+	- image2: /cards/2/cardImage/image
+	- image3: /cards/3/cardImage/image
+
+##### Banner
+- ###### Icon
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-banner.png`
+
+- ###### Card
+	Choose the gallery card. The pointers you need to add for the card are:
+	- headline: /header
+	- image0: /bannerImage/0/image
+	
+##### Slider
+- ###### Icon
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-slider.png`
+
+- ###### Card
+	Choose the gallery card. Examples of the pointers you need to add for the card are:
+	- headline: /_title
+	- image0: /slides/0/bannerImage/0/image
+	- image1: /slides/1/bannerImage/0/image
+	- image2: /slides/2/bannerImage/0/image	- image3: /slides/3/bannerImage/0/image
+
+##### Split block
+- ###### Icon
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-splitblock.png`
+
+- ###### Card
+	Choose the gallery card. Examples of pointers you need to add for the card are:
+	- headline: /content/0/text
+	- image0: /content/0/image
+	- image1: /content/1/image
+	- image2: /content/0/video
+	- image3: /content/1/video
+	
+##### Promo
+- ###### Icon
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-promobannersection.png`
+
+- ###### Card
+	Choose the gallery card. The pointers you need to add for the card are:
+	- headline: /_title
+	- image0: /icon
+
+##### Promo List
+- ###### Icon
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-promobanner.png`
+
+- ###### Card
+	Choose the gallery card. The pointers you need to add for the card are:
+	- headline: /_title
+	- image0: /bannerSection/0/icon
+	- image1: /bannerSection/1/icon
+	- image2: /bannerSection/2/icon
+
+##### External block
+
+- ###### Icon
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-externalblock.png`
+
+- ###### Card
+	Choose the text card. The pointer you need to add for the card is:
+	- headline: /external
+
+##### Snippet
+- ###### Icon
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-blogsnippet.png`
+
+- ###### Card
+	Choose the gallery card. The pointers you need to add for the card are:
+	- headline: /title
+	- image0: /image/image
+
+##### Blog Post
+- ###### Icon
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-blogpost.png`
+
+- ###### Card
+	Choose the gallery card. The pointers you need to add for the card are:
+	- headline: /title
+	- image0: /snippet/image/image
+
+##### Page
+- ###### Icon
+	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-page.png`
 
 ## Content Rendering Templates
 
