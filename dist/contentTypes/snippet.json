@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/snippet.json",
+  "id": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json",
   "title": "Blog Snippet Accelerator",
   "description": "Blog Snippet Accelerator",
   "allOf": [
@@ -22,7 +22,7 @@
       "description": "",
       "allOf": [
         {
-          "$ref": "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/image.json"
+          "$ref": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json"
         }
       ]
     },
@@ -46,7 +46,7 @@
       "description": "",
       "allOf": [
         {
-          "$ref": "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/link.json"
+          "$ref": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/link.json"
         }
       ]
     }

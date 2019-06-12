@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/cardlist.json",
+  "id": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/cardlist.json",
   "title": "Card List Accelerator",
   "description": "Card List Accelerator",
   "allOf": [
@@ -39,7 +39,7 @@
               "contentType": {
                 "title": "Card Content",
                 "enum": [
-                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/card.json"
+                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/card.json"
                 ]
               }
             }

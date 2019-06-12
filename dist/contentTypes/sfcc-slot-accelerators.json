@@ -5,7 +5,7 @@
 			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
 		}
 	],
-	"id": "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/sfcc-slot-accelerators.json",
+	"id": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/sfcc-slot-accelerators.json",
 	"title": "SFCC Slot all accelerators",
 	"description": "SFCC Slot all accelerators",
 	"type": "object",
@@ -37,18 +37,18 @@
 						"contentType": {
 							"title": "Page Content",
 							"enum": [
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/banner.json",
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/blogpost.json",
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/card.json",
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/cardlist.json",
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/page.json",
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/image.json",
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/promolist.json",
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/slider.json",
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/splitblock.json",
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/externalblock.json",
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/text.json",
-									"https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/video.json"
+									"https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json",
+									"https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json",
+									"https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/card.json",
+									"https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/cardlist.json",
+									"https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/page.json",
+									"https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json",
+									"https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/promolist.json",
+									"https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/slider.json",
+									"https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/splitblock.json",
+									"https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/externalblock.json",
+									"https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json",
+									"https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/video.json"
 								]
 						}
 					}

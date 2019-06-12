@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/promolist.json",
+  "id": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/promolist.json",
   "title": "Promotional List",
   "description": "Promotional list",
   "allOf": [
@@ -22,7 +22,7 @@
               "contentType": {
                 "title": "Promo list section",
                 "enum": [
-                  "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.0.0/dist/contentTypes/promo.json"
+                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/promo.json"
                 ]
               }
             }
