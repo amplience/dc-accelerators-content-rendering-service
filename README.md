@@ -108,7 +108,7 @@ if (window.AmpCa && window.AmpCa.Utils) {
 * [Creating new components](./docs/CREATING-COMPONENTS.md)
 * [Extending Storybook](./docs/EXTENDING-STORYBOOK.md)
 * [Template dependencies](./docs/TEMPLATE-DEPENDENCIES.md)
-* [Hosting content types externally](./docs/EXTERNAL-CONTENT-TYPES.md)
+* [Hosting Content Types externally](./docs/EXTERNAL-CONTENT-TYPES.md)
 
 ## Getting Help
 If you need help please reach out using one of the following channels:
