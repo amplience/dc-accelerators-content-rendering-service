@@ -149,7 +149,7 @@ const sampleContent = {
       }
     }
   ],
-  "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/blog.json"
+  "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/blogpost.json"
 };
 
 storiesOf('Blog Post', module)
