@@ -46,10 +46,6 @@
 {{> acc-template-blogPost }}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/blog")) ~}}
-{{> acc-template-blog }}
-{{~/if}}
-
 {{#if (test this.[@type] (toRegex ".*/banner")) ~}}
 {{> acc-template-banner }}
 {{~/if}}
