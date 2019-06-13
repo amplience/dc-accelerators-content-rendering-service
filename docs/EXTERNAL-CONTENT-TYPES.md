@@ -6,7 +6,7 @@ This feature is intended to support the following advanced use-cases:
 
 * Referencing the exact same content type from multiple hubs (e.g. across brands)
   * Note: This is only suitable if you will never need to make hub specific changes to a content type and they will strictly always be identical.
-* Contiguous integration – If you wish to version your content types in source control and create an automated deployment pipeline.
+* Continuous integration – If you wish to version your content types in source control and create an automated deployment pipeline.
 
 ## Steps
 
