@@ -1,10 +1,16 @@
 {
   "name": "dc-accelerators-content-rendering-service",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "scripts": {
     "build": "gulp",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "version:patch": "standard-version",
+    "version:minor": "standard-version --release-as minor",
+    "version:major": "standard-version --release-as major",
+    "prepare-patch-release": "run-s build version:patch",
+    "prepare-minor-release": "run-s build version:minor",
+    "prepare-major-release": "run-s build version:major"
   },
   "repository": {
     "type": "git",
@@ -50,8 +56,10 @@
     "kind-of": "^6.0.2",
     "lodash": "^4.17.11",
     "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5",
     "pump": "1.0.2",
     "sass-loader": "^7.1.0",
+    "standard-version": "^6.0.1",
     "unlazy-loader": "^0.1.3",
     "webpack": "^4.33.0"
   },
