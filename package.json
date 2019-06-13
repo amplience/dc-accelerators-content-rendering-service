@@ -1,6 +1,7 @@
 {
   "name": "dc-accelerators-content-rendering-service",
   "version": "4.0.0",
+  "repository": "https://github.com/amplience/dc-accelerators-content-rendering-service",
   "scripts": {
     "build": "gulp buildAll",
     "storybook": "start-storybook -p 6006",
@@ -11,10 +12,6 @@
     "prepare-patch-release": "run-s build version:patch",
     "prepare-minor-release": "run-s build version:minor",
     "prepare-major-release": "run-s build version:major"
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
   },
   "description": "Amplience DC Frontend modules, using HTML Service",
   "main": "src/",
