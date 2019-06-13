@@ -1,7 +1,11 @@
 {
   "name": "dc-accelerators-content-rendering-service",
   "version": "1.0.0",
-  "scripts": {},
+  "scripts": {
+    "build": "gulp",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
   "repository": {
     "type": "git",
     "url": ""
@@ -10,13 +14,15 @@
   "main": "src/",
   "author": "Amplience",
   "dependencies": {
-    "cms-javascript-sdk": "github:amplience/cms-javascript-sdk#2d7cb9d",
-    "dc-accelerators": "github:amplience/dc-accelerators#v3.0.0",
-    "dc-accelerators-content-types": "github:amplience/dc-accelerators-content-types#v2.0.0",
-    "lory.js": "2.2.1",
-    "showdown": "1.7.1"
+    "dc-accelerators-content-types": "github:amplience/dc-accelerators-content-types#v2.0.1",
+    "lory.js": "2.2.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@storybook/addon-notes": "^5.1.1",
+    "@storybook/addon-viewport": "^5.1.1",
+    "@storybook/html": "^5.1.1",
+    "babel-loader": "^8.0.6",
     "del": "3.0.0",
     "event-stream": "^4.0.1",
     "gulp": "^4.0.0",
@@ -26,6 +32,7 @@
     "gulp-concat": "2.6.1",
     "gulp-connect": "^5.7.0",
     "gulp-declare": "0.3.0",
+    "gulp-flatten": "^0.4.0",
     "gulp-htmlmin": "3.0.0",
     "gulp-insert": "^0.5.0",
     "gulp-processhtml": "^1.2.0",
@@ -34,12 +41,19 @@
     "gulp-sourcemaps": "2.6.0",
     "gulp-uglify": "3.0.0",
     "gulp-watch": "^5.0.1",
+    "handlebars": "^4.1.2",
+    "handlebars-helpers": "^0.10.0",
     "jasmine-core": "^2.7.0",
     "karma": "^4.0.1",
     "karma-chrome-launcher": "^2.2.0",
     "karma-jasmine": "^1.1.0",
+    "kind-of": "^6.0.2",
     "lodash": "^4.17.11",
-    "pump": "1.0.2"
+    "node-sass": "^4.12.0",
+    "pump": "1.0.2",
+    "sass-loader": "^7.1.0",
+    "unlazy-loader": "^0.1.3",
+    "webpack": "^4.33.0"
   },
   "directories": {},
   "keywords": [

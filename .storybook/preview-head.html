@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+<style>
+    html, body, div {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
+
+<script>
+
+    /**
+     * This function will invoke every time a story is rendered
+     */
+    function onStoryRendered() {
+        window.AmpCa.Utils.attachComponents();
+    }
+
+    /**
+     * Storybook replaces the DOM in the root element whenever the story is changed.
+     * This code watches for that change and runs the component init code above
+     */
+    document.addEventListener('DOMContentLoaded', function() {
+        onStoryRendered();
+
+        const callback = function(mutationsList) {
+            for (let i = 0, len = mutationsList.length; i < len; i++) {
+                if (mutationsList[i].type == 'childList') {
+                    onStoryRendered();
+                    break;
+                }
+            }
+        };
+
+        const observer = new MutationObserver(callback);
+        const config = { childList: true, subtree: false };
+        observer.observe(document.getElementById('root'), config);
+    }, false);
+        
+</script>
