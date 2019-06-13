@@ -6,8 +6,8 @@
 {{> acc-template-video }}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/promobanner")) ~}}
-{{> acc-template-promoList }}
+{{#if (test this.[@type] (toRegex ".*/promo")) ~}}
+{{> acc-template-promo }}
 {{~/if}}
 
 {{#if (test this.[@type] (toRegex ".*/promolist")) ~}}
