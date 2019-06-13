@@ -6,7 +6,7 @@ import {
     renderContent
 } from '../../.storybook/rendering-service';
 
-const sampleContent = {
+export const sampleContent = {
     "@id": "http://content.cms.amplience.com/a34ec334-0e78-41df-9bf4-5c15209bb266",
     "_meta": {
         "schema": "https://s3-eu-west-1.amazonaws.com/dev-solutions/DC-accelerators-with-CRS-v2.1.0/dist/contentTypes/sfcc-slot-accelerators.json",

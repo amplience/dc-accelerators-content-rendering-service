@@ -6,7 +6,7 @@ import { renderContent } from '../../.storybook/rendering-service';
 
 import imageStyles from './image.scss';
 
-const sampleContent = {
+export const sampleContent = {
   "@id": "http://content.cms.amplience.com/38476590-9594-4d46-8f5a-c54e293fd094",
   "_meta": {
     "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",

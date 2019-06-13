@@ -11,7 +11,7 @@ import {
 
 import bannerStyles from './banner.scss';
 
-const sampleContent = {
+export const sampleContent = {
   "@id": "http://content.cms.amplience.com/04125527-a0b0-415e-9b83-0791d7669638",
   "_meta": {
     "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/banner.json",

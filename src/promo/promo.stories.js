@@ -8,7 +8,7 @@ import {
 
 import promoStyles from './promo.scss';
 
-const samplePromoContent = {
+export const sampleContent = {
   "@id": "http://content.cms.amplience.com/3b0db833-ed08-4993-aec8-c24fc0f38c5c",
   "_meta": {
     "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobannersection.json",
@@ -94,5 +94,5 @@ const samplePromoListContent = {
 };
 
 storiesOf('Promo', module)
-  .add('Single Promo', () => renderContent('acc-template-promo', samplePromoContent))
+  .add('Single Promo', () => renderContent('acc-template-promo', sampleContent))
   .add('Promo List', () => renderContent('acc-template-promoList', samplePromoListContent));

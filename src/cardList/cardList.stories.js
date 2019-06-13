@@ -8,7 +8,7 @@ import {
 
 import cardListStyles from './cardList.scss';
 
-const sampleContent = {
+export const sampleContent = {
   "@id": "http://content.cms.amplience.com/3d35c8be-22d3-408e-8067-51dd38abaa63",
   "_meta": {
     "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/cardlist.json",

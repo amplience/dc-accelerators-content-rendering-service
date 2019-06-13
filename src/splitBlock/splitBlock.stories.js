@@ -8,7 +8,7 @@ import {
 
 import splitBlockStyles from './splitBlock.scss';
 
-const sampleContent = {
+export const sampleContent = {
   "@id": "http://content.cms.amplience.com/47c6b9bf-c164-4c7f-8087-1a608028108e",
   "_meta": {
     "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/splitblock.json",

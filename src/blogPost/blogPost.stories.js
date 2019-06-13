@@ -8,7 +8,7 @@ import {
 
 import blogPostStyles from './blogPost.scss';
 
-const sampleContent = {
+export const sampleContent = {
   "@id": "http://content.cms.amplience.com/a232e160-4c8a-4a96-97d1-635dc85bfe38",
   "_meta": {
     "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/blog.json",

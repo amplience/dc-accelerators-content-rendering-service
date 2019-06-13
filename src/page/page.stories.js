@@ -8,7 +8,7 @@ import {
 
 import pageStyles from './page.scss';
 
-const sampleContent = {
+export const sampleContent = {
   "@id": "http://content.cms.amplience.com/d8b929ee-214d-48f0-90c0-4e121ca55a6f",
   "_meta": {
     "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/homepage.json",
@@ -596,7 +596,7 @@ const sampleContent = {
       ]
     }
   ],
-  "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/homepage.json"
+  "@type": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/page.json"
 };
 
 storiesOf('Page', module)

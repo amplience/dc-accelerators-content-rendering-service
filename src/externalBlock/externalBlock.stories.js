@@ -8,7 +8,7 @@ import {
 
 import externalBlockStyles from './externalBlock.scss';
 
-const sampleContent = {
+export const sampleContent = {
   "@id": "http://content.cms.amplience.com/09a41f98-e99e-40b5-8736-dfd10f927e48",
   "_meta": {
     "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/externalblock.json",

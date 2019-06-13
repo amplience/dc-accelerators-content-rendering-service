@@ -8,7 +8,7 @@ import {
 
 import sliderStyles from './slider.scss';
 
-const sampleContent = {
+export const sampleContent = {
   "@id": "http://content.cms.amplience.com/42041097-5281-4e6d-b506-62b08b85ab80",
   "_meta": {
     "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/slider.json",
