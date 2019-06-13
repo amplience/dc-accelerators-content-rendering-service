@@ -1,6 +1,4 @@
 .storybook
 src
 .prettierrc.json
-docs
-media
 empty.png
