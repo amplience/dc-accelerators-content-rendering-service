@@ -1,0 +1,374 @@
+body {
+  background: #e5e5e5;
+}
+
+.card-viz {
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  top: 65px;
+  right: 10px;
+  bottom: 10px;
+  left: calc(50% - 150px);
+}
+
+.card-container {
+  margin: 0 auto;
+  background: white;
+  width: 100%;
+  height: 100%;
+
+  .amp-dc-image-pic {
+    width: 100%;
+    vertical-align: middle;
+  }
+
+  .amp-dc-banner-info-wrap, .amp-dc-banner-info {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .amp-dc-banner .amp-dc-banner-header {
+    font-size: 10px !important;
+  }
+
+  .amp-dc-banner-description {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 8px !important;
+  }
+
+  .amp-dc-banner .amp-dc-banner-button {
+    margin: 3px !important;
+    font-size: 8px !important;
+    padding: 6px 4px !important;
+  }
+
+  .amp-dc-slider {
+    position: unset !important;
+  }
+
+  .amp-dc-slider .amp-dc-dots > li {
+    height: 6px !important;
+    width: 6px !important;
+  }
+
+  .amp-dc-slider .amp-dc-slider-next svg, .amp-dc-slider .amp-dc-slider-prev svg {
+    height: 15px !important;
+    width: 15px !important;
+  }
+
+  .amp-dc-banner .amp-dc-banner-info-wrap:before {
+    content: none !important;
+  }
+
+  .amp-dc-dots {
+    margin: 0 !important;
+  }
+
+  .amp-dc-block-wrap {
+    margin: 0 !important;
+  }
+
+  .amp-dc-blog, .amp-dc-blog-content, .amp-dc-blog .amp-dc-block-wrap {
+    margin: 0 !important;
+  }
+
+  .amp-dc-blog {
+    padding: 0 !important;
+  }
+
+  .amp-dc-blog .amp-dc-blog-title {
+    font-size: 14px !important;
+  }
+
+  .amp-dc-text {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    h1 {
+      font-size: 12px;
+    }
+
+    h2 {
+      font-size: 10px !important;
+    }
+
+    p {
+      font-size: 8px !important;
+    }
+  }
+
+  .amp-dc-splitBlock .amp-dc-split-part:first-child {
+    padding: 0 !important;
+  }
+
+  .amp-dc-card-name {
+    font-size: 12px !important;
+  }
+
+  .amp-dc-card .amp-dc-card-description {
+    font-size: 10px !important;
+  }
+
+  .amp-dc-card-link {
+    font-size: 8px !important;
+  }
+
+  .amp-dc-banner-info-wrap {
+    width: 40%;
+
+    &[data-align='left'] {
+      left: 35px;
+    }
+
+    &[data-align='right'] {
+      right: 35px;
+    }
+
+    &.amp-dc-info-bottom {
+      position: relative;
+      top: 0 !important;
+      left: 0 !important;
+      right: auto;
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 0 15px 10px 15px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+
+      .amp-dc-banner-info {
+        display: block;
+      }
+    }
+  }
+
+  .amp-dc-prod-5-rows {
+    .amp-dc-card {
+      width: 50%;
+    }
+  }
+
+  .amp-dc-prod-4-rows {
+    .amp-dc-card {
+      width: 50%;
+    }
+  }
+
+  .amp-dc-prod-3-rows {
+    .amp-dc-card {
+      width: 50%;
+    }
+
+    &.amp-dc-cards-hero {
+      .amp-dc-card-list-wrap {
+        > div:nth-last-child(3):first-child {
+          width: 100%;
+
+          .amp-dc-card-wrap {
+            margin-right: 0;
+          }
+        }
+
+        .amp-dc-card {
+          width: 100%;
+
+          &.amp-dc-card-1 {
+            width: 100%;
+
+            .amp-dc-card-wrap {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .amp-dc-prod-2-rows {
+    .amp-dc-card {
+      width: 50%;
+    }
+  }
+
+  .amp-dc-prod-1-rows {
+    .amp-dc-card {
+      width: 100%;
+    }
+  }
+
+  .amp-dc-prod-5-rows {
+    .amp-dc-card {
+      width: 100%;
+    }
+  }
+
+  .amp-dc-prod-4-rows {
+    .amp-dc-card {
+      width: 100%;
+    }
+  }
+
+  .amp-dc-prod-3-rows {
+    .amp-dc-card {
+      width: 100%;
+    }
+  }
+
+  .amp-dc-prod-2-rows {
+    .amp-dc-card {
+      width: 100%;
+    }
+  }
+
+  .amp-dc-prod-1-rows {
+    .amp-dc-card {
+      width: 100%;
+    }
+  }
+
+  .amp-dc-promo-banner {
+    white-space: normal;
+
+    .amp-dc-promo-banner-wrap {
+      position: relative;
+      display: block;
+    }
+
+    .amp-dc-promo-block {
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      -webkit-transition: opacity 1s ease-in-out;
+      -moz-transition: opacity 1s ease-in-out;
+      -ms-transition: opacity 1s ease-in-out;
+      -o-transition: opacity 1s ease-in-out;
+      opacity: 0;
+
+      &.dc-fade-in {
+        position: relative;
+        -webkit-transition: opacity 1.5s ease-in-out;
+        -moz-transition: opacity 1.5s ease-in-out;
+        -ms-transition: opacity 1.5s ease-in-out;
+        -o-transition: opacity 1.5s ease-in-out;
+        animation-delay: 0.5s;
+        -moz-animation-delay: 0.5s;
+        -webkit-animation-delay: 0.5s;
+        opacity: 1;
+      }
+    }
+
+    .amp-dc-promo-head-text {
+      font-size: 15px;
+    }
+
+    .amp-dc-promo-content-text {
+      font-size: 13px;
+    }
+
+    .amp-dc-promo-ico {
+      min-height: 35px;
+    }
+  }
+
+  .amp-dc-splitBlock {
+    .amp-dc-split-part {
+      float: none;
+
+      &.amp-dc-size-50 {
+        width: 100%;
+      }
+
+      &.amp-dc-size-70 {
+        width: 100%;
+      }
+
+      &.amp-dc-size-30 {
+        width: 100%;
+      }
+
+      &:first-child {
+        padding: 0 0 30px 0;
+      }
+
+      .amp-dc-split-part-wrap {
+        padding-left: 0;
+      }
+
+      &:first-child {
+        .amp-dc-split-part-wrap {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  .amp-dc-promo-banner .amp-dc-promo-head-text {
+    font-size: 8px !important;
+  }
+
+  .amp-dc-slider .amp-dc-slider-frame {
+    padding: 0 !important;
+  }
+
+  .amp-dc-homepage .amp-dc-promo-banner {
+    margin: 0;
+  }
+
+  .amp-dc-homepage .amp-dc-promo-banner-wrap {
+    margin: 0;
+  }
+
+  .amp-dc-card-list .amp-dc-card-wrap {
+    margin: 0;
+  }
+
+  .amp-dc-card-list .amp-dc-card-list-wrap {
+    margin: 0;
+  }
+
+  .amp-dc-promo-banner image {
+    width: 100%;
+  }
+
+  .amp-dc-card-title {
+    font-size: 14px;
+  }
+
+  .amp-dc-promo-banner .amp-dc-promo-wrap > a {
+    padding: 0;
+    border: none;
+  }
+
+  .amp-dc-banner-pic-wrap {
+    text-align: center;
+  }
+
+  .amp-dc-block-wrap {
+    text-align: center;
+  }
+
+  .js_slider {
+    position: relative;
+  }
+
+  .amp-dc-promo-block {
+    border: none !important;
+  }
+
+  .amp-dc-external-block .test {
+    min-width: unset;
+    margin: 0;
+  }
+}

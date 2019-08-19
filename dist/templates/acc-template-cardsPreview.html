@@ -1,0 +1,39 @@
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Amplience Accelerators Card</title>
+    <link rel="stylesheet" href="https://unpkg.com/dc-accelerators-content-rendering-service@v4/dist/styles.min.css"/>
+
+    <style>
+        html, body, div {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <!--
+        Amplience accelerators dependencies
+            Updating these references to your own version will allow you to make style and code changes and observe them in the visualization.
+            Further guidance can be found on the github project: https://github.com/amplience/dc-accelerators-content-rendering-service
+    -->
+    <link rel="stylesheet" href="https://unpkg.com/dc-accelerators-content-rendering-service@v4/dist/cardsStyles.min.css"/>
+    <script src="https://unpkg.com/dc-accelerators-content-rendering-service@v4/dist/utils.min.js"></script>
+    <script src="https://unpkg.com/dc-accelerators-content-rendering-service@v4/dist/lory.min.js"></script>
+
+</head>
+<body>
+
+<div class="card-viz" id="card-viz">
+    <div class="card-container" id="card-container" onmouseleave="window.AmpCa.Utils.scrollLeave()" onmouseover="window.AmpCa.Utils.scrollOnHover(event)">
+        <div style="position: absolute; width: 100%">
+            {{> cardsTemplateChooser this}}
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

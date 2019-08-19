@@ -1,0 +1,13 @@
+<div class="amp-dc-card-list
+{{#compare cards.length '<' 6}}amp-dc-prod-{{cards.length}}-rows
+{{else}}amp-dc-prod-3-rows{{/compare}}
+{{#if heroList}}amp-dc-cards-hero{{/if}}
+">
+    <div class="amp-dc-card-title">
+        {{ header }}
+    </div>
+
+    <div class="amp-dc-card-list-wrap">
+        {{#each cards}}{{> cardsTemplateChooser this}}{{/each}}
+    </div>
+</div>

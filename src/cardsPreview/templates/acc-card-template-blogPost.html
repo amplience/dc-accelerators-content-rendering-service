@@ -1,0 +1,10 @@
+<div class="amp-dc-blog js_dc_blog">
+    <div class="amp-dc-blog-title">
+        {{ title }}
+    </div>
+    <div class="amp-dc-blog-content">
+        {{#each content}}
+        <div class="amp-dc-block-wrap">{{> cardsTemplateChooser this}}</div>
+        {{/each}}
+    </div>
+</div>

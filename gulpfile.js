@@ -109,7 +109,8 @@ gulp.task('minify-js', function () {
 
 gulp.task('build-css', function () {
     return gulp.src([
-            'src/**/*.scss'
+            'src/**/*.scss',
+            '!src/cardsPreview/cardsPreview.scss'
         ])
         .pipe(
             sass({
@@ -126,8 +127,30 @@ gulp.task('build-css', function () {
         .pipe(gulp.dest('dist'));
 });
 
+gulp.task('build-cards-css', function () {
+    return gulp.src([
+            'src/cardsPreview/cardsPreview.scss'
+        ])
+        .pipe(
+            sass({
+                outputStyle: 'expanded'
+            }).on('error', sass.logError)
+        )
+        .pipe(
+            autoprefixer({
+                browsers: ['last 2 versions'],
+                cascade: false
+            })
+        )
+        .pipe(concat('cardsStyles.css'))
+        .pipe(gulp.dest('dist'));
+});
+
 gulp.task('minify-css', function () {
-    return gulp.src(['dist/styles.css'])
+    return gulp.src([
+          'dist/styles.css',
+          'dist/cardsStyles.css'
+        ])
         .pipe(cleanCSS())
         .pipe(rename({
             suffix: '.min'
@@ -147,6 +170,7 @@ gulp.task(
         'addLoryLicense',
         'build-js',
         'minify-js',
+        'build-cards-css',
         'build-css',
         'minify-css'
     ),
