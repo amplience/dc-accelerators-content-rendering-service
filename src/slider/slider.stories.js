@@ -50,12 +50,12 @@ export const sampleContent = {
         "seoText": "lady in red"
       }],
       "textPositionLeft": "55",
-      "textColour": "ffffff",
+      "textColor": "rgb(255,255,255)",
       "header": "Pretty in Pink",
       "description": "Exploring Spring & Summer Looks in London",
       "stackMobileLayout": true,
       "style": "black",
-      "bannerColor": "000000",
+      "bannerColor": "rgb(0,0,0)",
       "bannerOpacity": 0.5
     },
     {
@@ -95,7 +95,7 @@ export const sampleContent = {
         "seoText": "3-new-year-banner"
       }],
       "textPositionLeft": "20",
-      "textColour": "000000",
+      "textColor": "rgb(0,0,0)",
       "header": "3 LOOKS FOR EASTER!",
       "description": "3 ways to look great this Easter",
       "stackMobileLayout": true,
@@ -137,12 +137,12 @@ export const sampleContent = {
         }
       }],
       "textPositionLeft": "15",
-      "textColour": "ffffff",
+      "textColor": "rgb(255,255,255)",
       "header": "HEAD TO TOE IN BLACK SALE",
       "description": "What is the best way to wear all black?",
       "stackMobileLayout": true,
       "style": "white",
-      "bannerColor": "#00000",
+      "bannerColor": "rgb(0,0,0)",
       "bannerOpacity": 0.6
     }
   ],

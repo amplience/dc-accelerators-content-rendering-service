@@ -12,26 +12,19 @@
 
   Banner.prototype.initBackgroundColor = function (element) {
     var infoPanel = element.querySelector('.amp-dc-banner-info');
-    var dataColor = infoPanel.getAttribute('data-color') || 'fff';
+    var dataColor = infoPanel.getAttribute('data-color') || "rgb(255,255,255)";
     var dataOpacity = Number(infoPanel.getAttribute('data-opacity') || '1');
 
-    if (dataColor.indexOf('#') === 0) {
-      dataColor = dataColor.slice(1);
-    }
+    dataColor = dataColor.slice(4);
+    dataColor = dataColor.slice(0, dataColor.length - 1);
+    dataColor = dataColor.split(',');
 
-    if (dataColor.length === 3) {
-      var hexArr = dataColor.split('');
-      dataColor = hexArr[0] + hexArr[0];
-      dataColor += hexArr[1] + hexArr[1];
-      dataColor += hexArr[2] + hexArr[2];
-    }
-
-    var r = parseInt(dataColor.slice(0, 2), 16);
-    var g = parseInt(dataColor.slice(2, 4), 16);
-    var b = parseInt(dataColor.slice(4, 6), 16);
+    var r = parseInt(dataColor[0], 10);
+    var g = parseInt(dataColor[1], 10);
+    var b = parseInt(dataColor[2], 10);
 
     infoPanel.style.backgroundColor = 'rgba(' + r + ', ' + g + ', ' + b + ', ' + dataOpacity + ')';
-  }
+  };
 
   /**
    * Promo Banner - Javascript is used to animate the sections for resolutions that can only show a single section at a time

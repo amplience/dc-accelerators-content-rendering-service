@@ -21,8 +21,8 @@ export const sampleContent = {
     },
     "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/productlist/index.html?c=f49907fd-99df-4446-85b7-4c3235aac82a&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
   },
-  "backgroundColour": "d3d3d3",
-  "toplineColour": "000000",
+  "backgroundColor": "rgb(211,211,211)",
+  "toplineColor": "rgb(0,0,0)",
   "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobannersection.json"
 };
 
@@ -33,7 +33,7 @@ const samplePromoListContent = {
     "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobanner.json",
     "name": "accelerator-promo-banner-1"
   },
-  "bannerSection": [{
+  "promoItems": [{
       "@id": "http://content.cms.amplience.com/990ecee0-6976-496a-8b77-d23cb4e42976",
       "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobannersection.json",
       "_meta": {
@@ -47,10 +47,10 @@ const samplePromoListContent = {
         },
         "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/productlist/index.html?c=f49907fd-99df-4446-85b7-4c3235aac82a&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
       },
-      "backgroundColour": "000000",
+      "backgroundColor": "rgb(0,0,0)",
       "bottomLine": "hurry ends in 3 days",
-      "bottomlineColour": "ffffff",
-      "toplineColour": "ffffff"
+      "bottomlineColor": "rgb(255,255,255)",
+      "toplineColor": "rgb(255,255,255)"
     },
     {
       "@id": "http://content.cms.amplience.com/90e694ec-a761-4c32-8581-b6c14ea37690",
@@ -66,10 +66,10 @@ const samplePromoListContent = {
         },
         "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/productlist/index.html?c=f49907fd-99df-4446-85b7-4c3235aac82a&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
       },
-      "backgroundColour": "ffffff",
+      "backgroundColor": "rgb(255,255,255)",
       "bottomLine": "t&c's apply, code: wrapup",
-      "bottomlineColour": "000000",
-      "toplineColour": "000000"
+      "bottomlineColor": "rgb(0,0,0)",
+      "toplineColor": "rgb(0,0,0)"
     },
     {
       "@id": "http://content.cms.amplience.com/da807558-e551-4ed1-a73a-3530a24abc6b",
@@ -85,9 +85,9 @@ const samplePromoListContent = {
         },
         "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/productlist/index.html?c=f49907fd-99df-4446-85b7-4c3235aac82a&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
       },
-      "backgroundColour": "d3d3d3",
+      "backgroundColor": "rgb(211,211,211)",
       "bottomLine": "excludes sale. t&c's apply",
-      "toplineColour": "000000"
+      "toplineColor": "rgb(0,0,0)"
     }
   ],
   "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobanner.json"

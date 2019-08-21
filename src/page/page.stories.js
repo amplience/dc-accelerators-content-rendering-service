@@ -35,10 +35,10 @@ export const sampleContent = {
             },
             "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/productlist/index.html?c=f49907fd-99df-4446-85b7-4c3235aac82a&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
           },
-          "backgroundColour": "000000",
+          "backgroundColor": "rgb(0,0,0)",
           "bottomLine": "hurry ends in 3 days",
-          "bottomlineColour": "ffffff",
-          "toplineColour": "ffffff"
+          "bottomlineColor": "rgb(255,255,255)",
+          "toplineColor": "rgb(255,255,255)"
         },
         {
           "@id": "http://content.cms.amplience.com/90e694ec-a761-4c32-8581-b6c14ea37690",
@@ -54,10 +54,10 @@ export const sampleContent = {
             },
             "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/productlist/index.html?c=f49907fd-99df-4446-85b7-4c3235aac82a&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
           },
-          "backgroundColour": "ffffff",
+          "backgroundColor": "rgb(255,255,255)",
           "bottomLine": "t&c's apply, code: wrapup",
-          "bottomlineColour": "000000",
-          "toplineColour": "000000"
+          "bottomlineColor": "rgb(0,0,0)",
+          "toplineColor": "rgb(0,0,0)"
         },
         {
           "@id": "http://content.cms.amplience.com/da807558-e551-4ed1-a73a-3530a24abc6b",
@@ -73,9 +73,9 @@ export const sampleContent = {
             },
             "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/productlist/index.html?c=f49907fd-99df-4446-85b7-4c3235aac82a&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
           },
-          "backgroundColour": "d3d3d3",
+          "backgroundColor":"rgb(211,211,211)",
           "bottomLine": "excludes sale. t&c's apply",
-          "toplineColour": "000000"
+          "toplineColor": "rgb(0,0,0)"
         }
       ]
     },
@@ -122,12 +122,12 @@ export const sampleContent = {
             "seoText": "lady in red"
           }],
           "textPositionLeft": "55",
-          "textColour": "ffffff",
+          "textColor": "rgb(255,255,255)",
           "header": "Pretty in Pink",
           "description": "Exploring Spring & Summer Looks in London",
           "stackMobileLayout": true,
           "style": "black",
-          "bannerColor": "000000",
+          "bannerColor": "rgb(0,0,0)",
           "bannerOpacity": 0.5
         },
         {
@@ -167,7 +167,7 @@ export const sampleContent = {
             "seoText": "3-new-year-banner"
           }],
           "textPositionLeft": "20",
-          "textColour": "000000",
+          "textColor": "rgb(0,0,0)",
           "header": "3 LOOKS FOR EASTER!",
           "description": "3 ways to look great this Easter",
           "stackMobileLayout": true,
@@ -209,12 +209,12 @@ export const sampleContent = {
             }
           }],
           "textPositionLeft": "15",
-          "textColour": "ffffff",
+          "textColor": "rgb(255,255,255)",
           "header": "HEAD TO TOE IN BLACK SALE",
           "description": "What is the best way to wear all black?",
           "stackMobileLayout": true,
           "style": "white",
-          "bannerColor": "#00000",
+          "bannerColor": "rgb(0,0,0)",
           "bannerOpacity": 0.6
         }
       ],
@@ -242,8 +242,8 @@ export const sampleContent = {
           },
           "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/productlist/index.html?c=f49907fd-99df-4446-85b7-4c3235aac82a&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
         },
-        "backgroundColour": "d3d3d3",
-        "toplineColour": "000000"
+        "backgroundColor": "rgb(211,211,211)",
+        "toplineColor": "rgb(0,0,0)"
       }]
     },
     {
@@ -317,7 +317,7 @@ export const sampleContent = {
             }
           },
           "cardName": "Shop The Look",
-          "textBackgroundColour": "cccccc",
+          "textBackgroundColor": "rgb(204,204,204)",
           "link": {
             "label": "Find products as you see them",
             "value": "http://dev-solutions.s3.amazonaws.com/ca-demo-site/dist/shop-the-look/index.html",
@@ -390,7 +390,7 @@ export const sampleContent = {
             }
           },
           "cardName": "Blog",
-          "textBackgroundColour": "d3d3d3",
+          "textBackgroundColor": "rgb(211,211,211)",
           "link": {
             "label": "Visit Blog",
             "value": "http://dev-solutions.s3.amazonaws.com/ca-demo-site/dist/bloglist/index.html?s=e6bdb253-db3c-4458-b5cc-0d90aa02e114&c=54db7a18-1768-400f-8e96-bbd2e35e4b9c",

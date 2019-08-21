@@ -46,12 +46,12 @@ export const sampleContent = {
     "seoText": "lady in red"
   }],
   "textPositionLeft": "55",
-  "textColour": "ffffff",
+  "textColor": "rgb(255,255,255)",
   "header": "Pretty in Pink",
   "description": "Exploring Spring & Summer Looks in London",
   "stackMobileLayout": true,
   "style": "black",
-  "bannerColor": "f00",
+  "bannerColor": "rgb(255,0,0)",
   "bannerOpacity": 0.5,
   "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/banner.json"
 };
