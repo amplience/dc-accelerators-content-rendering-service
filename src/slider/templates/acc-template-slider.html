@@ -1,9 +1,24 @@
-<div class="amp-dc-slider js_slider" data-infinite="{{loop}}" data-autoplay="{{autoplay}}" data-navigation="{{navigationDots}}">
+<div class="amp-dc-slider js_slider" data-infinite="{{loop}}" data-autoplay="{{autoplay}}"
+     data-navigation="{{navigationDots}}">
     <div class="amp-dc-slider-frame js_frame">
         <ul class="amp-dc-slider-slides js_slides">
             {{#each slides}}
             <li class="amp-dc-slider-slide js_dc_slide">
-                {{> templateChooser this}}
+                {{#if (test this.[@type] (toRegex ".*/banner")) ~}}
+                {{> acc-template-banner }}
+                {{~/if}}
+
+                {{#if (test this.[@type] (toRegex ".*/video")) ~}}
+                {{> acc-template-video }}
+                {{~/if}}
+
+                {{#if (test this.[@type] (toRegex ".*/image")) ~}}
+                {{> acc-template-slider-image this}}
+                {{~/if}}
+
+                {{#if (test this.[0].[@type] (toRegex ".*/image")) ~}}
+                {{> acc-template-slider-image this.[0]}}
+                {{~/if}}
             </li>
             {{/each}}
         </ul>
