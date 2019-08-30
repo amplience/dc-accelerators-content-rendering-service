@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/slider.json",
+  "id": "{CONTENT_TYPE_BASEPATH}/slider.json",
   "title": "Slider",
   "description": "Slider accelerator",
   "allOf": [
@@ -21,9 +21,9 @@
             "properties": {
               "contentType": {
                 "enum": [
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json",
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json",
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/video.json"
+                  "{CONTENT_TYPE_BASEPATH}/banner.json",
+                  "{CONTENT_TYPE_BASEPATH}/image.json",
+                  "{CONTENT_TYPE_BASEPATH}/video.json"
                 ]
               }
             }

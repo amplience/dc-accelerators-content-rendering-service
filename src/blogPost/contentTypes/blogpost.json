@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json",
+  "id": "{CONTENT_TYPE_BASEPATH}/blogpost.json",
   "title": "Blog post",
   "description": "Blog post accelerator",
   "allOf": [
@@ -16,7 +16,7 @@
       "description": "",
       "allOf": [
         {
-          "$ref": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/accelerator-partials#/definitions/snippet"
+          "$ref": "{CONTENT_TYPE_BASEPATH}/accelerator-partials#/definitions/snippet"
         }
       ]
     },
@@ -38,12 +38,12 @@
               "contentType": {
                 "title": "Content",
                 "enum": [
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json",
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json",
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/video.json",
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json",
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/cardlist.json",
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json"
+                  "{CONTENT_TYPE_BASEPATH}/banner.json",
+                  "{CONTENT_TYPE_BASEPATH}/image.json",
+                  "{CONTENT_TYPE_BASEPATH}/video.json",
+                  "{CONTENT_TYPE_BASEPATH}/text.json",
+                  "{CONTENT_TYPE_BASEPATH}/cardlist.json",
+                  "{CONTENT_TYPE_BASEPATH}/blogpost.json"
                 ]
               }
             }

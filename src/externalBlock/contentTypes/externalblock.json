@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/externalblock.json",
+  "id": "{CONTENT_TYPE_BASEPATH}/externalblock.json",
   "title": "External block",
   "description": "External block accelerator",
   "allOf": [

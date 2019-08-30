@@ -1,0 +1,44 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "{CONTENT_TYPE_BASEPATH}/page.json",
+  "title": "Page",
+  "description": "Page accelerator",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "contentTypes": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "enum": [
+                  "{CONTENT_TYPE_BASEPATH}/slider.json",
+                  "{CONTENT_TYPE_BASEPATH}/promolist.json",
+                  "{CONTENT_TYPE_BASEPATH}/video.json",
+                  "{CONTENT_TYPE_BASEPATH}/text.json",
+                  "{CONTENT_TYPE_BASEPATH}/externalblock.json",
+                  "{CONTENT_TYPE_BASEPATH}/splitblock.json",
+                  "{CONTENT_TYPE_BASEPATH}/cardlist.json",
+                  "{CONTENT_TYPE_BASEPATH}/image.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "title": "Content types"
+    }
+  },
+  "propertyOrder": [
+    "contentTypes"
+  ]
+}

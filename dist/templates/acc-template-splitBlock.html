@@ -2,7 +2,21 @@
     {{#each content}}
     <div class="amp-dc-split-part{{#if ../split}} amp-dc-size-{{itemAt (split ../split "/") @index}}{{/if}}">
         <div class="amp-dc-split-part-wrap">
-            {{> templateChooser this}}
+            {{#if (test this.[@type] (toRegex ".*/text")) ~}}
+            {{> acc-template-text }}
+            {{~/if}}
+
+            {{#if (test this.[@type] (toRegex ".*/video")) ~}}
+            {{> acc-template-video }}
+            {{~/if}}
+
+            {{#if (test this.[@type] (toRegex ".*/image")) ~}}
+            {{> acc-template-splitBlock-image this}}
+            {{~/if}}
+
+            {{#if (test this.[0].[@type] (toRegex ".*/image")) ~}}
+            {{> acc-template-splitBlock-image this.[0]}}
+            {{~/if}}
         </div>
     </div>
     {{/each}}

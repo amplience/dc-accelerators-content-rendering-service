@@ -1,15 +1,12 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
   "id": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/page.json",
-  "title": "Page Accelerator",
-  "description": "Page Accelerator",
+  "title": "Page",
+  "description": "Page accelerator",
   "allOf": [
     {
       "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
     }
-  ],
-  "propertyOrder": [
-    "contentTypes"
   ],
   "type": "object",
   "properties": {
@@ -23,7 +20,6 @@
           {
             "properties": {
               "contentType": {
-                "title": "Content Types",
                 "enum": [
                   "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/slider.json",
                   "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/promolist.json",
@@ -39,8 +35,10 @@
           }
         ]
       },
-      "title": "Content Type",
-      "description": ""
+      "title": "Content types"
     }
-  }
+  },
+  "propertyOrder": [
+    "contentTypes"
+  ]
 }

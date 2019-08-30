@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/promolist.json",
+  "id": "{CONTENT_TYPE_BASEPATH}/promolist.json",
   "title": "Promo list",
   "description": "Promo list accelerator",
   "allOf": [
@@ -22,7 +22,7 @@
             "properties": {
               "contentType": {
                 "enum": [
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/promo.json"
+                  "{CONTENT_TYPE_BASEPATH}/promo.json"
                 ]
               }
             }

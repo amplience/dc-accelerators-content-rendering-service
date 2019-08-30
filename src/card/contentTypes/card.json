@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/card.json",
+  "id": "{CONTENT_TYPE_BASEPATH}/card.json",
   "title": "Card",
   "description": "Card accelerator",
   "allOf": [
@@ -21,7 +21,7 @@
             "contentType": {
               "title": "image",
               "enum": [
-                "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json"
+                "{CONTENT_TYPE_BASEPATH}/image.json"
               ]
             }
           }
@@ -45,7 +45,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/accelerator-partials#/definitions/link"
+          "$ref": "{CONTENT_TYPE_BASEPATH}/accelerator-partials#/definitions/link"
         }
       ]
     }

@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/video.json",
+  "id": "{CONTENT_TYPE_BASEPATH}/video.json",
   "title": "Video",
   "description": "Video accelerator",
   "allOf": [

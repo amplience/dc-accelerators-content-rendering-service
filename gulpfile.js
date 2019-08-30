@@ -58,18 +58,6 @@ gulp.task('copy-local-content-types', function () {
         .pipe(gulp.dest('dist/contentTypes'));
 });
 
-gulp.task('copy-accelerators-content-types', function () {
-    return gulp
-        .src([
-            'node_modules/dc-accelerators-content-types/**/*.json',
-            '!**/package.json',
-            '!**/package-lock.json'
-        ])
-        .pipe(replace())
-        .pipe(flatten())
-        .pipe(gulp.dest('dist/contentTypes'));
-});
-
 gulp.task('copy-node-modules', function () {
     return gulp
         .src([
@@ -166,7 +154,6 @@ gulp.task(
         'copy-icons',
         'copy-templates',
         'copy-local-content-types',
-        'copy-accelerators-content-types',
         'addLoryLicense',
         'build-js',
         'minify-js',

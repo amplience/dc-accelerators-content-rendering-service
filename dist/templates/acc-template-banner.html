@@ -15,10 +15,22 @@
         {{/unless}}"
          data-align="{{#if alignment}}{{alignment}}{{else}}left{{/if}}"
          style="
-             {{#if textPositionLeft}}left:{{textPositionLeft}}%;{{/if}}
-             {{#if textPositionTop}}top:{{textPositionTop}}%;{{/if}}"
-    >
-        <div class="amp-dc-banner-info" data-opacity="{{bannerOpacity}}" data-color="{{bannerColor}}" style="{{#if textColour}}color: #{{textColour}};{{/if}} {{#if bannerColor}}background: #{{bannerColor}}{{/if}}">
+             {{#if textPositionLeft}}
+                left:{{textPositionLeft}}%;
+             {{/if}}
+             {{#if textPositionTop}}
+                top:{{textPositionTop}}%;
+             {{/if}}
+            ">
+        <div class="amp-dc-banner-info" data-opacity="{{bannerOpacity}}" data-color="{{bannerColor}}"
+             style="
+             {{#if textColor}}
+                color: {{textColor}};
+             {{/if}}
+             {{#if bannerColor}}
+                background: {{bannerColor}};
+             {{/if}}
+            ">
             {{#if header}}
             <div class="amp-dc-banner-header">{{header}}</div>
             {{/if}}

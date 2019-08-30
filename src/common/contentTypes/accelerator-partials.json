@@ -1,0 +1,90 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "{CONTENT_TYPE_BASEPATH}/accelerator-partials",
+  "definitions": {
+    "roundel": {
+      "title": "Roundel",
+      "description": "Use this to enter image roundel's details",
+      "type": "object",
+      "properties": {
+        "roundel": {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+          "title": "Roundel image"
+        },
+        "roundelRatio": {
+          "type": "number",
+          "title": "Roundel ratio",
+          "description": "A value between 0 and 10 e.g. 0.6 (1 by default)",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "roundelPosition": {
+          "type": "string",
+          "enum": [
+            "Top Left",
+            "Top Right",
+            "Bottom Left",
+            "Bottom Right"
+          ],
+          "title": "Roundel position",
+          "description": "Roundel position is centered by default"
+        }
+      }
+    },
+    "link": {
+      "title": "Link",
+      "description": "Use this to configure links",
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 255,
+          "title": "Label"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 2000,
+          "title": "Value",
+          "description": "A relative URL, absolute URL or an ID"
+        }
+      }
+    },
+    "snippet": {
+      "title": "Snippet",
+      "description": "Use this to add snippets to the blog post",
+      "type": "object",
+      "properties": {
+        "image": {
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "{CONTENT_TYPE_BASEPATH}/image.json"
+            }
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 255,
+          "title": "Title"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 500,
+          "title": "Description"
+        },
+        "cta": {
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "#/definitions/link"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/cardlist.json",
+  "id": "{CONTENT_TYPE_BASEPATH}/cardlist.json",
   "title": "Card list",
   "description": "Card list accelerator",
   "allOf": [
@@ -32,7 +32,7 @@
             "properties": {
               "contentType": {
                 "enum": [
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/card.json"
+                  "{CONTENT_TYPE_BASEPATH}/card.json"
                 ]
               }
             }
