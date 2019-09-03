@@ -45,7 +45,7 @@
       "items": {
         "allOf": [
           {
-            "$ref": "{CONTENT_TYPE_BASEPATH}/accelerator-partials#/definitions/roundel"
+            "$ref": "{CONTENT_TYPE_BASEPATH}/accelerator-partials.json#/definitions/roundel"
           }
         ]
       }

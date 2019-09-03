@@ -1,6 +1,14 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "{CONTENT_TYPE_BASEPATH}/accelerator-partials",
+  "id": "{CONTENT_TYPE_BASEPATH}/accelerator-partials.json",
+  "title": "Accelerator partials",
+  "description": "Partials",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
   "definitions": {
     "roundel": {
       "title": "Roundel",

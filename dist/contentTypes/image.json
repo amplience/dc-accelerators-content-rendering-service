@@ -45,7 +45,7 @@
       "items": {
         "allOf": [
           {
-            "$ref": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/accelerator-partials#/definitions/roundel"
+            "$ref": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/accelerator-partials.json#/definitions/roundel"
           }
         ]
       }

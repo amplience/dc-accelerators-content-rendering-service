@@ -16,7 +16,7 @@
       "description": "",
       "allOf": [
         {
-          "$ref": "{CONTENT_TYPE_BASEPATH}/accelerator-partials#/definitions/snippet"
+          "$ref": "{CONTENT_TYPE_BASEPATH}/accelerator-partials.json#/definitions/snippet"
         }
       ]
     },

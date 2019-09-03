@@ -16,7 +16,7 @@
       "description": "",
       "allOf": [
         {
-          "$ref": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/accelerator-partials#/definitions/snippet"
+          "$ref": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/accelerator-partials.json#/definitions/snippet"
         }
       ]
     },

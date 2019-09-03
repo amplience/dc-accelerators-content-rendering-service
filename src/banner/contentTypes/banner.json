@@ -54,7 +54,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "{CONTENT_TYPE_BASEPATH}/accelerator-partials#/definitions/link"
+          "$ref": "{CONTENT_TYPE_BASEPATH}/accelerator-partials.json#/definitions/link"
         }
       ]
     },
