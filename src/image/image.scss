@@ -1,18 +1,119 @@
 .amp-dc-image {
-    margin: 0;
-    padding: 0;
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  display: block;
+
+  .amp-dc-image-pic {
     display: block;
+  }
 
-    .amp-dc-image-pic {
-        display: block;
-    }
-
-    img {
-        width: 100%;
-        user-select: none;
-    }
+  img {
+    width: 100%;
+    user-select: none;
+  }
 }
+
+.amp-dc-poi-image {
+  .hotspot {
+    cursor: pointer;
+    z-index: 3;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    margin-left: -15px;
+    text-align: center;
+    -webkit-transition: -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+  }
+
+  .hotspot:hover {
+    -webkit-transition: -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+  }
+
+  .hotspot:active {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  .hotspot:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: url('https://dev-solutions.s3.amazonaws.com/poi-js-lib/svg/target.svg') no-repeat 0 0;
+  }
+
+  .hotspot:before {
+    content: '';
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    width: 27px;
+    height: 27px;
+    background: #fff;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    margin-left: -13px;
+    margin-top: -13px;
+  }
+
+  svg {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  svg g polygon {
+    fill: transparent;
+    opacity: 1;
+    stroke: #ececec;
+    stroke-width: 3px;
+    stroke-dasharray: 15;
+    stroke-linecap: round;
+    cursor: pointer;
+  }
+
+  @-webkit-keyframes square-anim {
+    25% {
+      stroke-dasharray: 15;
+      opacity: .5
+    }
+
+    50% {
+      stroke-dasharray: 10;
+      opacity: .7
+    }
+
+    75% {
+      stroke-dasharray: 6;
+      opacity: .8
+    }
+
+    100% {
+      stroke-dasharray: 0;
+      opacity: 1
+    }
+  }
+
+  svg g:hover polygon {
+    animation: square-anim .1s 1 ease-out;
+    animation-fill-mode: forwards;
+  }
+
+}
+

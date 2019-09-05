@@ -262,10 +262,59 @@
     clearInterval(interval)
   }
 
+  function initPOI() {
+    var poi = new window.POI({
+      domain: 'http://i1.adis.ws',
+      account: 'csdemo',
+      containerClass: 'amp-dc-poi-image',
+      imgClass: 'amp-dc-image-pic',
+      images: [{
+        name: '*',
+        polygonCallbacks: [
+          {
+            target: "*",
+            action: "click",
+            callback: function (evt, settings) {
+              console.log('generic click', settings);
+
+            },
+            initCallback: function (settings) {
+              console.log('init callback polygon', settings);
+            }
+          }
+        ],
+        hotspotCallbacks: [
+          {
+            target: "*",
+            action: "click",
+            callback: function (evt, settings) {
+              console.log('yay, i was clicked :)', settings);
+            },
+            initCallback: function (settings) {
+              console.log('init callback hotspot', settings);
+            }
+          },
+          {
+            target: "*",
+            action: "mouseover",
+            callback: function (evt, settings) {
+              console.log('yay, i was hovered :)', settings);
+            },
+            initCallback: function (settings) {
+              console.log('init callback hotspot', settings);
+            }
+          }
+        ]
+      }]
+    });
+    poi.init();
+  }
+
   function attachComponents() {
     attachComponent('.amp-dc-banner', Banner);
     attachComponent('.amp-dc-promo-banner', PromoBanner);
     attachComponent('.amp-dc-slider', Slider);
+    initPOI();
   }
 
   exports.Utils = exports.Utils || {};
@@ -276,7 +325,7 @@
   /**
    * Automatically activate accelerator components when the page renders
    */
-  document.addEventListener('DOMContentLoaded', function () {
+  window.addEventListener('load', function () {
     attachComponents();
   });
 

@@ -21,7 +21,7 @@
      * Storybook replaces the DOM in the root element whenever the story is changed.
      * This code watches for that change and runs the component init code above
      */
-    document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('load', function() {
         onStoryRendered();
 
         const callback = function(mutationsList) {

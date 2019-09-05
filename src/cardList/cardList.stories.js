@@ -35,7 +35,7 @@ export const sampleContent = {
             "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
           },
           "id": "293fae56-2d8f-459e-b375-b65e524d3c69",
-          "name": "pexels-photo-128939",
+          "name": "shutterstock_151174712",
           "endpoint": "csdemo",
           "defaultHost": "i1.adis.ws",
           "mediaType": "image"

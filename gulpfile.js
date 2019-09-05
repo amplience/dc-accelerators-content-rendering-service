@@ -80,6 +80,7 @@ gulp.task('addLoryLicense', function () {
 gulp.task('build-js', function () {
     return gulp.src([
             'src/**/*.js',
+            'node_modules/poi-js-lib/dist/poi-lib.min.js',
             '!**/*.stories.js'
         ])
         .pipe(concat('utils.js'))
