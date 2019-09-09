@@ -18,13 +18,13 @@ export const sampleContent = {
       "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
     },
     "id": "f46fecc5-945c-451c-879e-5c974a821891",
-    "name": "shutterstock_151174712",
+    "name": "pexels-photo-128939",
     "endpoint": "csdemo",
     "defaultHost": "i1.adis.ws",
     "mediaType": "image"
   },
-  "imageAltText": "shutterstock_151174712",
-  "seoText": "shutterstock_151174712",
+  "imageAltText": "pexels-photo-128939",
+  "seoText": "pexels-photo-128939",
   "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
 };
 
