@@ -7,6 +7,7 @@ import {
 } from '../../.storybook/rendering-service';
 
 import styles from './cardsPreview.scss';
+import localStyles from './localCardsStyles.scss';
 
 import {sampleContent} from '../slider/slider.stories';
 import {sampleContent as samplePageContent} from '../page/page.stories';

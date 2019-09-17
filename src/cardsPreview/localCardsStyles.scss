@@ -1,0 +1,15 @@
+body {
+  background: #e5e5e5;
+}
+
+.card-viz {
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  top: 65px;
+  right: 10px;
+  bottom: 10px;
+  left: calc(50% - 150px);
+}

@@ -99,7 +99,8 @@ gulp.task('minify-js', function () {
 gulp.task('build-css', function () {
     return gulp.src([
             'src/**/*.scss',
-            '!src/cardsPreview/cardsPreview.scss'
+            '!src/cardsPreview/cardsPreview.scss',
+            '!src/cardsPreview/localCardsStyles.scss'
         ])
         .pipe(
             sass({
