@@ -66,9 +66,9 @@
       "properties": {
         "image": {
           "type": "object",
-          "allOf": [
+          "anyOf": [
             {
-              "$ref": "{CONTENT_TYPE_BASEPATH}/image.json"
+              "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
             }
           ]
         },

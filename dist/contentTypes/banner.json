@@ -11,25 +11,13 @@
   "type": "object",
   "properties": {
     "bannerImage": {
-      "type": "array",
-      "items": {
-        "allOf": [
-          {
-            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
-          },
-          {
-            "properties": {
-              "contentType": {
-                "title": "image",
-                "enum": [
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json"
-                ]
-              }
-            }
-          }
-        ]
-      },
-      "maxItems": 1,
+      "description": "",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json"
+        }
+      ],
       "title": "Banner image"
     },
     "subheader": {

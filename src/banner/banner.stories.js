@@ -24,7 +24,7 @@ export const sampleContent = {
     },
     "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/blog/index.html?c=54db7a18-1768-400f-8e96-bbd2e35e4b9c&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
   },
-  "bannerImage": [{
+  "bannerImage": {
     "@id": "http://content.cms.amplience.com/38476590-9594-4d46-8f5a-c54e293fd094",
     "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
     "_meta": {
@@ -44,7 +44,7 @@ export const sampleContent = {
     },
     "imageAltText": "lady in red",
     "seoText": "lady in red"
-  }],
+  },
   "textPositionLeft": "55",
   "textColor": "rgb(255,255,255)",
   "header": "Pretty in Pink",

@@ -314,7 +314,7 @@
     attachComponent('.amp-dc-banner', Banner);
     attachComponent('.amp-dc-promo-banner', PromoBanner);
     attachComponent('.amp-dc-slider', Slider);
-    initPOI();
+    //initPOI();
   }
 
   exports.Utils = exports.Utils || {};

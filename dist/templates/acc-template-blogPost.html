@@ -4,36 +4,7 @@
     </div>
     <div class="amp-dc-blog-content">
         {{#each content}}
-        <div class="amp-dc-block-wrap">
-            {{#if (test this.[@type] (toRegex ".*/text")) ~}}
-            {{> acc-template-text }}
-            {{~/if}}
-
-            {{#if (test this.[@type] (toRegex ".*/video")) ~}}
-            {{> acc-template-video }}
-            {{~/if}}
-
-            {{#if (test this.[@type] (toRegex ".*/image")) ~}}
-            {{> acc-template-blogPost-image this}}
-            {{~/if}}
-
-            {{#if (test this.[0].[@type] (toRegex ".*/image")) ~}}
-            {{> acc-template-blogPost-image this.[0]}}
-            {{~/if}}
-
-            {{#if (test this.[@type] (toRegex ".*/cardlist")) ~}}
-            {{> acc-template-cardList }}
-            {{~/if}}
-
-            {{#if (test this.[@type] (toRegex ".*/blogpost")) ~}}
-            {{> acc-template-blogPost }}
-            {{~/if}}
-
-            {{#if (test this.[@type] (toRegex ".*/banner")) ~}}
-            {{> acc-template-banner }}
-            {{~/if}}
-
-        </div>
+        <div class="amp-dc-block-wrap">{{> templateChooser this}}</div>
         {{/each}}
     </div>
 </div>

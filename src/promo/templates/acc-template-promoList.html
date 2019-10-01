@@ -4,24 +4,26 @@
         <div class="amp-dc-promo-block dc-{{@index}}">
             <div class="amp-dc-promo-wrap">
                 <a style="background:{{backgroundColor}}" href="{{link.value}}"
-                   {{#unless icon.name}}class="amp-dc-promo-center" {{/unless}}>
-                {{#if icon.name}}
-                <picture class="amp-dc-promo-ico">
-                    <img src="//{{icon.defaultHost}}/i/{{icon.endpoint}}/{{icon.name}}?w=40&h=40"
-                         srcset="//{{icon.defaultHost}}/i/{{icon.endpoint}}/{{icon.name}}?w=40&h=40 1x, //{{icon.defaultHost}}/i/{{icon.endpoint}}/{{icon.name}}?w=80&h=80 2x"
-                         class="amp-dc-image-pic"/>
-                </picture>
-                {{/if}}
-                <div class="amp-dc-promo-text-wrap">
-                    <div class="amp-dc-promo-head-text" {{#if toplineColor}}style="color:{{toplineColor}}" {{/if}}>
-                    {{topLine}}
-                </div>
+                   {{#unless icon.name}}class="amp-dc-promo-center" {{/unless}} >
+                        {{#if icon.name}}
+                            <picture class="amp-dc-promo-ico">
+                                <img src="//{{icon.defaultHost}}/i/{{icon.endpoint}}/{{icon.name}}?w=40&h=40"
+                                     srcset="//{{icon.defaultHost}}/i/{{icon.endpoint}}/{{icon.name}}?w=40&h=40 1x, //{{icon.defaultHost}}/i/{{icon.endpoint}}/{{icon.name}}?w=80&h=80 2x"
+                                     class="amp-dc-image-pic"/>
+                            </picture>
+                        {{/if}}
+                        <div class="amp-dc-promo-text-wrap">
+                            <div class="amp-dc-promo-head-text" {{#if toplineColor}}style="color:{{toplineColor}}" {{/if}}>
+                                {{topLine}}
+                            </div>
+                        </div>
+                        <div class="amp-dc-promo-content-text"
+                             {{#if bottomlineColor}}style="color:{{bottomlineColor}}" {{/if}}>
+                            {{bottomLine}}
+                        </div>
+                </a>
             </div>
-            <div class="amp-dc-promo-content-text"
-                 {{#if bottomlineColor}}style="color:{{bottomlineColor}}" {{/if}}>
-            {{bottomLine}}
         </div>
+        {{/each}}
     </div>
 </div>
-</div>
-</div>{{/each}}

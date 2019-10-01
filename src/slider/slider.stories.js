@@ -15,49 +15,49 @@ export const sampleContent = {
     "name": "accelerator-slider-1"
   },
   "slides": [{
-      "@id": "http://content.cms.amplience.com/04125527-a0b0-415e-9b83-0791d7669638",
-      "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/banner.json",
-      "_meta": {
-        "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/banner.json",
-        "name": "accelerator-banner-1"
-      },
-      "button": {
-        "label": "Read More",
-        "_meta": {
-          "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/link.json"
-        },
-        "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/blog/index.html?c=54db7a18-1768-400f-8e96-bbd2e35e4b9c&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
-      },
-      "bannerImage": [{
-        "@id": "http://content.cms.amplience.com/38476590-9594-4d46-8f5a-c54e293fd094",
-        "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
-        "_meta": {
-          "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
-          "name": "accelerator-image-1"
-        },
-        "image": {
-          "@id": "http://image.cms.amplience.com/f46fecc5-945c-451c-879e-5c974a821891",
-          "_meta": {
-            "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
-          },
-          "id": "f46fecc5-945c-451c-879e-5c974a821891",
-          "name": "blue-and-pink",
-          "endpoint": "csdemo",
-          "defaultHost": "i1.adis.ws",
-          "mediaType": "image"
-        },
-        "imageAltText": "lady in red",
-        "seoText": "lady in red"
-      }],
-      "textPositionLeft": "55",
-      "textColor": "rgb(255,255,255)",
-      "header": "Pretty in Pink",
-      "description": "Exploring Spring & Summer Looks in London",
-      "stackMobileLayout": true,
-      "style": "black",
-      "bannerColor": "rgb(0,0,0)",
-      "bannerOpacity": 0.5
+    "@id": "http://content.cms.amplience.com/04125527-a0b0-415e-9b83-0791d7669638",
+    "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/banner.json",
+    "_meta": {
+      "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/banner.json",
+      "name": "accelerator-banner-1"
     },
+    "button": {
+      "label": "Read More",
+      "_meta": {
+        "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/link.json"
+      },
+      "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/blog/index.html?c=54db7a18-1768-400f-8e96-bbd2e35e4b9c&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
+    },
+    "bannerImage": {
+      "@id": "http://content.cms.amplience.com/38476590-9594-4d46-8f5a-c54e293fd094",
+      "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+      "_meta": {
+        "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+        "name": "accelerator-image-1"
+      },
+      "image": {
+        "@id": "http://image.cms.amplience.com/f46fecc5-945c-451c-879e-5c974a821891",
+        "_meta": {
+          "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+        },
+        "id": "f46fecc5-945c-451c-879e-5c974a821891",
+        "name": "blue-and-pink",
+        "endpoint": "csdemo",
+        "defaultHost": "i1.adis.ws",
+        "mediaType": "image"
+      },
+      "imageAltText": "lady in red",
+      "seoText": "lady in red"
+    },
+    "textPositionLeft": "55",
+    "textColor": "rgb(255,255,255)",
+    "header": "Pretty in Pink",
+    "description": "Exploring Spring & Summer Looks in London",
+    "stackMobileLayout": true,
+    "style": "black",
+    "bannerColor": "rgb(0,0,0)",
+    "bannerOpacity": 0.5
+  },
     {
       "@id": "http://content.cms.amplience.com/724d4494-9f53-42ab-a55f-b328334d49ae",
       "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/banner.json",
@@ -73,7 +73,7 @@ export const sampleContent = {
         }
       },
       "textPositionTop": "5",
-      "bannerImage": [{
+      "bannerImage": {
         "@id": "http://content.cms.amplience.com/518a5161-b9de-432b-bab7-022557b7e01d",
         "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
         "_meta": {
@@ -93,7 +93,7 @@ export const sampleContent = {
         },
         "imageAltText": "3 new year banner!!",
         "seoText": "3-new-year-banner"
-      }],
+      },
       "textPositionLeft": "20",
       "textColor": "rgb(0,0,0)",
       "header": "3 LOOKS FOR EASTER!",
@@ -117,7 +117,7 @@ export const sampleContent = {
         }
       },
       "textPositionTop": "0",
-      "bannerImage": [{
+      "bannerImage": {
         "@id": "http://content.cms.amplience.com/eaa840ac-c4e9-4b55-8435-5a42afeca9aa",
         "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
         "_meta": {
@@ -135,7 +135,7 @@ export const sampleContent = {
           "defaultHost": "i1.adis.ws",
           "mediaType": "image"
         }
-      }],
+      },
       "textPositionLeft": "15",
       "textColor": "rgb(255,255,255)",
       "header": "HEAD TO TOE IN BLACK SALE",
@@ -144,6 +144,41 @@ export const sampleContent = {
       "style": "white",
       "bannerColor": "rgb(0,0,0)",
       "bannerOpacity": 0.6
+    },
+    {
+      "@id": "http://content.cms.amplience.com/38476590-9594-4d46-8f5a-c54e293fd094",
+      "_meta": {
+        "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+        "name": "accelerator-image-1"
+      },
+      "image": {
+        "@id": "http://image.cms.amplience.com/f46fecc5-945c-451c-879e-5c974a821891",
+        "_meta": {
+          "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+        },
+        "id": "f46fecc5-945c-451c-879e-5c974a821891",
+        "name": "pexels-photo-128939",
+        "endpoint": "csdemo",
+        "defaultHost": "i1.adis.ws",
+        "mediaType": "image"
+      },
+      "roundel": [{
+        "roundelRatio": 0.8636776524387701,
+        "roundelPosition": "Top Right",
+        "roundel": {
+          "id": "cad6cb31-1936-4193-82de-1844a1235c91",
+          "name": "pexels-photo-128939",
+          "endpoint": "csdemo",
+          "defaultHost": "i1.adis.ws",
+          "mediaType": "image",
+          "_meta": {
+            "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+          }
+        }
+      }],
+      "imageAltText": "pexels-photo-128939",
+      "seoText": "pexels-photo-128939",
+      "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
     }
   ],
   "navigationDots": true,
@@ -167,14 +202,14 @@ const sampleVideoContent = {
 storiesOf('Slider', module)
   .add('Looping', () => renderContent('acc-template-slider', sampleContent))
   .add('Non-Looping', () => renderContent('acc-template-slider', {
-    ... sampleContent,
+    ...sampleContent,
     loop: false
   }))
   .add('Without Navigation Dots', () => renderContent('acc-template-slider', {
-    ... sampleContent,
+    ...sampleContent,
     navigationDots: false
   }))
   .add('Video Slide', () => renderContent('acc-template-slider', {
-    ... sampleContent,
+    ...sampleContent,
     slides: sampleContent.slides.concat([sampleVideoContent])
   }))

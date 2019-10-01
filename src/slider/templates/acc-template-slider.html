@@ -13,11 +13,15 @@
                 {{~/if}}
 
                 {{#if (test this.[@type] (toRegex ".*/image")) ~}}
-                {{> acc-template-slider-image this}}
-                {{~/if}}
-
-                {{#if (test this.[0].[@type] (toRegex ".*/image")) ~}}
-                {{> acc-template-slider-image this.[0]}}
+                {{> acc-template-image-generator
+                    image=this.image
+                    settings=this
+                    mediaQueries='[
+                        {"query": 1025, "width": 1600},
+                        {"query": 1024, "width": 1024},
+                        {"query": 768, "width": 768}
+                    ]'
+                    }}
                 {{~/if}}
             </li>
             {{/each}}

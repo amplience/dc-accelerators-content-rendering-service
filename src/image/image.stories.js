@@ -23,6 +23,20 @@ export const sampleContent = {
     "defaultHost": "i1.adis.ws",
     "mediaType": "image"
   },
+  "roundel": [{
+    "roundelRatio": 0.8636776524387701,
+    "roundelPosition": "Top Right",
+    "roundel": {
+      "id": "cad6cb31-1936-4193-82de-1844a1235c91",
+      "name": "pexels-photo-128939",
+      "endpoint": "csdemo",
+      "defaultHost": "i1.adis.ws",
+      "mediaType": "image",
+      "_meta": {
+        "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+      }
+    }
+  }],
   "imageAltText": "pexels-photo-128939",
   "seoText": "pexels-photo-128939",
   "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"

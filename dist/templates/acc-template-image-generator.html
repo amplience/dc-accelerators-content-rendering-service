@@ -1,0 +1,25 @@
+<div class="amp-dc-poi-image">
+    <picture class="amp-dc-image">
+        {{#each (JSONparse mediaQueries)}}
+            <source srcset="//{{../image.defaultHost}}/i/{{../image.endpoint}}/{{encodeURI ../image.name}}{{#if ../settings.seoText}}/{{encodeURI ../settings.seoText}}{{/if}}.webp?w={{this.width}}{{#if this.widthPercents}}%{{/if}}{{> acc-template-roundel roundel=../settings.roundel }}{{#if ../isBanner}}{{>acc-template-banner-poi name=../image.name settings=this.x1}}{{/if}} 1x,
+                            //{{../image.defaultHost}}/i/{{../image.endpoint}}/{{encodeURI ../image.name}}{{#if ../settings.seoText}}/{{encodeURI ../settings.seoText}}{{/if}}.webp?w={{multiply this.width 2}}{{#if this.widthPercents}}%{{/if}}{{> acc-template-roundel roundel=../settings.roundel}}{{#if ../isBanner}}{{> acc-template-banner-poi name=../image.name settings=this.x2}}{{/if}} 2x"
+                    media="({{#if @first}}min-width{{else}}max-width{{/if}}: {{this.query}}px)"
+                    type="image/webp">
+            <source srcset="//{{../image.defaultHost}}/i/{{../image.endpoint}}/{{encodeURI ../image.name}}{{#if ../settings.seoText}}/{{encodeURI ../settings.seoText}}{{/if}}?w={{this.width}}{{#if this.widthPercents}}%{{/if}}{{> acc-template-roundel roundel=../settings.roundel}}{{#if ../isBanner}}{{> acc-template-banner-poi name=../image.name settings=this.x1}}{{/if}} 1x,
+                            //{{../image.defaultHost}}/i/{{../image.endpoint}}/{{encodeURI ../image.name}}{{#if ../settings.seoText}}/{{encodeURI ../settings.seoText}}{{/if}}?w={{multiply this.width 2}}{{#if this.widthPercents}}%{{/if}}{{> acc-template-roundel roundel=../settings.roundel}}{{#if ../isBanner}}{{> acc-template-banner-poi name=../image.name settings=this.x2}}{{/if}} 2x"
+                    media="({{#if @first}}min-width{{else}}max-width{{/if}}: {{this.query}}px)"
+                    >
+            {{#if @last}}
+                {{#with (first (JSONparse ../mediaQueries) 1)}}
+                <img
+                        src="//{{../../image.defaultHost}}/i/{{../../image.endpoint}}/{{encodeURI ../../image.name}}{{#if ../../settings.seoText}}/{{encodeURI ../../settings.seoText}}{{/if}}{{> acc-template-roundel roundel=../../settings.roundel}}{{#if ../../isBanner}}{{> acc-template-banner-poi name=../../image.name settings=this.x1}}{{/if}}"
+                        srcset="//{{../../image.defaultHost}}/i/{{../../image.endpoint}}/{{encodeURI ../../image.name}}{{#if ../../settings.seoText}}/{{encodeURI ../../settings.seoText}}{{/if}}.webp?w={{this.0.width}}{{#if this.widthPercents}}%{{/if}}{{> acc-template-roundel roundel=../../settings.roundel}}{{#if ../../isBanner}}{{> acc-template-banner-poi name=../../image.name settings=this.0.x1}}{{/if}} 1x,
+                                //{{../../image.defaultHost}}/i/{{../../image.endpoint}}/{{encodeURI ../../image.name}}{{#if ../../settings.seoText}}/{{encodeURI ../../settings.seoText}}{{/if}}.webp?w={{multiply this.0.width 2}}{{#if this.widthPercents}}%{{/if}}{{> acc-template-roundel roundel=../../settings.roundel}}{{#if ../../isBanner}}{{> acc-template-banner-poi name=../../image.name settings=this.0.x2}}{{/if}} 2x,
+                                //{{../../image.defaultHost}}/i/{{../../image.endpoint}}/{{encodeURI ../../image.name}}{{#if ../../settings.seoText}}/{{encodeURI ../../settings.seoText}}{{/if}}?w={{this.0.width}}{{#if this.widthPercents}}%{{/if}}{{> acc-template-roundel roundel=../../settings.roundel}}{{#if ../../isBanner}}{{> acc-template-banner-poi name=../../image.name settings=this.0.x1}}{{/if}} 1x,
+                                //{{../../image.defaultHost}}/i/{{../../image.endpoint}}/{{encodeURI ../../image.name}}{{#if ../../settings.seoText}}/{{encodeURI ../../settings.seoText}}{{/if}}?w={{multiply this.0.width 2}}{{#if this.widthPercents}}%{{/if}}{{> acc-template-roundel roundel=../../settings.roundel}}{{#if ../../isBanner}}{{> acc-template-banner-poi name=../../image.name settings=this.0.x2}}{{/if}} 2x"
+                        class="amp-dc-image-pic {{../../classNames}}" {{#if ../../settings.imageAltText}} alt="{{../../settings.imageAltText}}" {{/if}} />
+                {{/with}}
+            {{/if}}
+        {{/each}}
+    </picture>
+</div>

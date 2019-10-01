@@ -100,7 +100,7 @@ export const sampleContent = {
             },
             "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/blog/index.html?c=54db7a18-1768-400f-8e96-bbd2e35e4b9c&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
           },
-          "bannerImage": [{
+          "bannerImage": {
             "@id": "http://content.cms.amplience.com/38476590-9594-4d46-8f5a-c54e293fd094",
             "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
             "_meta": {
@@ -120,7 +120,7 @@ export const sampleContent = {
             },
             "imageAltText": "lady in red",
             "seoText": "lady in red"
-          }],
+          },
           "textPositionLeft": "55",
           "textColor": "rgb(255,255,255)",
           "header": "Pretty in Pink",
@@ -145,7 +145,7 @@ export const sampleContent = {
             }
           },
           "textPositionTop": "5",
-          "bannerImage": [{
+          "bannerImage": {
             "@id": "http://content.cms.amplience.com/518a5161-b9de-432b-bab7-022557b7e01d",
             "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
             "_meta": {
@@ -165,7 +165,7 @@ export const sampleContent = {
             },
             "imageAltText": "3 new year banner!!",
             "seoText": "3-new-year-banner"
-          }],
+          },
           "textPositionLeft": "20",
           "textColor": "rgb(0,0,0)",
           "header": "3 LOOKS FOR EASTER!",
@@ -189,7 +189,7 @@ export const sampleContent = {
             }
           },
           "textPositionTop": "0",
-          "bannerImage": [{
+          "bannerImage": {
             "@id": "http://content.cms.amplience.com/eaa840ac-c4e9-4b55-8435-5a42afeca9aa",
             "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
             "_meta": {
@@ -207,7 +207,7 @@ export const sampleContent = {
               "defaultHost": "i1.adis.ws",
               "mediaType": "image"
             }
-          }],
+          },
           "textPositionLeft": "15",
           "textColor": "rgb(255,255,255)",
           "header": "HEAD TO TOE IN BLACK SALE",
@@ -262,23 +262,15 @@ export const sampleContent = {
             "name": "accelerator-card-1"
           },
           "cardImage": {
-            "@id": "http://content.cms.amplience.com/bdcf5474-c3eb-4c1e-a582-a186bf4df1bd",
-            "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+            "@id": "http://image.cms.amplience.com/054c070d-0943-4bd4-aa48-c40fefe9b9c3",
             "_meta": {
-              "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
-              "name": "shop-card-image"
+              "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
             },
-            "image": {
-              "@id": "http://image.cms.amplience.com/054c070d-0943-4bd4-aa48-c40fefe9b9c3",
-              "_meta": {
-                "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
-              },
-              "id": "054c070d-0943-4bd4-aa48-c40fefe9b9c3",
-              "name": "Fashion_Womens_Collection_SS",
-              "endpoint": "csdemo",
-              "defaultHost": "i1.adis.ws",
-              "mediaType": "image"
-            }
+            "id": "054c070d-0943-4bd4-aa48-c40fefe9b9c3",
+            "name": "Fashion_Womens_Collection_SS",
+            "endpoint": "csdemo",
+            "defaultHost": "i1.adis.ws",
+            "mediaType": "image"
           },
           "cardName": "Women Fashion",
           "link": {
@@ -298,23 +290,15 @@ export const sampleContent = {
             "name": "accelerator-card-2"
           },
           "cardImage": {
-            "@id": "http://content.cms.amplience.com/927beb58-9ef3-4b81-9864-5a666dc6e762",
-            "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+            "@id": "http://image.cms.amplience.com/e4bd0dcb-e6b0-4cda-b7fd-857ae42cf87e",
             "_meta": {
-              "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
-              "name": "accelerator-image-for-card-2"
+              "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
             },
-            "image": {
-              "@id": "http://image.cms.amplience.com/e4bd0dcb-e6b0-4cda-b7fd-857ae42cf87e",
-              "_meta": {
-                "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
-              },
-              "id": "e4bd0dcb-e6b0-4cda-b7fd-857ae42cf87e",
-              "name": "shopthelook copy",
-              "endpoint": "csdemo",
-              "defaultHost": "i1.adis.ws",
-              "mediaType": "image"
-            }
+            "id": "e4bd0dcb-e6b0-4cda-b7fd-857ae42cf87e",
+            "name": "shopthelook copy",
+            "endpoint": "csdemo",
+            "defaultHost": "i1.adis.ws",
+            "mediaType": "image"
           },
           "cardName": "Shop The Look",
           "textBackgroundColor": "rgb(204,204,204)",
@@ -335,23 +319,15 @@ export const sampleContent = {
             "name": "accelerator-card-3"
           },
           "cardImage": {
-            "@id": "http://content.cms.amplience.com/c22872d2-d3b6-4884-89b9-41438073babb",
-            "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+            "@id": "http://image.cms.amplience.com/5de21dbd-99ee-4e3b-9c0d-16eb64c68c77",
             "_meta": {
-              "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
-              "name": "accelerator-image-for-card-3"
+              "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
             },
-            "image": {
-              "@id": "http://image.cms.amplience.com/5de21dbd-99ee-4e3b-9c0d-16eb64c68c77",
-              "_meta": {
-                "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
-              },
-              "id": "5de21dbd-99ee-4e3b-9c0d-16eb64c68c77",
-              "name": "onlineCatalogue copy",
-              "endpoint": "csdemo",
-              "defaultHost": "i1.adis.ws",
-              "mediaType": "image"
-            }
+            "id": "5de21dbd-99ee-4e3b-9c0d-16eb64c68c77",
+            "name": "onlineCatalogue copy",
+            "endpoint": "csdemo",
+            "defaultHost": "i1.adis.ws",
+            "mediaType": "image"
           },
           "cardName": "Online Catalogue",
           "link": {
@@ -371,23 +347,15 @@ export const sampleContent = {
             "name": "accelerator-card-4"
           },
           "cardImage": {
-            "@id": "http://content.cms.amplience.com/6d10dd9e-a9d2-4d26-8427-abea31bbbcee",
-            "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+            "@id": "http://image.cms.amplience.com/77eb6cf8-ce22-4548-9822-56f160718a64",
             "_meta": {
-              "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
-              "name": "accelerator-image-for-card-4"
+              "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
             },
-            "image": {
-              "@id": "http://image.cms.amplience.com/77eb6cf8-ce22-4548-9822-56f160718a64",
-              "_meta": {
-                "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
-              },
-              "id": "77eb6cf8-ce22-4548-9822-56f160718a64",
-              "name": "blog_1",
-              "endpoint": "csdemo",
-              "defaultHost": "i1.adis.ws",
-              "mediaType": "image"
-            }
+            "id": "77eb6cf8-ce22-4548-9822-56f160718a64",
+            "name": "blog_1",
+            "endpoint": "csdemo",
+            "defaultHost": "i1.adis.ws",
+            "mediaType": "image"
           },
           "cardName": "Blog",
           "textBackgroundColor": "rgb(211,211,211)",
@@ -494,23 +462,15 @@ export const sampleContent = {
             "name": "accelerator-card-2-for-cardlist2"
           },
           "cardImage": {
-            "@id": "http://content.cms.amplience.com/21d560fb-198e-4c00-a620-5d480c5f8932",
-            "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+            "@id": "http://image.cms.amplience.com/d998a6d0-276d-4061-a482-b0b7ce2ef3f9",
             "_meta": {
-              "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
-              "name": "accelerator-image-2-for-card2"
+              "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
             },
-            "image": {
-              "@id": "http://image.cms.amplience.com/d998a6d0-276d-4061-a482-b0b7ce2ef3f9",
-              "_meta": {
-                "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
-              },
-              "id": "d998a6d0-276d-4061-a482-b0b7ce2ef3f9",
-              "name": "shutterstock_167805908",
-              "endpoint": "csdemo",
-              "defaultHost": "i1.adis.ws",
-              "mediaType": "image"
-            }
+            "id": "d998a6d0-276d-4061-a482-b0b7ce2ef3f9",
+            "name": "shutterstock_167805908",
+            "endpoint": "csdemo",
+            "defaultHost": "i1.adis.ws",
+            "mediaType": "image"
           },
           "link": {
             "value": "http://dev-solutions.s3.amazonaws.com/ca-demo-site/dist/productlist/index.html?c=ea3fdefd-298f-4891-b6f6-31de9a0788b0&s=53251bf8-98b5-4699-9b03-8cac225de5ff",
@@ -528,23 +488,15 @@ export const sampleContent = {
             "name": "accelerator-card-1-for-cardlist2"
           },
           "cardImage": {
-            "@id": "http://content.cms.amplience.com/be803f40-7362-40b6-8231-fcf7354e3e54",
-            "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+            "@id": "http://image.cms.amplience.com/f3c78d66-ca8a-4834-82a8-44ed93c08ecc",
             "_meta": {
-              "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
-              "name": "accelerator-image-for-cardlist2"
+              "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
             },
-            "image": {
-              "@id": "http://image.cms.amplience.com/f3c78d66-ca8a-4834-82a8-44ed93c08ecc",
-              "_meta": {
-                "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
-              },
-              "id": "f3c78d66-ca8a-4834-82a8-44ed93c08ecc",
-              "name": "shutterstock_151174712",
-              "endpoint": "csdemo",
-              "defaultHost": "i1.adis.ws",
-              "mediaType": "image"
-            }
+            "id": "f3c78d66-ca8a-4834-82a8-44ed93c08ecc",
+            "name": "shutterstock_151174712",
+            "endpoint": "csdemo",
+            "defaultHost": "i1.adis.ws",
+            "mediaType": "image"
           },
           "link": {
             "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/productlist/index.html?c=ea3fdefd-298f-4891-b6f6-31de9a0788b0&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114",

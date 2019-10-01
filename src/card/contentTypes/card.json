@@ -11,20 +11,11 @@
   "type": "object",
   "properties": {
     "cardImage": {
+      "description": "",
       "type": "object",
-      "allOf": [
+      "anyOf": [
         {
-          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
-        },
-        {
-          "properties": {
-            "contentType": {
-              "title": "image",
-              "enum": [
-                "{CONTENT_TYPE_BASEPATH}/image.json"
-              ]
-            }
-          }
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
         }
       ],
       "title": "Card image"

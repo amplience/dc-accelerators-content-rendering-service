@@ -1,7 +1,15 @@
 <a href="{{snippet.cta.value}}" class="amp-dc-snippet js_dc_snippet">
     {{#if snippet.image}}
-    <div class="amp-dc-image">
-        {{> acc-template-blogPost-image snippet.image}}
+    <div class="amp-dc-image bbb">
+        {{> acc-template-image-generator
+            image=snippet.image
+            mediaQueries='[
+                {"query": 1025, "width": 800},
+                {"query": 1024, "width": 512},
+                {"query": 768, "width": 768}
+            ]'
+            classNames='snippet'
+        }}
     </div>
     {{/if}}
 

@@ -135,7 +135,7 @@ Recommended Steps:
 - ###### Card
 	Choose the gallery card. The pointers you need to add for the card are:
 	- headline: /header
-	- image0: /bannerImage/0/image
+	- image0: /bannerImage/image
 	
 ##### Slider
 - ###### Icon
@@ -144,9 +144,9 @@ Recommended Steps:
 - ###### Card
 	Choose the gallery card. Examples of the pointers you need to add for the card are:
 	- headline: /_title
-	- image0: /slides/0/bannerImage/0/image
-	- image1: /slides/1/bannerImage/0/image
-	- image2: /slides/2/bannerImage/0/image	- image3: /slides/3/bannerImage/0/image
+	- image0: /slides/0/bannerImage/image
+	- image1: /slides/1/bannerImage/image
+	- image2: /slides/2/bannerImage/image	- image3: /slides/3/bannerImage/image
 
 ##### Split block
 - ###### Icon

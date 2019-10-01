@@ -15,26 +15,15 @@ export const sampleContent = {
     "name": "accelerator-card-1"
   },
   "cardImage": {
-    "@id": "http://content.cms.amplience.com/ece6b9f2-b58a-4420-937d-a05e9970a459",
-    "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+    "@id": "http://image.cms.amplience.com/293fae56-2d8f-459e-b375-b65e524d3c69",
     "_meta": {
-      "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
-      "name": "accelerator-image-card-1"
+      "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
     },
-    "image": {
-      "@id": "http://image.cms.amplience.com/293fae56-2d8f-459e-b375-b65e524d3c69",
-      "_meta": {
-        "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
-      },
-      "id": "293fae56-2d8f-459e-b375-b65e524d3c69",
-      "name": "pexels-photo-128939",
-      "endpoint": "csdemo",
-      "defaultHost": "i1.adis.ws",
-      "mediaType": "image"
-    },
-    "roundel": [],
-    "imageAltText": "alt txt",
-    "seoText": "seo txt"
+    "id": "293fae56-2d8f-459e-b375-b65e524d3c69",
+    "name": "pexels-photo-128939",
+    "endpoint": "csdemo",
+    "defaultHost": "i1.adis.ws",
+    "mediaType": "image"
   },
   "cardName": "Card 1",
   "link": {

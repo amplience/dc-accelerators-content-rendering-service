@@ -11,20 +11,11 @@
   "type": "object",
   "properties": {
     "cardImage": {
+      "description": "",
       "type": "object",
-      "allOf": [
+      "anyOf": [
         {
-          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
-        },
-        {
-          "properties": {
-            "contentType": {
-              "title": "image",
-              "enum": [
-                "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json"
-              ]
-            }
-          }
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
         }
       ],
       "title": "Card image"
