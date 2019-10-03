@@ -24,7 +24,7 @@ export const sampleContent = {
     "mediaType": "image"
   },
   "roundel": [{
-    "roundelRatio": 0.8636776524387701,
+    "roundelRatio": 0.3,
     "roundelPosition": "Top Right",
     "roundel": {
       "id": "cad6cb31-1936-4193-82de-1844a1235c91",
