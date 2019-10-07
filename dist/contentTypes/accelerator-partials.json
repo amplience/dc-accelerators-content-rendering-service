@@ -32,7 +32,8 @@
             "Top Left",
             "Top Right",
             "Bottom Left",
-            "Bottom Right"
+            "Bottom Right",
+            "Center"
           ],
           "title": "Roundel position",
           "description": "Roundel position is centered by default"
