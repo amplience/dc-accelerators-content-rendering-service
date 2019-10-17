@@ -5,7 +5,7 @@
 
 import handlebars from 'handlebars';
 import helpers from 'handlebars-helpers';
-//import poiLib from '../node_modules/poi-js-lib/dist/poi-lib';
+import poiLib from '../node_modules/poi-js-lib/dist/poi-lib';
 import commonUtils from '../src/common/utils';
 
 helpers(

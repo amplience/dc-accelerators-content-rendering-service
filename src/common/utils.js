@@ -173,7 +173,7 @@
     attachNavEvents();
     element.addEventListener('after.lory.slide', selectActiveDot);
     element.addEventListener('on.lory.resize', resetToFirst);
-  }
+  };
 
   Slider.prototype.enableSwipeGesturesOnVideo = function (element) {
     if (navigator.userAgent.match(/Android/i)) {
@@ -205,7 +205,7 @@
         });
       });
     }
-  }
+  };
 
 
   /**
@@ -314,7 +314,7 @@
     attachComponent('.amp-dc-banner', Banner);
     attachComponent('.amp-dc-promo-banner', PromoBanner);
     attachComponent('.amp-dc-slider', Slider);
-    //initPOI();
+    initPOI();
   }
 
   exports.Utils = exports.Utils || {};
