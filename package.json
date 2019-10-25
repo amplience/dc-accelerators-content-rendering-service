@@ -1,6 +1,6 @@
 {
   "name": "dc-accelerators-content-rendering-service",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "repository": "https://github.com/amplience/dc-accelerators-content-rendering-service",
   "scripts": {
     "build": "gulp buildAll",
