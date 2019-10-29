@@ -109,6 +109,7 @@ if (window.AmpCa && window.AmpCa.Utils) {
 * [Extending Storybook](./docs/EXTENDING-STORYBOOK.md)
 * [Template dependencies](./docs/TEMPLATE-DEPENDENCIES.md)
 * [Hosting Content Types externally](./docs/EXTERNAL-CONTENT-TYPES.md)
+* [Configuring images](./docs/CONFIGURING-IMAGES.md)
 
 ## Getting Help
 If you need help please reach out using one of the following channels:
