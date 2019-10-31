@@ -131,7 +131,26 @@
 
     element.addEventListener('after.lory.slide', navButtonsBehave);
     element.addEventListener('on.lory.resize', navButtonsBehave);
-  }
+  };
+
+  Slider.prototype.autoslide = function ($slider, sliderInstance) {
+    var iterate = function () {
+      sliderInstance.next();
+    };
+    var sim;
+
+    return {
+      start: function () {
+        sim = setInterval(iterate, 3000);
+      },
+      stop: function () {
+        clearTimeout(sim);
+      },
+      init: function () {
+        this.start();
+      }
+    }
+  };
 
   Slider.prototype.navigationDots = function (element, sliderInstance, sliderSettings) {
     var dots = Array.prototype.slice.call(
@@ -139,10 +158,13 @@
       0
     );
 
+    var autoSlide = sliderSettings.autoplay && new this.autoslide(element, sliderInstance);
+
     var attachNavEvents = function () {
       dots.forEach(function ($dot, ind) {
         if (ind === 0) {
           $dot.classList.add('active');
+          autoSlide && autoSlide.init($dot);
         }
         $dot.addEventListener('click', function (evt) {
           sliderInstance.slideTo(ind);
@@ -160,13 +182,19 @@
         evt.detail.currentSlide - 1 :
         evt.detail.currentSlide;
       dots[currentSlide].classList.add('active');
+      autoSlide && autoSlide.stop();
+      autoSlide && autoSlide.start();
     };
 
     var resetToFirst = function () {
       dots.forEach(function ($dot, ind) {
-        ind === 0 ?
-          $dot.classList.add('active') :
-          $dot.classList.remove('active');
+        if (ind === 0) {
+          $dot.classList.add('active');
+          autoSlide && autoSlide.stop();
+          autoSlide && autoSlide.start();
+        } else {
+          $dot.classList.remove('active')
+        }
       });
     };
 

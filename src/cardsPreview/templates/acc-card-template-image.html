@@ -1,4 +1,4 @@
 <img
-        src="//{{image.defaultHost}}/i/{{image.endpoint}}/{{encodeURI image.name}}{{#if seoText}}/{{encodeURI
-                    seoText}}{{/if}}?h=300&{{> acc-template-banner-poi name=image.name w=300 h=200 aspect=2:1}}{{> acc-template-roundel }}"
-        class="amp-dc-image-pic" {{#if imageAltText}} alt="{{imageAltText}}" {{/if}} />
+        src="//{{image.defaultHost}}/i/{{image.endpoint}}/{{encodeURI image.name}}?h={$this.layer0.metadata.image.height<300?100%:300}{{> acc-template-roundel }}"
+        class="" style="display: block; width: 100%;
+    user-select: none;" {{#if imageAltText}} alt="{{imageAltText}}" {{/if}} />
