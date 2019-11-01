@@ -258,6 +258,9 @@
 
   function scrollCard() {
     var container = document.getElementById('card-container');
+    if (!container){
+      return false;
+    }
     var child = container.childNodes[0].nextSibling;
     var length = child.clientHeight;
     var parent = container.clientHeight;
@@ -301,7 +304,7 @@
   function initPOI() {
     var poi = new window.POI({
       domain: 'http://i1.adis.ws',
-      account: 'csdemo',
+      account: '{COMPANY_TAG}',
       containerClass: 'amp-dc-poi-image',
       imgClass: 'amp-dc-image-pic',
       images: [{
