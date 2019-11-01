@@ -251,24 +251,25 @@
   }
 
   /**
-   * scrollOnHover - is used to emulate scroll action on card mouse over event
+   * scrollCard - is used to scroll card if its content doesn't fit container
    */
 
   var interval;
 
-  function scrollOnHover() {
+  function scrollCard() {
     var container = document.getElementById('card-container');
     var child = container.childNodes[0].nextSibling;
     var length = child.clientHeight;
     var parent = container.clientHeight;
     var xH;
 
-    if (parent < length) {
+    if (length / parent > 1.5) {
       if (interval) {
         clearInterval(interval)
       }
 
       interval = setInterval(function () {
+        container.classList.remove('transition');
         xH = child.style.top || 0;
         xH = parseInt(xH);
         if (Math.abs(parseInt(xH)) + parent < length) {
@@ -276,18 +277,25 @@
           xH = xH + "px";
           child.style.top = xH;
         } else {
-          clearInterval(interval)
+          clearInterval(interval);
+          setTimeout(scrollLeave, 1000);
         }
-      }, 1)
+      }, 10)
     }
   }
 
   function scrollLeave() {
     var container = document.getElementById('card-container');
     var child = container.childNodes[0].nextSibling;
-    child.style.top = '0px';
+    container.classList.add('with-transition');
 
-    clearInterval(interval)
+    setTimeout(function () {
+      child.style.top = '0px';
+      container.classList.remove('with-transition');
+      container.classList.add('transition');
+
+      clearInterval(interval);
+    }, 1000);
   }
 
   function initPOI() {
@@ -343,12 +351,11 @@
     attachComponent('.amp-dc-promo-banner', PromoBanner);
     attachComponent('.amp-dc-slider', Slider);
     initPOI();
+    setTimeout(scrollCard, 2000);
   }
 
   exports.Utils = exports.Utils || {};
   exports.Utils.attachComponents = attachComponents;
-  exports.Utils.scrollOnHover = scrollOnHover;
-  exports.Utils.scrollLeave = scrollLeave;
 
   /**
    * Automatically activate accelerator components when the page renders

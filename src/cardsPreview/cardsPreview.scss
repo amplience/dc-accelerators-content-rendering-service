@@ -356,3 +356,19 @@
     margin: 0;
   }
 }
+
+.with-transition {
+  -webkit-transition: opacity  .7s ease-in-out;
+  -moz-transition: opacity .7s ease-in-out;
+  -o-transition: opacity .7s ease-in-out;
+  transition: opacity .7s ease-in-out;
+  opacity: 0;
+}
+
+.transition {
+  -webkit-transition: opacity  .7s ease-in;
+  -moz-transition: opacity .7s ease-in;
+  -o-transition: opacity .7s ease-in;
+  transition: opacity .7s ease-in;
+  opacity: 1;
+}
