@@ -16,15 +16,25 @@ export const sampleContent = {
   },
   "snippet": {
     "image": {
-      "@id": "http://image.cms.amplience.com/013b1272-b85d-421c-90d8-8762c11b5a32",
+      "@id": "http://content.cms.amplience.com/38476590-9594-4d46-8f5a-c54e293fd094",
       "_meta": {
-        "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+        "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+        "name": "accelerator-image-1"
       },
-      "id": "013b1272-b85d-421c-90d8-8762c11b5a32",
-      "name": "womensfashion",
-      "endpoint": "csdemo",
-      "defaultHost": "i1.adis.ws",
-      "mediaType": "image"
+      "image": {
+        "@id": "http://image.cms.amplience.com/f46fecc5-945c-451c-879e-5c974a821891",
+        "_meta": {
+          "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+        },
+        "id": "f46fecc5-945c-451c-879e-5c974a821891",
+        "name": "womanfashion",
+        "endpoint": "csdemo",
+        "defaultHost": "i1.adis.ws",
+        "mediaType": "image"
+      },
+      "imageAltText": "womanfashion",
+      "seoText": "womanfashion",
+      "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
     },
     "cta": {
       "label": "google",

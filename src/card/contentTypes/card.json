@@ -13,9 +13,9 @@
     "cardImage": {
       "description": "",
       "type": "object",
-      "anyOf": [
+      "allOf": [
         {
-          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+          "$ref": "{CONTENT_TYPE_BASEPATH}/image.json"
         }
       ],
       "title": "Card image"

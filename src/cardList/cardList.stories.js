@@ -16,33 +16,43 @@ export const sampleContent = {
   },
   "heroList": false,
   "cards": [{
-      "@id": "http://content.cms.amplience.com/29bd9901-691f-4f35-adb2-ad93c85cd01b",
-      "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/card.json",
+    "@id": "http://content.cms.amplience.com/29bd9901-691f-4f35-adb2-ad93c85cd01b",
+    "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/card.json",
+    "_meta": {
+      "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/card.json",
+      "name": "accelerator-card-1"
+    },
+    "cardImage": {
+      "@id": "http://content.cms.amplience.com/38476590-9594-4d46-8f5a-c54e293fd094",
       "_meta": {
-        "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/card.json",
-        "name": "accelerator-card-1"
+        "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+        "name": "accelerator-image-1"
       },
-      "cardImage": {
-        "@id": "http://image.cms.amplience.com/293fae56-2d8f-459e-b375-b65e524d3c69",
+      "image": {
+        "@id": "http://image.cms.amplience.com/f46fecc5-945c-451c-879e-5c974a821891",
         "_meta": {
           "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
         },
-        "id": "293fae56-2d8f-459e-b375-b65e524d3c69",
+        "id": "f46fecc5-945c-451c-879e-5c974a821891",
         "name": "shutterstock_151174712",
         "endpoint": "csdemo",
         "defaultHost": "i1.adis.ws",
         "mediaType": "image"
       },
-      "cardName": "Card 1",
-      "link": {
-        "value": "http://google.com",
-        "_meta": {
-          "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/link.json"
-        },
-        "label": "link card 1"
-      },
-      "description": "Card 1 description"
+      "imageAltText": "shutterstock_151174712",
+      "seoText": "shutterstock_151174712",
+      "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
     },
+    "cardName": "Card 1",
+    "link": {
+      "value": "http://google.com",
+      "_meta": {
+        "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/link.json"
+      },
+      "label": "link card 1"
+    },
+    "description": "Card 1 description"
+  },
     {
       "@id": "http://content.cms.amplience.com/fa12ddf7-b22b-4757-a318-c9e5f778d526",
       "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/card.json",
@@ -51,15 +61,25 @@ export const sampleContent = {
         "name": "accelerator-card-2"
       },
       "cardImage": {
-        "@id": "http://image.cms.amplience.com/7ecda0e5-457c-43a0-9341-9c1cb3c33c01",
+        "@id": "http://content.cms.amplience.com/38476590-9594-4d46-8f5a-c54e293fd094",
         "_meta": {
-          "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+          "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+          "name": "accelerator-image-1"
         },
-        "id": "7ecda0e5-457c-43a0-9341-9c1cb3c33c01",
-        "name": "shutterstock_285640730",
-        "endpoint": "csdemo",
-        "defaultHost": "i1.adis.ws",
-        "mediaType": "image"
+        "image": {
+          "@id": "http://image.cms.amplience.com/f46fecc5-945c-451c-879e-5c974a821891",
+          "_meta": {
+            "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+          },
+          "id": "f46fecc5-945c-451c-879e-5c974a821891",
+          "name": "shutterstock_285640730",
+          "endpoint": "csdemo",
+          "defaultHost": "i1.adis.ws",
+          "mediaType": "image"
+        },
+        "imageAltText": "shutterstock_285640730",
+        "seoText": "shutterstock_285640730",
+        "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
       },
       "cardName": "Card 2",
       "link": {
@@ -79,15 +99,25 @@ export const sampleContent = {
         "name": "accelerator-card-1"
       },
       "cardImage": {
-        "@id": "http://image.cms.amplience.com/293fae56-2d8f-459e-b375-b65e524d3c69",
+        "@id": "http://content.cms.amplience.com/38476590-9594-4d46-8f5a-c54e293fd094",
         "_meta": {
-          "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+          "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+          "name": "accelerator-image-1"
         },
-        "id": "293fae56-2d8f-459e-b375-b65e524d3c69",
-        "name": "pexels-photo-128939",
-        "endpoint": "csdemo",
-        "defaultHost": "i1.adis.ws",
-        "mediaType": "image"
+        "image": {
+          "@id": "http://image.cms.amplience.com/f46fecc5-945c-451c-879e-5c974a821891",
+          "_meta": {
+            "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+          },
+          "id": "f46fecc5-945c-451c-879e-5c974a821891",
+          "name": "pexels-photo-128939",
+          "endpoint": "csdemo",
+          "defaultHost": "i1.adis.ws",
+          "mediaType": "image"
+        },
+        "imageAltText": "pexels-photo-128939",
+        "seoText": "pexels-photo-128939",
+        "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
       },
       "cardName": "Card 1",
       "link": {
@@ -107,15 +137,25 @@ export const sampleContent = {
         "name": "accelerator-card-2"
       },
       "cardImage": {
-        "@id": "http://image.cms.amplience.com/7ecda0e5-457c-43a0-9341-9c1cb3c33c01",
+        "@id": "http://content.cms.amplience.com/38476590-9594-4d46-8f5a-c54e293fd094",
         "_meta": {
-          "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+          "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+          "name": "accelerator-image-1"
         },
-        "id": "7ecda0e5-457c-43a0-9341-9c1cb3c33c01",
-        "name": "shutterstock_285640730",
-        "endpoint": "csdemo",
-        "defaultHost": "i1.adis.ws",
-        "mediaType": "image"
+        "image": {
+          "@id": "http://image.cms.amplience.com/f46fecc5-945c-451c-879e-5c974a821891",
+          "_meta": {
+            "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+          },
+          "id": "f46fecc5-945c-451c-879e-5c974a821891",
+          "name": "shutterstock_285640730",
+          "endpoint": "csdemo",
+          "defaultHost": "i1.adis.ws",
+          "mediaType": "image"
+        },
+        "imageAltText": "shutterstock_285640730",
+        "seoText": "shutterstock_285640730",
+        "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
       },
       "cardName": "Card 2",
       "link": {

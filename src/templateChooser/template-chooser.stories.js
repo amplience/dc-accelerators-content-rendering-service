@@ -15,6 +15,7 @@ const components = [
   ['Image', 'image'],
   ['Page', 'page'],
   ['Promo', 'promo'],
+  ['Promo List', 'promo', 'samplePromoListContent'],
   ['SFCC Slot', 'sfccSlot'],
   ['Slider', 'slider'],
   ['Split Block', 'splitBlock'],
@@ -24,6 +25,6 @@ const components = [
 
 const stories = storiesOf('Template Chooser', module);
 
-components.forEach(([label, name]) => {
-  stories.add(label, () => renderContent('templateChooser', require(`../${name}/${name}.stories`).sampleContent));
+components.forEach(([label, name, contentName = 'sampleContent']) => {
+  stories.add(label, () => renderContent('templateChooser', require(`../${name}/${name}.stories`)[contentName]));
 });

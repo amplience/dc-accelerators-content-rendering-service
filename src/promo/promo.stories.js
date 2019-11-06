@@ -23,11 +23,11 @@ export const sampleContent = {
   },
   "backgroundColor": "rgb(211,211,211)",
   "toplineColor": "rgb(0,0,0)",
-  "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobannersection.json"
+  "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promo.json"
 };
 
 
-const samplePromoListContent = {
+export const samplePromoListContent = {
   "@id": "http://content.cms.amplience.com/1b05fb00-e845-412b-80e0-33ee82789913",
   "_meta": {
     "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobanner.json",
@@ -90,7 +90,7 @@ const samplePromoListContent = {
       "toplineColor": "rgb(0,0,0)"
     }
   ],
-  "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobanner.json"
+  "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promolist.json"
 };
 
 storiesOf('Promo', module)
