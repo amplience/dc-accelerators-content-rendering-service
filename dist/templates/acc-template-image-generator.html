@@ -1,3 +1,4 @@
+{{#if image.image}}
 <picture class="amp-dc-image">
     {{#each (JSONparse mediaQueries)}}
     <source srcset="//{{../image.image.defaultHost}}/i/{{../image.image.endpoint}}/{{encodeURI ../image.image.name}}{{#if ../image.seoText}}/{{encodeURI ../image.seoText}}/{{/if}}?fmt=webp&w={{this.width}}{{#if this.widthPercents}}%{{/if}}{{> acc-template-roundel roundel=../image.roundel }}{{#if this.x1}}{{>acc-template-banner-poi name=../image.image.name settings=this.x1}}{{/if}} 1x,
@@ -21,3 +22,4 @@
     {{/if}}
     {{/each}}
 </picture>
+{{/if}}

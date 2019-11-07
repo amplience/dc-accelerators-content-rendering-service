@@ -36,7 +36,9 @@
       "type": "string",
       "minLength": 0,
       "maxLength": 100,
-      "title": "SEO text"
+      "title": "SEO text",
+      "pattern": "^[A-Za-z0-9+_-]+$",
+      "description": "Enter only alphanumeric, _, -, + characters"
     },
     "roundel": {
       "title": "Roundels",

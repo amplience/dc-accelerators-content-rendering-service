@@ -1,7 +1,7 @@
 .amp-dc-promo-banner {
     margin-left: auto;
     margin-right: auto;
-    white-space: nowrap;
+    white-space: normal;
     overflow: hidden;
 
     * {
@@ -10,24 +10,50 @@
     }
 
     .amp-dc-promo-banner-wrap {
-        display: table;
-        vertical-align: top;
+        display: flex;
+        flex-direction: row;
         width: 100%;
+        height: 100%;
+        align-items: stretch;
+
+        div {
+            width: 100%;
+        }
+
+        .dc-width-2 {
+            width: 50%;
+        }
+
+        .dc-width-3 {
+            width: 33.3%;
+        }
     }
 
+  .amp-dc-promo-text-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
     .amp-dc-promo-block {
-        display: table-cell;
+        display: flex;
+        flex-direction: column;
         overflow: visible;
         border: 4px solid transparent;
     }
 
     .amp-dc-promo-wrap {
+        height: 100%;
+
         &>a {
-            display: block;
+            display: flex;
+            height: 100%;
+            align-items: stretch;
             overflow: hidden;
             border: 1px solid #eeeeee;
             text-decoration: none;
             padding: 8px;
+            justify-content: center;
 
             & :hover {
                 * {
@@ -42,11 +68,13 @@
     }
 
     .amp-dc-promo-ico {
-        float: left;
         margin-right: 15px;
         min-height: 40px;
         background-size: cover;
         background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         &>img {
             display: block;

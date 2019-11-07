@@ -148,56 +148,6 @@
   }
 }
 
-.amp-dc-card {
-  width: 100%;
-  display: inline-block;
-  vertical-align: top;
-}
-
-.amp-dc-card * {
-  margin: 0;
-  padding: 0;
-}
-
-.amp-dc-card .amp-dc-hide {
-  display: none;
-}
-
-.amp-dc-card .amp-dc-card-text-wrap {
-  padding: 10px 0;
-  text-align: center;
-  background-color: #fff;
-}
-
-.amp-dc-card a.amp-dc-card-wrap {
-  display: block;
-  text-decoration: none;
-}
-
-.amp-dc-card a.amp-dc-card-wrap:hover .amp-dc-card-link {
-  text-decoration: underline;
-}
-
-.amp-dc-card .amp-dc-card-name {
-  font-size: 21px;
-  color: #000;
-  margin-bottom: 5px;
-}
-
-.amp-dc-card .amp-dc-card-description {
-  font-size: 14px;
-  color: #8F8F8F;
-  display: inline-block;
-}
-
-.amp-dc-card .amp-dc-card-link {
-  margin-top: 7px;
-  color: #8F8F8F;
-  font-size: 16px;
-  font-weight: bold;
-  white-space: nowrap;
-}
-
 .amp-dc-blog {
   overflow: hidden;
   margin: 40px auto;
@@ -247,6 +197,56 @@
 .amp-dc-snippet .amp-dc-link {
   margin: 20px;
   font-weight: bold;
+}
+
+.amp-dc-card {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.amp-dc-card * {
+  margin: 0;
+  padding: 0;
+}
+
+.amp-dc-card .amp-dc-hide {
+  display: none;
+}
+
+.amp-dc-card .amp-dc-card-text-wrap {
+  padding: 10px 0;
+  text-align: center;
+  background-color: #fff;
+}
+
+.amp-dc-card a.amp-dc-card-wrap {
+  display: block;
+  text-decoration: none;
+}
+
+.amp-dc-card a.amp-dc-card-wrap:hover .amp-dc-card-link {
+  text-decoration: underline;
+}
+
+.amp-dc-card .amp-dc-card-name {
+  font-size: 21px;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.amp-dc-card .amp-dc-card-description {
+  font-size: 14px;
+  color: #8F8F8F;
+  display: inline-block;
+}
+
+.amp-dc-card .amp-dc-card-link {
+  margin-top: 7px;
+  color: #8F8F8F;
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
 }
 
 .amp-dc-image {
@@ -647,7 +647,7 @@
 .amp-dc-promo-banner {
   margin-left: auto;
   margin-right: auto;
-  white-space: nowrap;
+  white-space: normal;
   overflow: hidden;
 }
 
@@ -657,23 +657,76 @@
 }
 
 .amp-dc-promo-banner .amp-dc-promo-banner-wrap {
-  display: table;
-  vertical-align: top;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.amp-dc-promo-banner .amp-dc-promo-banner-wrap div {
   width: 100%;
 }
 
+.amp-dc-promo-banner .amp-dc-promo-banner-wrap .dc-width-2 {
+  width: 50%;
+}
+
+.amp-dc-promo-banner .amp-dc-promo-banner-wrap .dc-width-3 {
+  width: 33.3%;
+}
+
+.amp-dc-promo-banner .amp-dc-promo-text-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 .amp-dc-promo-banner .amp-dc-promo-block {
-  display: table-cell;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   overflow: visible;
   border: 4px solid transparent;
 }
 
+.amp-dc-promo-banner .amp-dc-promo-wrap {
+  height: 100%;
+}
+
 .amp-dc-promo-banner .amp-dc-promo-wrap > a {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   overflow: hidden;
   border: 1px solid #eeeeee;
   text-decoration: none;
   padding: 8px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .amp-dc-promo-banner .amp-dc-promo-wrap > a :hover * {
@@ -685,11 +738,20 @@
 }
 
 .amp-dc-promo-banner .amp-dc-promo-ico {
-  float: left;
   margin-right: 15px;
   min-height: 40px;
   background-size: cover;
   background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .amp-dc-promo-banner .amp-dc-promo-ico > img {

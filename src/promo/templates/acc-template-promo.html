@@ -11,16 +11,19 @@
                                  class="amp-dc-image-pic"/>
                         </picture>
                     {{/if}}
+                <div class="{{#if topLine}}amp-dc-promo-text-flex{{/if}} {{#if bottomLine}}amp-dc-promo-text-flex{{/if}}">
+
                     <div class="amp-dc-promo-text-wrap">
                         <div class="amp-dc-promo-head-text"
-                             {{#if toplineColour}}style="color:{{toplineColor}}" {{/if}} >
+                             {{#if toplineColor}}style="color:{{toplineColor}}" {{/if}} >
                             {{topLine}}
                         </div>
                     </div>
                     <div class="amp-dc-promo-content-text"
-                         {{#if bottomlineColour}}style="color:{{bottomlineColor}}" {{/if}} >
+                         {{#if bottomlineColor}}style="color:{{bottomlineColor}}" {{/if}} >
                         {{bottomLine}}
                     </div>
+                </div>
                 </a>
              </div>
         </div>

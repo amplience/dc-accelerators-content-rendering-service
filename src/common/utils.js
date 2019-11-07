@@ -111,6 +111,10 @@
     var $nextButton = element.querySelector('.js_next');
     var disabledClass = 'ctrl-disabled';
 
+    if (!$prevButton && !$nextButton){
+      return false;
+    }
+
     var navButtonsBehave = function (evt) {
       var slideIndex = sliderInstance.returnIndex();
       if (slideIndex === 0) {

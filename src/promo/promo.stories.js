@@ -14,12 +14,23 @@ export const sampleContent = {
     "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobannersection.json",
     "name": "promo-banner-single-section"
   },
-  "topLine": "Click here to score 20% off with your first app order* (t&c’s apply)",
+  "topLine": "Click here to score 20% off with your first app order* (t&c’s apply) Click here to score 20% off with your first app order* (t&c’s apply)",
   "link": {
     "_meta": {
       "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/link.json"
     },
     "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/productlist/index.html?c=f49907fd-99df-4446-85b7-4c3235aac82a&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
+  },
+  "icon": {
+    "_meta": {
+      "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+    },
+    "id": "e028b665-2cc5-4013-b884-765d7f50e58c",
+    "name": "promoiconwireframe",
+    "endpoint": "csdemo",
+    "defaultHost": "i1.adis.ws",
+    "@id": "http://image.cms.amplience.com/e028b665-2cc5-4013-b884-765d7f50e58c",
+    "mediaType": "image"
   },
   "backgroundColor": "rgb(211,211,211)",
   "toplineColor": "rgb(0,0,0)",
@@ -34,24 +45,24 @@ export const samplePromoListContent = {
     "name": "accelerator-promo-banner-1"
   },
   "promoItems": [{
-      "@id": "http://content.cms.amplience.com/990ecee0-6976-496a-8b77-d23cb4e42976",
-      "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobannersection.json",
-      "_meta": {
-        "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobannersection.json",
-        "name": "accelerator-promo-banner-section-1"
-      },
-      "topLine": "free next uk day delivery",
-      "link": {
-        "_meta": {
-          "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/link.json"
-        },
-        "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/productlist/index.html?c=f49907fd-99df-4446-85b7-4c3235aac82a&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
-      },
-      "backgroundColor": "rgb(0,0,0)",
-      "bottomLine": "hurry ends in 3 days",
-      "bottomlineColor": "rgb(255,255,255)",
-      "toplineColor": "rgb(255,255,255)"
+    "@id": "http://content.cms.amplience.com/990ecee0-6976-496a-8b77-d23cb4e42976",
+    "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobannersection.json",
+    "_meta": {
+      "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobannersection.json",
+      "name": "accelerator-promo-banner-section-1"
     },
+    "topLine": "free next uk day delivery",
+    "link": {
+      "_meta": {
+        "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/link.json"
+      },
+      "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/productlist/index.html?c=f49907fd-99df-4446-85b7-4c3235aac82a&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
+    },
+    "backgroundColor": "rgb(0,0,0)",
+    "bottomLine": "hurry ends in 3 days",
+    "bottomlineColor": "rgb(255,255,255)",
+    "toplineColor": "rgb(255,255,255)"
+  },
     {
       "@id": "http://content.cms.amplience.com/90e694ec-a761-4c32-8581-b6c14ea37690",
       "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobannersection.json",

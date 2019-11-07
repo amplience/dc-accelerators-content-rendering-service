@@ -22,6 +22,7 @@
               "contentType": {
                 "enum": [
                   "{CONTENT_TYPE_BASEPATH}/slider.json",
+                  "{CONTENT_TYPE_BASEPATH}/banner.json",
                   "{CONTENT_TYPE_BASEPATH}/promolist.json",
                   "{CONTENT_TYPE_BASEPATH}/video.json",
                   "{CONTENT_TYPE_BASEPATH}/text.json",

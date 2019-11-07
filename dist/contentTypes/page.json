@@ -22,6 +22,7 @@
               "contentType": {
                 "enum": [
                   "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/slider.json",
+                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json",
                   "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/promolist.json",
                   "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/video.json",
                   "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json",

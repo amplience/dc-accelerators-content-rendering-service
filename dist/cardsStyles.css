@@ -10,25 +10,27 @@
   vertical-align: middle;
 }
 
-.card-container .amp-dc-banner-info-wrap, .card-container .amp-dc-banner-info {
-  padding: 0 !important;
-  margin: 0 !important;
+.card-container .amp-dc-banner .amp-dc-banner-info {
+  font-size: 8px;
+  min-width: 50px;
+  padding: 2px;
 }
 
 .card-container .amp-dc-banner .amp-dc-banner-header {
-  font-size: 10px !important;
+  font-size: 8px;
 }
 
-.card-container .amp-dc-banner-description {
-  margin: 0 !important;
-  padding: 0 !important;
-  font-size: 8px !important;
+.card-container .amp-dc-banner .amp-dc-banner-description, .card-container .amp-dc-banner .amp-dc-banner-subheader {
+  font-size: 6px;
+  margin-top: 3px;
 }
 
 .card-container .amp-dc-banner .amp-dc-banner-button {
-  margin: 3px !important;
-  font-size: 8px !important;
-  padding: 6px 4px !important;
+  font-size: 6px;
+  margin-top: 3px;
+  display: inline-block;
+  min-width: 40%;
+  padding: 2px 3px;
 }
 
 .card-container .amp-dc-slider {
@@ -43,10 +45,6 @@
 .card-container .amp-dc-slider .amp-dc-slider-next svg, .card-container .amp-dc-slider .amp-dc-slider-prev svg {
   height: 15px !important;
   width: 15px !important;
-}
-
-.card-container .amp-dc-banner .amp-dc-banner-info-wrap:before {
-  content: none !important;
 }
 
 .card-container .amp-dc-dots {
@@ -88,6 +86,10 @@
 
 .card-container .amp-dc-splitBlock .amp-dc-split-part:first-child {
   padding: 0 !important;
+}
+
+.card-container .amp-dc-splitBlock .amp-dc-split-part .amp-dc-video {
+  min-width: unset;
 }
 
 .card-container .amp-dc-card-name {
