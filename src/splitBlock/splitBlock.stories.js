@@ -53,7 +53,7 @@ storiesOf('Split Block', module)
     ...sampleContent,
     split: '50/50'
   }))
-  .add('Full Size', () => renderContent('acc-template-splitBlock', {
+  .add('Default Size', () => renderContent('acc-template-splitBlock', {
     ...sampleContent,
     split: null
   }));

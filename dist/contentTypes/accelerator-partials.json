@@ -56,7 +56,8 @@
           "minLength": 0,
           "maxLength": 2000,
           "title": "Value",
-          "description": "A relative URL, absolute URL or an ID"
+          "pattern": "^(https:\/\/|http:\/\/)([0-9a-z_-]+.)[^s]{2,}$",
+          "description": "Enter an absolute URL"
         }
       }
     },

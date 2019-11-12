@@ -3,30 +3,6 @@
 (function (exports) {
 
   /**
-   * Banner - Javascript is used to calculate the background color
-   * @param element
-   */
-  function Banner(element) {
-    this.initBackgroundColor(element);
-  }
-
-  Banner.prototype.initBackgroundColor = function (element) {
-    var infoPanel = element.querySelector('.amp-dc-banner-info');
-    var dataColor = infoPanel.getAttribute('data-color') || "rgb(255,255,255)";
-    var dataOpacity = Number(infoPanel.getAttribute('data-opacity') || '1');
-
-    dataColor = dataColor.slice(4);
-    dataColor = dataColor.slice(0, dataColor.length - 1);
-    dataColor = dataColor.split(',');
-
-    var r = parseInt(dataColor[0], 10);
-    var g = parseInt(dataColor[1], 10);
-    var b = parseInt(dataColor[2], 10);
-
-    infoPanel.style.backgroundColor = 'rgba(' + r + ', ' + g + ', ' + b + ', ' + dataOpacity + ')';
-  };
-
-  /**
    * Promo Banner - Javascript is used to animate the sections for resolutions that can only show a single section at a time
    * @param element
    */
@@ -83,7 +59,7 @@
    */
   function Slider(element) {
     var data = {
-      infinite: element.getAttribute('data-infinite') === 'true',
+      infinite: element.getAttribute('data-infinite') === 'true' ? 1 : 0,
       navigation: element.getAttribute('data-navigation') === 'true',
       autoplay: element.getAttribute('data-autoplay') === 'true'
     };
@@ -111,7 +87,7 @@
     var $nextButton = element.querySelector('.js_next');
     var disabledClass = 'ctrl-disabled';
 
-    if (!$prevButton && !$nextButton){
+    if (!$prevButton && !$nextButton) {
       return false;
     }
 
@@ -204,7 +180,7 @@
 
     attachNavEvents();
     element.addEventListener('after.lory.slide', selectActiveDot);
-    element.addEventListener('on.lory.resize', resetToFirst);
+    // element.addEventListener('on.lory.resize', resetToFirst);
   };
 
   Slider.prototype.enableSwipeGesturesOnVideo = function (element) {
@@ -262,7 +238,7 @@
 
   function scrollCard() {
     var container = document.getElementById('card-container');
-    if (!container){
+    if (!container) {
       return false;
     }
     var child = container.childNodes[0].nextSibling;
@@ -307,7 +283,7 @@
 
   function initPOI() {
     var poi = new window.POI({
-      domain: 'http://i1.adis.ws',
+      domain: '//i1.adis.ws',
       account: 'solutions',
       containerClass: 'amp-dc-poi-image',
       imgClass: 'amp-dc-image-pic',
@@ -354,7 +330,6 @@
   }
 
   function attachComponents() {
-    attachComponent('.amp-dc-banner', Banner);
     attachComponent('.amp-dc-promo-banner', PromoBanner);
     attachComponent('.amp-dc-slider', Slider);
     initPOI();

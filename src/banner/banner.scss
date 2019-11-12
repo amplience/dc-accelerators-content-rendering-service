@@ -50,15 +50,6 @@
     &[data-align='right'] {
       right: 65px;
     }
-
-    &:before {
-      content: '';
-      display: inline-block;
-      height: 100%;
-      vertical-align: middle;
-      margin-right: -1em;
-      /* Adjusts for spacing */
-    }
   }
 
   .amp-dc-banner-info {

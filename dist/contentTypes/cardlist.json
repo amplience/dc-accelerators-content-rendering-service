@@ -16,11 +16,6 @@
       "maxLength": 50,
       "title": "Header"
     },
-    "heroList": {
-      "type": "boolean",
-      "title": "Hero format",
-      "description": "Hero format supports exactly 3 cards"
-    },
     "cards": {
       "type": "array",
       "items": {
@@ -46,7 +41,6 @@
   },
   "propertyOrder": [
     "header",
-    "heroList",
     "cards"
   ]
 }
