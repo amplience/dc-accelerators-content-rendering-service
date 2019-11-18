@@ -57,7 +57,7 @@
       "type": "string",
       "minLength": 1,
       "maxLength": 3,
-      "title": "Text position from middle",
+      "title": "Text position from top",
       "description": "Enter a percentage value (without a '%' sign) to position text vertically from the top"
     },
     "textColor": {
