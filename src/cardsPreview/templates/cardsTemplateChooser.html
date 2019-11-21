@@ -15,7 +15,7 @@
 {{~/if}}
 
 {{#if (test this.[@type] (toRegex ".*/splitblock")) ~}}
-{{> acc-template-splitBlock }}
+{{> acc-card-template-splitBlock }}
 {{~/if}}
 
 {{#if (test this.[@type] (toRegex ".*/slider")) ~}}
@@ -52,8 +52,4 @@
 
 {{#if (test this.[@type] (toRegex ".*/page")) ~}}
 {{> acc-card-template-page }}
-{{~/if}}
-
-{{#if (test this.[@type] (toRegex ".*/sfcc-slot-accelerators")) ~}}
-{{> sfcc-contentWrapper }}
 {{~/if}}

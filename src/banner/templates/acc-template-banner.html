@@ -21,16 +21,11 @@
                 {{/unless}}
             {{/unless}}
         {{/unless}}"
-         data-align="{{#if alignment}}{{alignment}}{{else}}left{{/if}}"
          style="
-             {{#if textPositionLeft}}
-                left:{{textPositionLeft}}%;
-             {{/if}}
-             {{#if textPositionTop}}
-                top:{{textPositionTop}}%;
-             {{/if}}
+                left:{{#if textPositionLeft}}{{textPositionLeft}}{{else}}10{{/if}}%;
+                top:{{#if textPositionTop}}{{textPositionTop}}{{else}}40{{/if}}%;
             ">
-        <div class="amp-dc-banner-info" data-opacity="{{bannerOpacity}}" data-color="{{bannerColor}}"
+        <div class="amp-dc-banner-info"
              style="
              {{#if textColor}}
                 color: {{textColor}};
@@ -50,7 +45,7 @@
             {{/if}}
             {{#if button.label}}
             <a href="{{button.value}}"
-               class="amp-dc-banner-button {{#if style}}{{style}}{{/if}}">{{button.label}}</a>
+               class="amp-dc-banner-button">{{button.label}}</a>
             {{/if}}
         </div>
     </div>

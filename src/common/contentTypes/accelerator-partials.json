@@ -22,9 +22,9 @@
         "roundelRatio": {
           "type": "number",
           "title": "Roundel ratio",
-          "description": "A value between 0 and 10 e.g. 0.6 (1 by default)",
+          "description": "A value between 0 and 1 e.g. 0.6 (default is 0.2)",
           "minimum": 0,
-          "maximum": 10
+          "maximum": 1
         },
         "roundelPosition": {
           "type": "string",
@@ -56,7 +56,7 @@
           "minLength": 0,
           "maxLength": 2000,
           "title": "Value",
-          "pattern": "^(https:\/\/|http:\/\/)([0-9a-z_-]+.)[^s]{2,}$",
+          "pattern": "^(http:\/\/www.|https:\/\/www.|http:\/\/|https:\/\/)?[a-z0-9]+([-.]{1}[a-z0-9]+)*.[a-z]{2,5}(:[0-9]{1,5})?(/.*)?$",
           "description": "Enter an absolute URL"
         }
       }

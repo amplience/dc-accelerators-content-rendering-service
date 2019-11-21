@@ -1,0 +1,22 @@
+<div class="amp-dc-splitBlock{{#unless split}} full-size{{/unless}}">
+    {{#each content}}
+    <div class="amp-dc-split-part{{#if ../split}} amp-dc-size-{{itemAt (split ../split "/") @index}}{{else}} amp-dc-size-50{{/if}}">
+        <div class="amp-dc-split-part-wrap">
+            {{#if (test this.[@type] (toRegex ".*/text")) ~}}
+            {{> acc-template-text }}
+            {{~/if}}
+
+            {{#if (test this.[@type] (toRegex ".*/video")) ~}}
+            {{> acc-card-template-video }}
+            {{~/if}}
+
+            {{#if (test this.[@type] (toRegex ".*/image")) ~}}
+            <div class="amp-dc-poi-image">
+                {{> acc-card-template-image this}}
+            </div>
+            {{~/if}}
+
+        </div>
+    </div>
+    {{/each}}
+</div>

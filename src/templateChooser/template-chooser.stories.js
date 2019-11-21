@@ -16,7 +16,6 @@ const components = [
   ['Page', 'page'],
   ['Promo', 'promo'],
   ['Promo List', 'promo', 'samplePromoListContent'],
-  ['SFCC Slot', 'sfccSlot'],
   ['Slider', 'slider'],
   ['Split Block', 'splitBlock'],
   ['Text', 'text'],

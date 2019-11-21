@@ -51,14 +51,14 @@
       "minLength": 1,
       "maxLength": 3,
       "title": "Text position from the left",
-      "description": "Enter a percentage value (without a '%' sign) to position text horizontally from the left"
+      "description": "Enter a percentage value (without a '%' sign) to position text horizontally from the left (default is 10)"
     },
     "textPositionTop": {
       "type": "string",
       "minLength": 1,
       "maxLength": 3,
       "title": "Text position from top",
-      "description": "Enter a percentage value (without a '%' sign) to position text vertically from the top"
+      "description": "Enter a percentage value (without a '%' sign) to position text vertically from the top (default is 40)"
     },
     "textColor": {
       "type": "string",
