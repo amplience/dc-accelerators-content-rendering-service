@@ -36,7 +36,7 @@
             "Center"
           ],
           "title": "Roundel position",
-          "description": "Roundel position is centered by default"
+          "description": "Roundel position is top left by default"
         }
       }
     },

@@ -43,7 +43,7 @@
     "roundel": {
       "title": "Roundels",
       "type": "array",
-      "maxItems": 4,
+      "maxItems": 5,
       "items": {
         "allOf": [
           {

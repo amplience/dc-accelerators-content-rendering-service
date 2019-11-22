@@ -1,16 +1,16 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "{CONTENT_TYPE_BASEPATH}/page.json",
-  "title": "Page",
-  "description": "Page accelerator",
   "allOf": [
     {
       "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
     }
   ],
+  "id": "{CONTENT_TYPE_BASEPATH}/slot.json",
+  "title": "Slot",
+  "description": "Slot accelerator",
   "type": "object",
   "properties": {
-    "contentTypes": {
+    "content": {
       "type": "array",
       "items": {
         "allOf": [
@@ -27,6 +27,7 @@
                   "{CONTENT_TYPE_BASEPATH}/cardlist.json",
                   "{CONTENT_TYPE_BASEPATH}/externalblock.json",
                   "{CONTENT_TYPE_BASEPATH}/image.json",
+                  "{CONTENT_TYPE_BASEPATH}/page.json",
                   "{CONTENT_TYPE_BASEPATH}/promo.json",
                   "{CONTENT_TYPE_BASEPATH}/promolist.json",
                   "{CONTENT_TYPE_BASEPATH}/slider.json",
@@ -39,10 +40,7 @@
           }
         ]
       },
-      "title": "Content types"
+      "title": "Page content"
     }
-  },
-  "propertyOrder": [
-    "contentTypes"
-  ]
+  }
 }
