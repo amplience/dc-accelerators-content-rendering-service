@@ -18,7 +18,7 @@
   "author": "Amplience",
   "dependencies": {
     "lory.js": "2.2.1",
-    "poi-js-lib": "git+https://github.com/amplience/poi-js-lib.git#feature/allImagesSupport"
+    "poi-js-lib": "git+https://github.com/amplience/poi-js-lib.git#v2.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",

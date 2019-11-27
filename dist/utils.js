@@ -284,7 +284,7 @@
   function initPOI() {
     var poi = new window.POI({
       domain: '//i1.adis.ws',
-      account: 'solutions',
+      account: 'csdemo',
       containerClass: 'amp-dc-poi-image',
       imgClass: 'amp-dc-image-pic',
       images: [{
