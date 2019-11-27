@@ -282,7 +282,7 @@
   }
 
   function initPOI() {
-    var poi = new window.POI({
+    var params = window.poiDefaults || {
       domain: '//i1.adis.ws',
       account: '{COMPANY_TAG}',
       containerClass: 'amp-dc-poi-image',
@@ -325,7 +325,8 @@
           }
         ]
       }]
-    });
+    };
+    var poi = new window.POI(params);
     poi.init();
   }
 
