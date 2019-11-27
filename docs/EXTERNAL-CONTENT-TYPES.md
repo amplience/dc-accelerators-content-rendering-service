@@ -19,10 +19,10 @@ Using this features requires you to host the Content Types in an internet facing
 3. Run the following command which will export the content types to dist/contentTypes with the correct id and reference URLs.
 
 ```
-gulp
+gulp buildAll
 ```
 
-4. Upload the content types to your hosting location
+4. Upload the content types to your hosting location (for external) or create internal schemas in Dynamic Content developer tab (recommended)
 
 5. Register the content type in the Dynamic Content developer tab by providing the URL and settings for each content type
 
