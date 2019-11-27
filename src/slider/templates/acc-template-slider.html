@@ -1,5 +1,5 @@
 <div class="amp-dc-slider js_slider" data-infinite="{{loop}}" data-autoplay="{{autoplay}}"
-     data-navigation="{{navigationDots}}">
+     data-navigation="{{#if (itemAt slides 1)}}{{navigationDots}}{{/if}}">
     <div class="amp-dc-slider-frame js_frame">
         <ul class="amp-dc-slider-slides js_slides">
             {{#each slides}}
@@ -15,8 +15,7 @@
                 {{#if (test this.[@type] (toRegex ".*/image")) ~}}
                 <div class="amp-dc-poi-image">
                     {{> acc-template-image-generator
-                        image=this.image
-                        settings=this
+                        image=this
                         mediaQueries='[
                             {"query": 768, "width": 768},
                             {"query": 1024, "width": 1024},
@@ -28,6 +27,7 @@
             </li>
             {{/each}}
         </ul>
+        {{#if (itemAt slides 1)}}
         <span class="amp-dc-slider-prev js_prev js_slider_toggle">
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5">
                     <g>
@@ -42,12 +42,15 @@
                     </g>
                 </svg>
             </span>
-        {{#if navigationDots}}
-        <ul class="amp-dc-dots">
-            {{#each slides}}
-            <li class="amp-dc-dot js_dc_slider_dot"></li>
-            {{/each}}
-        </ul>
+        {{/if}}
+        {{#if (itemAt slides 1)}}
+            {{#if navigationDots}}
+            <ul class="amp-dc-dots">
+                {{#each slides}}
+                <li class="amp-dc-dot js_dc_slider_dot"></li>
+                {{/each}}
+            </ul>
+            {{/if}}
         {{/if}}
     </div>
 </div>

@@ -26,6 +26,16 @@ var replace = function () {
     });
 }
 
+var replaceCompany = function () {
+    return es.map(function (file, cb) {
+        var fileContent = file.contents.toString();
+        fileContent = fileContent.replace(/\{COMPANY_TAG\}/g, toReplace.COMPANY_TAG);
+        file.contents = new Buffer.from(fileContent);
+        // send the updated file down the pipe
+        cb(null, file);
+    });
+};
+
 gulp.task('del', function () {
     return del('dist');
 });
@@ -84,6 +94,7 @@ gulp.task('build-js', function () {
             '!**/*.stories.js'
         ])
         .pipe(concat('utils.js'))
+        .pipe(replaceCompany())
         .pipe(gulp.dest('dist'));
 });
 

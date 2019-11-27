@@ -14,7 +14,7 @@ export const sampleContent = {
     "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/splitblock.json",
     "name": "accelerator-split-block-1"
   },
-  "split": "30/70",
+  "split": "50/50",
   "content": [{
       "@id": "http://content.cms.amplience.com/bc3f11ab-ed9c-4163-8e87-ac64fec19f44",
       "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/text.json",
@@ -53,7 +53,7 @@ storiesOf('Split Block', module)
     ...sampleContent,
     split: '50/50'
   }))
-  .add('Full Size', () => renderContent('acc-template-splitBlock', {
+  .add('Default Size', () => renderContent('acc-template-splitBlock', {
     ...sampleContent,
     split: null
   }));

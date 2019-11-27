@@ -9,25 +9,27 @@
     vertical-align: middle;
   }
 
-  .amp-dc-banner-info-wrap, .amp-dc-banner-info {
-    padding: 0 !important;
-    margin: 0 !important;
+  .amp-dc-banner .amp-dc-banner-info {
+    font-size: 8px;
+    min-width: 50px;
+    padding: 2px;
   }
 
   .amp-dc-banner .amp-dc-banner-header {
-    font-size: 10px !important;
+    font-size: 8px;
   }
 
-  .amp-dc-banner-description {
-    margin: 0 !important;
-    padding: 0 !important;
-    font-size: 8px !important;
+  .amp-dc-banner .amp-dc-banner-description, .amp-dc-banner .amp-dc-banner-subheader {
+    font-size: 6px;
+    margin-top: 3px;
   }
 
   .amp-dc-banner .amp-dc-banner-button {
-    margin: 3px !important;
-    font-size: 8px !important;
-    padding: 6px 4px !important;
+    font-size: 6px;
+    margin-top: 3px;
+    display: inline-block;
+    min-width: 40%;
+    padding: 2px 3px;
   }
 
   .amp-dc-slider {
@@ -42,10 +44,6 @@
   .amp-dc-slider .amp-dc-slider-next svg, .amp-dc-slider .amp-dc-slider-prev svg {
     height: 15px !important;
     width: 15px !important;
-  }
-
-  .amp-dc-banner .amp-dc-banner-info-wrap:before {
-    content: none !important;
   }
 
   .amp-dc-dots {
@@ -87,6 +85,10 @@
 
   .amp-dc-splitBlock .amp-dc-split-part:first-child {
     padding: 0 !important;
+  }
+
+  .amp-dc-splitBlock .amp-dc-split-part .amp-dc-video {
+    min-width: unset;
   }
 
   .amp-dc-card-name {
@@ -266,39 +268,56 @@
   }
 
   .amp-dc-splitBlock {
+    margin: 0;
+    padding: 0;
+
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
     .amp-dc-split-part {
-      float: none;
+      float: left;
+      box-sizing: border-box;
 
       &.amp-dc-size-50 {
-        width: 100%;
+        width: 50%;
       }
 
       &.amp-dc-size-70 {
-        width: 100%;
+        width: 70%;
       }
 
       &.amp-dc-size-30 {
-        width: 100%;
-      }
-
-      &:first-child {
-        padding: 0 0 30px 0;
+        width: 30%;
       }
 
       .amp-dc-split-part-wrap {
-        padding-left: 0;
+        padding-left: 5px;
       }
 
       &:first-child {
         .amp-dc-split-part-wrap {
           padding-left: 0;
-          padding-right: 0;
         }
       }
     }
   }
 
   .amp-dc-promo-banner .amp-dc-promo-head-text {
+    font-size: 8px !important;
+  }
+
+  .amp-dc-promo-banner .amp-dc-promo-ico > img {
+    display: inline-block;
+  }
+
+  .amp-dc-promo-banner .amp-dc-promo-ico {
+    line-height: 35px;
+  }
+
+  .amp-dc-promo-banner .amp-dc-promo-content-text {
     font-size: 8px !important;
   }
 
@@ -355,4 +374,20 @@
     min-width: unset;
     margin: 0;
   }
+}
+
+.with-transition {
+  -webkit-transition: opacity  .7s ease-in-out;
+  -moz-transition: opacity .7s ease-in-out;
+  -o-transition: opacity .7s ease-in-out;
+  transition: opacity .7s ease-in-out;
+  opacity: 0;
+}
+
+.transition {
+  -webkit-transition: opacity  .7s ease-in;
+  -moz-transition: opacity .7s ease-in;
+  -o-transition: opacity .7s ease-in;
+  transition: opacity .7s ease-in;
+  opacity: 1;
 }

@@ -18,18 +18,16 @@ export const sampleContent = {
       "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
     },
     "id": "f46fecc5-945c-451c-879e-5c974a821891",
-    "name": "pexels-photo-128939",
-    "endpoint": "csdemo",
+    "name": "textwireframe",
+    "endpoint": "solutions",
     "defaultHost": "i1.adis.ws",
     "mediaType": "image"
   },
   "roundel": [{
-    "roundelRatio": 0.3,
-    "roundelPosition": "Top Right",
     "roundel": {
       "id": "cad6cb31-1936-4193-82de-1844a1235c91",
-      "name": "pexels-photo-128939",
-      "endpoint": "csdemo",
+      "name": "shutterstock_151174712",
+      "endpoint": "solutions",
       "defaultHost": "i1.adis.ws",
       "mediaType": "image",
       "_meta": {

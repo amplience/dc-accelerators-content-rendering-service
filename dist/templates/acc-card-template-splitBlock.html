@@ -7,18 +7,12 @@
             {{~/if}}
 
             {{#if (test this.[@type] (toRegex ".*/video")) ~}}
-            {{> acc-template-video }}
+            {{> acc-card-template-video }}
             {{~/if}}
 
             {{#if (test this.[@type] (toRegex ".*/image")) ~}}
             <div class="amp-dc-poi-image">
-                {{> acc-template-image-generator
-                    image=this
-                    mediaQueries='[
-                        {"query": 768, "width": 768},
-                        {"query": 1024, "width": 1024},
-                        {"query": 1025, "width": 1600}
-                    ]'}}
+                {{> acc-card-template-image this}}
             </div>
             {{~/if}}
 

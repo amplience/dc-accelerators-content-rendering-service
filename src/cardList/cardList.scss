@@ -26,42 +26,6 @@
             max-height: 250px;
         }
     }
-
-    &.amp-dc-cards-hero {
-
-        .amp-dc-card-list-wrap {
-            margin-left: 0;
-            overflow: hidden;
-
-
-            >div:nth-last-child(3):first-child {
-                float: left;
-                width: 70%;
-
-                .amp-dc-card-wrap {
-                    margin-right: 20px;
-                }
-            }
-        }
-
-        .amp-dc-card-wrap {
-            margin: 0 0 50px 0;
-        }
-
-        .amp-dc-card {
-            float: right;
-            width: 30%;
-
-            &.amp-dc-card-1 {
-                float: left;
-                width: 70%;
-
-                .amp-dc-card-wrap {
-                    margin-right: 20px;
-                }
-            }
-        }
-    }
 }
 
 .amp-dc-prod-5-rows {
@@ -112,29 +76,6 @@
             width: 50%;
         }
 
-        &.amp-dc-cards-hero {
-            .amp-dc-card-list-wrap {
-                >div:nth-last-child(3):first-child {
-                    width: 100%;
-
-                    .amp-dc-card-wrap {
-                        margin-right: 0;
-                    }
-                }
-
-                .amp-dc-card {
-                    width: 100%;
-
-                    &.amp-dc-card-1 {
-                        width: 100%;
-
-                        .amp-dc-card-wrap {
-                            margin-right: 0;
-                        }
-                    }
-                }
-            }
-        }
     }
 
     .amp-dc-prod-2-rows {

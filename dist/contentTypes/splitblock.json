@@ -47,5 +47,8 @@
   "propertyOrder": [
     "content",
     "split"
+  ],
+  "required": [
+    "split"
   ]
 }

@@ -3,19 +3,19 @@
 {{~/if}}
 
 {{#if (test this.[@type] (toRegex ".*/video")) ~}}
-{{> acc-template-video }}
-{{~/if}}
-
-{{#if (test this.[@type] (toRegex ".*/promo")) ~}}
-{{> acc-template-promo }}
+{{> acc-card-template-video }}
 {{~/if}}
 
 {{#if (test this.[@type] (toRegex ".*/promolist")) ~}}
 {{> acc-template-promoList }}
 {{~/if}}
 
+{{#if (test this.[@type] (toRegex ".*/promo.json")) ~}}
+{{> acc-template-promo }}
+{{~/if}}
+
 {{#if (test this.[@type] (toRegex ".*/splitblock")) ~}}
-{{> acc-template-splitBlock }}
+{{> acc-card-template-splitBlock }}
 {{~/if}}
 
 {{#if (test this.[@type] (toRegex ".*/slider")) ~}}
@@ -52,8 +52,4 @@
 
 {{#if (test this.[@type] (toRegex ".*/page")) ~}}
 {{> acc-card-template-page }}
-{{~/if}}
-
-{{#if (test this.[@type] (toRegex ".*/sfcc-slot-accelerators")) ~}}
-{{> sfcc-contentWrapper }}
 {{~/if}}

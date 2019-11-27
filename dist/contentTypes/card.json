@@ -13,9 +13,9 @@
     "cardImage": {
       "description": "",
       "type": "object",
-      "anyOf": [
+      "allOf": [
         {
-          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+          "$ref": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json"
         }
       ],
       "title": "Card image"

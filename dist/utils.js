@@ -3,30 +3,6 @@
 (function (exports) {
 
   /**
-   * Banner - Javascript is used to calculate the background color
-   * @param element
-   */
-  function Banner(element) {
-    this.initBackgroundColor(element);
-  }
-
-  Banner.prototype.initBackgroundColor = function (element) {
-    var infoPanel = element.querySelector('.amp-dc-banner-info');
-    var dataColor = infoPanel.getAttribute('data-color') || "rgb(255,255,255)";
-    var dataOpacity = Number(infoPanel.getAttribute('data-opacity') || '1');
-
-    dataColor = dataColor.slice(4);
-    dataColor = dataColor.slice(0, dataColor.length - 1);
-    dataColor = dataColor.split(',');
-
-    var r = parseInt(dataColor[0], 10);
-    var g = parseInt(dataColor[1], 10);
-    var b = parseInt(dataColor[2], 10);
-
-    infoPanel.style.backgroundColor = 'rgba(' + r + ', ' + g + ', ' + b + ', ' + dataOpacity + ')';
-  };
-
-  /**
    * Promo Banner - Javascript is used to animate the sections for resolutions that can only show a single section at a time
    * @param element
    */
@@ -83,7 +59,7 @@
    */
   function Slider(element) {
     var data = {
-      infinite: element.getAttribute('data-infinite') === 'true',
+      infinite: element.getAttribute('data-infinite') === 'true' ? 1 : 0,
       navigation: element.getAttribute('data-navigation') === 'true',
       autoplay: element.getAttribute('data-autoplay') === 'true'
     };
@@ -111,6 +87,10 @@
     var $nextButton = element.querySelector('.js_next');
     var disabledClass = 'ctrl-disabled';
 
+    if (!$prevButton && !$nextButton) {
+      return false;
+    }
+
     var navButtonsBehave = function (evt) {
       var slideIndex = sliderInstance.returnIndex();
       if (slideIndex === 0) {
@@ -131,7 +111,26 @@
 
     element.addEventListener('after.lory.slide', navButtonsBehave);
     element.addEventListener('on.lory.resize', navButtonsBehave);
-  }
+  };
+
+  Slider.prototype.autoslide = function ($slider, sliderInstance) {
+    var iterate = function () {
+      sliderInstance.next();
+    };
+    var sim;
+
+    return {
+      start: function () {
+        sim = setInterval(iterate, 3000);
+      },
+      stop: function () {
+        clearTimeout(sim);
+      },
+      init: function () {
+        this.start();
+      }
+    }
+  };
 
   Slider.prototype.navigationDots = function (element, sliderInstance, sliderSettings) {
     var dots = Array.prototype.slice.call(
@@ -139,10 +138,13 @@
       0
     );
 
+    var autoSlide = sliderSettings.autoplay && new this.autoslide(element, sliderInstance);
+
     var attachNavEvents = function () {
       dots.forEach(function ($dot, ind) {
         if (ind === 0) {
           $dot.classList.add('active');
+          autoSlide && autoSlide.init($dot);
         }
         $dot.addEventListener('click', function (evt) {
           sliderInstance.slideTo(ind);
@@ -160,19 +162,25 @@
         evt.detail.currentSlide - 1 :
         evt.detail.currentSlide;
       dots[currentSlide].classList.add('active');
+      autoSlide && autoSlide.stop();
+      autoSlide && autoSlide.start();
     };
 
     var resetToFirst = function () {
       dots.forEach(function ($dot, ind) {
-        ind === 0 ?
-          $dot.classList.add('active') :
-          $dot.classList.remove('active');
+        if (ind === 0) {
+          $dot.classList.add('active');
+          autoSlide && autoSlide.stop();
+          autoSlide && autoSlide.start();
+        } else {
+          $dot.classList.remove('active')
+        }
       });
     };
 
     attachNavEvents();
     element.addEventListener('after.lory.slide', selectActiveDot);
-    element.addEventListener('on.lory.resize', resetToFirst);
+    // element.addEventListener('on.lory.resize', resetToFirst);
   };
 
   Slider.prototype.enableSwipeGesturesOnVideo = function (element) {
@@ -223,24 +231,28 @@
   }
 
   /**
-   * scrollOnHover - is used to emulate scroll action on card mouse over event
+   * scrollCard - is used to scroll card if its content doesn't fit container
    */
 
   var interval;
 
-  function scrollOnHover() {
+  function scrollCard() {
     var container = document.getElementById('card-container');
+    if (!container) {
+      return false;
+    }
     var child = container.childNodes[0].nextSibling;
     var length = child.clientHeight;
     var parent = container.clientHeight;
     var xH;
 
-    if (parent < length) {
+    if (length / parent > 1.5) {
       if (interval) {
         clearInterval(interval)
       }
 
       interval = setInterval(function () {
+        container.classList.remove('transition');
         xH = child.style.top || 0;
         xH = parseInt(xH);
         if (Math.abs(parseInt(xH)) + parent < length) {
@@ -248,24 +260,31 @@
           xH = xH + "px";
           child.style.top = xH;
         } else {
-          clearInterval(interval)
+          clearInterval(interval);
+          setTimeout(scrollLeave, 1000);
         }
-      }, 1)
+      }, 10)
     }
   }
 
   function scrollLeave() {
     var container = document.getElementById('card-container');
     var child = container.childNodes[0].nextSibling;
-    child.style.top = '0px';
+    container.classList.add('with-transition');
 
-    clearInterval(interval)
+    setTimeout(function () {
+      child.style.top = '0px';
+      container.classList.remove('with-transition');
+      container.classList.add('transition');
+
+      clearInterval(interval);
+    }, 1000);
   }
 
   function initPOI() {
     var poi = new window.POI({
-      domain: 'http://i1.adis.ws',
-      account: 'csdemo',
+      domain: '//i1.adis.ws',
+      account: 'solutions',
       containerClass: 'amp-dc-poi-image',
       imgClass: 'amp-dc-image-pic',
       images: [{
@@ -311,16 +330,14 @@
   }
 
   function attachComponents() {
-    attachComponent('.amp-dc-banner', Banner);
     attachComponent('.amp-dc-promo-banner', PromoBanner);
     attachComponent('.amp-dc-slider', Slider);
     initPOI();
+    setTimeout(scrollCard, 2000);
   }
 
   exports.Utils = exports.Utils || {};
   exports.Utils.attachComponents = attachComponents;
-  exports.Utils.scrollOnHover = scrollOnHover;
-  exports.Utils.scrollLeave = scrollLeave;
 
   /**
    * Automatically activate accelerator components when the page renders

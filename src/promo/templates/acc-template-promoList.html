@@ -1,5 +1,5 @@
 <div class="amp-dc-promo-banner">
-    <div class="amp-dc-promo-banner-wrap">
+    <div class="amp-dc-promo-banner-wrap dc-width-{{promoItems.length}}">
         {{#each promoItems}}
         <div class="amp-dc-promo-block dc-{{@index}}">
             <div class="amp-dc-promo-wrap">
@@ -12,6 +12,7 @@
                                      class="amp-dc-image-pic"/>
                             </picture>
                         {{/if}}
+                        <div class="{{#if topLine}}amp-dc-promo-text-flex{{/if}} {{#if bottomLine}}amp-dc-promo-text-flex{{/if}}">
                         <div class="amp-dc-promo-text-wrap">
                             <div class="amp-dc-promo-head-text" {{#if toplineColor}}style="color:{{toplineColor}}" {{/if}}>
                                 {{topLine}}
@@ -20,6 +21,7 @@
                         <div class="amp-dc-promo-content-text"
                              {{#if bottomlineColor}}style="color:{{bottomlineColor}}" {{/if}}>
                             {{bottomLine}}
+                        </div>
                         </div>
                 </a>
             </div>

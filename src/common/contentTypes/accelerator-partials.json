@@ -22,9 +22,9 @@
         "roundelRatio": {
           "type": "number",
           "title": "Roundel ratio",
-          "description": "A value between 0 and 10 e.g. 0.6 (1 by default)",
+          "description": "A value between 0 and 1 e.g. 0.6 (default is 0.2)",
           "minimum": 0,
-          "maximum": 10
+          "maximum": 1
         },
         "roundelPosition": {
           "type": "string",
@@ -36,7 +36,7 @@
             "Center"
           ],
           "title": "Roundel position",
-          "description": "Roundel position is centered by default"
+          "description": "Roundel position is top left by default"
         }
       }
     },
@@ -56,7 +56,8 @@
           "minLength": 0,
           "maxLength": 2000,
           "title": "Value",
-          "description": "A relative URL, absolute URL or an ID"
+          "pattern": "^(http:\/\/www.|https:\/\/www.|http:\/\/|https:\/\/)?[a-z0-9]+([-.]{1}[a-z0-9]+)*.[a-z]{2,5}(:[0-9]{1,5})?(/.*)?$",
+          "description": "Enter an absolute URL"
         }
       }
     },
@@ -66,12 +67,14 @@
       "type": "object",
       "properties": {
         "image": {
+          "description": "",
           "type": "object",
-          "anyOf": [
+          "allOf": [
             {
-              "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+              "$ref": "{CONTENT_TYPE_BASEPATH}/image.json"
             }
-          ]
+          ],
+          "title": "Image"
         },
         "title": {
           "type": "string",

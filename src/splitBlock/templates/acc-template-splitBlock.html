@@ -1,6 +1,6 @@
 <div class="amp-dc-splitBlock{{#unless split}} full-size{{/unless}}">
     {{#each content}}
-    <div class="amp-dc-split-part{{#if ../split}} amp-dc-size-{{itemAt (split ../split "/") @index}}{{/if}}">
+    <div class="amp-dc-split-part{{#if ../split}} amp-dc-size-{{itemAt (split ../split "/") @index}}{{else}} amp-dc-size-50{{/if}}">
         <div class="amp-dc-split-part-wrap">
             {{#if (test this.[@type] (toRegex ".*/text")) ~}}
             {{> acc-template-text }}
@@ -13,8 +13,7 @@
             {{#if (test this.[@type] (toRegex ".*/image")) ~}}
             <div class="amp-dc-poi-image">
                 {{> acc-template-image-generator
-                    image=this.image
-                    settings=this
+                    image=this
                     mediaQueries='[
                         {"query": 768, "width": 768},
                         {"query": 1024, "width": 1024},

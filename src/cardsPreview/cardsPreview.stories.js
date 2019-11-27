@@ -18,6 +18,7 @@ import {sampleContent as sampleCardListContent} from '../cardList/cardList.stori
 import {sampleContent as sampleExternalBlockContent} from '../externalBlock/externalBlock.stories';
 import {sampleContent as sampleImageContent} from '../image/image.stories';
 import {sampleContent as samplePromoContent} from '../promo/promo.stories';
+import {samplePromoListContent as samplePromoListContent} from '../promo/promo.stories';
 import {sampleContent as sampleSplitBlockContent} from '../splitBlock/splitBlock.stories';
 import {sampleContent as sampleTextContent} from '../text/text.stories';
 import {sampleContent as sampleVideoContent} from '../video/video.stories';
@@ -32,6 +33,7 @@ storiesOf('Cards Preview', module)
   .add('Image card', () => renderContent('acc-template-cardsPreview', sampleImageContent))
   .add('Page card', () => renderContent('acc-template-cardsPreview', samplePageContent))
   .add('Promo card', () => renderContent('acc-template-cardsPreview', samplePromoContent))
+  .add('Promo list', () => renderContent('acc-template-cardsPreview', samplePromoListContent))
   .add('Slider card', () => renderContent('acc-template-cardsPreview', sampleContent))
   .add('Split block card', () => renderContent('acc-template-cardsPreview', sampleSplitBlockContent))
   .add('Text card', () => renderContent('acc-template-cardsPreview', sampleTextContent))
