@@ -54,7 +54,7 @@ Recommended Steps:
 
 7. Choose an icon / copy icon URL from the recommended values below
 
-8. Choose a card / copy settings from the recommended values below
+8. Add card URL: ```https://{{vse.domain}}/v1/content/demo/content-item/{{content.sys.id}}?template=acc-template-cardsPreview```
 
 ![Configure Card](../media/configure-card.jpeg)
 
@@ -68,144 +68,62 @@ Recommended Steps:
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-imagewithroundel.png`
 
-- ###### Card
-	Choose the gallery card. The pointers you need to add for the card are:
-	- headline: /roundelPosition
-	- image0: /roundel
-
 ##### Link
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-link.png`
-
-- ###### Card
-	Choose the text card. The pointer you need to add for the card is:
-	- headline: /label
 
 ##### Image
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-image.png`
 
-- ###### Card
-	Choose the photo card. The pointers you need to add for the card are:
-	- image: /image
-	- imageAlt: /imageAltText
-
 ##### Text
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-text.png`
-
-- ###### Card
-	Choose the text card. The pointer you need to add for the card is:
-	- headline: /text
 
 ##### Video
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-video.png`
 
-- ###### Card
-	Choose the gallery card. The pointers you need to add for the card are:
-	- headline: /_title
-	- image0: /video
-
 ##### Card
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-card.png`
-
-- ###### Card
-	Choose the gallery card. The pointers you need to add for the card are:
-	- headline: /cardName
-	- image0: /cardImage/image
 
 ##### Card list
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-cardlist.png`
 
-- ###### Card
-	Choose the gallery card. The pointers you need to add for the card are:
-	- headline: /header
-	- image0: /cards/0/cardImage/image	
-	- image1: /cards/1/cardImage/image
-	- image2: /cards/2/cardImage/image
-	- image3: /cards/3/cardImage/image
-
 ##### Banner
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-banner.png`
-
-- ###### Card
-	Choose the gallery card. The pointers you need to add for the card are:
-	- headline: /header
-	- image0: /bannerImage/image
 	
 ##### Slider
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-slider.png`
 
-- ###### Card
-	Choose the gallery card. Examples of the pointers you need to add for the card are:
-	- headline: /_title
-	- image0: /slides/0/bannerImage/image
-	- image1: /slides/1/bannerImage/image
-	- image2: /slides/2/bannerImage/image	- image3: /slides/3/bannerImage/image
-
 ##### Split block
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-splitblock.png`
-
-- ###### Card
-	Choose the gallery card. Examples of pointers you need to add for the card are:
-	- headline: /content/0/text
-	- image0: /content/0/image
-	- image1: /content/1/image
-	- image2: /content/0/video
-	- image3: /content/1/video
 	
 ##### Promo
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-promobannersection.png`
 
-- ###### Card
-	Choose the gallery card. The pointers you need to add for the card are:
-	- headline: /_title
-	- image0: /icon
-
 ##### Promo List
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-promobanner.png`
-
-- ###### Card
-	Choose the gallery card. The pointers you need to add for the card are:
-	- headline: /_title
-	- image0: /bannerSection/0/icon
-	- image1: /bannerSection/1/icon
-	- image2: /bannerSection/2/icon
 
 ##### External block
 
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-externalblock.png`
 
-- ###### Card
-	Choose the text card. The pointer you need to add for the card is:
-	- headline: /external
-
 ##### Snippet
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-blogsnippet.png`
 
-- ###### Card
-	Choose the gallery card. The pointers you need to add for the card are:
-	- headline: /title
-	- image0: /image/image
-
 ##### Blog Post
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-blogpost.png`
-
-- ###### Card
-	Choose the gallery card. The pointers you need to add for the card are:
-	- headline: /title
-	- image0: /snippet/image/image
 
 ##### Page
 - ###### Icon
