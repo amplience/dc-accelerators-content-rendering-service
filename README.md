@@ -52,7 +52,7 @@ npm install --global gulp-cli
 2. Run gulp:
 
 ```
-gulp
+gulp buildAll
 ```
 
 This will export the following files:
@@ -63,6 +63,7 @@ This will export the following files:
 | dist/templates      | [Content Rendering Service](https://docs.amplience.net/integration/contentrenderingservice.html#the-content-rendering-service) templates which render content to HTML. |
 | dist/icons          | Icons for each component.                                                                                                                                              |
 | dist/styles.min.css | CSS Styles for the components.                                                                                                                                         |
+| dist/cardsStyles.min.css | CSS Styles for the cards.                                                                                                                                         |
 | dist/utils.min.js   | JavaScript which adds functionality to the components.                                                                                                                 |
 | dist/lory.min.js    | [JavaScript Library](https://github.com/loryjs/lory) required by the Slider component.                                                                                 |
 
