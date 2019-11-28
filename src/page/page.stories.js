@@ -119,7 +119,7 @@ export const sampleContent = {
               "mediaType": "image"
             },
             "imageAltText": "lady in red",
-            "seoText": "lady in red"
+            "seoText": "lady-in-red"
           },
           "textPositionLeft": "55",
           "textColor": "rgb(255,255,255)",
@@ -317,7 +317,7 @@ export const sampleContent = {
               "mediaType": "image"
             },
             "imageAltText": "shopthelook copy",
-            "seoText": "shopthelook copy",
+            "seoText": "shopthelook-copy",
             "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
           },
           "cardName": "Shop The Look",
@@ -356,7 +356,7 @@ export const sampleContent = {
               "mediaType": "image"
             },
             "imageAltText": "onlineCatalogue copy",
-            "seoText": "onlineCatalogue copy",
+            "seoText": "onlineCatalogue-copy",
             "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
           },
           "cardName": "Online Catalogue",

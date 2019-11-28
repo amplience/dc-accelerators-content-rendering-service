@@ -84,7 +84,7 @@ export const sampleContent = {
         "mediaType": "image"
       },
       "imageAltText": "lady in red",
-      "seoText": "lady in red"
+      "seoText": "lady-in-red"
     },
     "textPositionLeft": "55",
     "textColor": "rgb(255,255,255)",
@@ -114,7 +114,7 @@ export const sampleContent = {
         "mediaType": "image"
       },
       "imageAltText": "lady in red",
-      "seoText": "lady in red"
+      "seoText": "lady-in-red"
     },
     {
       "@id": "http://content.cms.amplience.com/6474a851-d24d-48b3-be21-599818c0a47a",

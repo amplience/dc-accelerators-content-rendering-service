@@ -47,7 +47,7 @@ export const sampleContent = {
         "mediaType": "image"
       },
       "imageAltText": "lady in red",
-      "seoText": "lady in red"
+      "seoText": "lady-in-red"
     },
     "textPositionLeft": "55",
     "textColor": "rgb(255,255,255)",

@@ -38,7 +38,7 @@ export const sampleContent = {
       "mediaType": "image"
     },
     "imageAltText": "lady in red",
-    "seoText": "lady in red",
+    "seoText": "lady-in-red",
     "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
   }, {
     "@id": "http://content.cms.amplience.com/47c6b9bf-c164-4c7f-8087-1a608028108e",
