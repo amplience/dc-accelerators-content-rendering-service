@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.1](https://github.com/amplience/dc-accelerators-content-rendering-service/compare/v4.0.0...v4.0.1) (2020-02-12)
+
+
+### Bug Fixes
+
+* **docs:** logo update ([b4dcde2](https://github.com/amplience/dc-accelerators-content-rendering-service/commit/b4dcde2))
+
+
+
 ## [4.0.0](https://github.com/techiedarren/dc-accelerators-content-rendering-service/compare/v3.0.0...v4.0.0) (2019-06-13)
 
 
