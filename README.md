@@ -1,5 +1,3 @@
-[![Amplience Dynamic Content](media/header.png)](https://amplience.com/dynamic-content)
-
 # Dynamic Content Accelerators - Rendering Service
 
 > Extensible content types and rendering templates for use with the Amplience Rendering Service
